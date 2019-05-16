@@ -1,0 +1,54 @@
+
+.top_search{
+	width: 497rpx;
+	padding: 10rpx 87rpx 10rpx 166rpx;
+	position: relative;
+}
+.top_search input{
+	width:447rpx;
+	height:60rpx;
+	background:rgba(255,255,255,1);
+	-webkit-box-shadow:0px 0px 7rpx 0px rgba(191, 191, 191, 0.35);
+	        box-shadow:0px 0px 7rpx 0px rgba(191, 191, 191, 0.35);
+	border-radius:10rpx;
+	font-size:24rpx;
+	text-align: center;
+	color:rgba(153,153,153,1);
+	line-height: 60rpx;
+	padding-left: 50rpx;
+}
+.top_search_map{
+	position: absolute;
+	top: 10rpx;
+	left: 26rpx;
+	line-height: 60rpx;
+}
+.top_search_map text{
+	font-size: 30rpx;
+	color:rgba(51,51,51,1);
+	margin-right: 8rpx;
+}
+.top_search_map image{
+	width: 17rpx;
+	height: 9rpx;
+	display: inline-block;
+	vertical-align: 10rpx;
+}
+.top_search_m{
+	position: absolute;
+	top: 10rpx;
+	right: 17rpx;
+	line-height: 60rpx;
+}
+.top_search_m image{
+	width: 26rpx;
+	height: 28rpx;
+}
+.top_search_icon{
+	width: 32rpx;
+	height: 32rpx;
+	position: absolute;
+	top: 24rpx;
+	left: 38.4%;
+}
+

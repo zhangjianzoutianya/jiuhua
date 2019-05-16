@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/business/index",
+    "pages/user/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "九华",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#C90009",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/navbar/navbar1_on.png",
+        "selectedIconPath": "static/navbar/navbar1.png",
+        "text": "九华首页"
+      },
+      {
+        "pagePath": "pages/business/index",
+        "iconPath": "static/navbar/navbar2_on.png",
+        "selectedIconPath": "static/navbar/navbar2.png",
+        "text": "智慧商业"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "static/navbar/navbar3_on.png",
+        "selectedIconPath": "static/navbar/navbar3.png",
+        "text": "我的九华"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap7.json"
+}

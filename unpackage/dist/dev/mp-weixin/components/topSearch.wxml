@@ -1,0 +1,1 @@
+<view class="top_search" bind:__l="__l"><view class="top_search_map"><text>{{title}}</text><image src="../static/index/topSearch_icon.png"></image></view><image class="top_search_icon" src="../static/index/topSearch_s.png"></image><input confirmtype="text" placeholder="输入意向位置/业态"/><view class="top_search_m"><image src="../static/index/topSearch_m.png"></image></view></view>
