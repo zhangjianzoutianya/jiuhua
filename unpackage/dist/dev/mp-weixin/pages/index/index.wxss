@@ -1,5 +1,6 @@
 
 .pages{
+	/* padding-top: 45upx; */
 }
 .banner{
 	margin-top: 29rpx;
