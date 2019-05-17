@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="pages">
 		
 		<topSearch :title="mapName"></topSearch>
 		
@@ -30,23 +30,23 @@
 		</view>
 		
 		<view class="index_class">
-			<view class="index_class_item item1">
+			<view class="index_class_item item1" @click="goClassPages('indexnav1/wisdomIndex')">
 				<text>智@九华</text>
 				<image src="../../static/index/index_class_1.png"></image>
 			</view>
-			<view class="index_class_item item2">
+			<view class="index_class_item item2" @click="goClassPages('indexnav2/index')">
 				<text>循@九华</text>
 				<image src="../../static/index/index_class_2.png"></image>
 			</view>
-			<view class="index_class_item item3">
+			<view class="index_class_item item3" @click="goClassPages('indexnav3/live_box')">
 				<text>住@九华</text>
 				<image src="../../static/index/index_class_3.png"></image>
 			</view>
-			<view class="index_class_item item4">
+			<view class="index_class_item item4" @click="goClassPages('indexnav4/edge_hua')">
 				<text>缘@九华</text>
 				<image src="../../static/index/index_class_4.png"></image>
 			</view>
-			<view class="index_class_item item5">
+			<view class="index_class_item item5" @click="goClassPages('indexnav5/food')">
 				<text>食@九华</text>
 				<image src="../../static/index/index_class_5.png"></image>
 			</view>
@@ -314,12 +314,19 @@
 			
 		},
 		methods: {
-			
+			goClassPages(url){
+				uni.navigateTo({
+					url:url,
+				})
+			}
 		}
 	}
 </script>
 
 <style>
+	.pages{
+		/* padding-top: 45upx; */
+	}
 	.banner{
 		margin-top: 29upx;
 		margin-bottom: 50upx;

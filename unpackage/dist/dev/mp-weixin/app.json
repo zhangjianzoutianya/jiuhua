@@ -2,7 +2,31 @@
   "pages": [
     "pages/index/index",
     "pages/business/index",
-    "pages/user/index"
+    "pages/user/index",
+    "pages/user/login/home_page",
+    "pages/user/login/member_login",
+    "pages/user/login/staff_login",
+    "pages/user/login/code_login",
+    "pages/user/login/merchant_register",
+    "pages/user/login/change_password",
+    "pages/index/indexnav1/wisdomIndex",
+    "pages/index/indexnav1/supermarket/supermarket",
+    "pages/index/indexnav1/supermarket/details",
+    "pages/index/indexnav1/supermarket/map",
+    "pages/index/indexnav5/food",
+    "pages/index/indexnav5/supermarket/supermarket",
+    "pages/index/indexnav5/supermarket/details",
+    "pages/index/indexnav2/index",
+    "pages/index/indexnav2/regenerate",
+    "pages/index/indexnav2/articleInner",
+    "pages/index/indexnav2/videoInner",
+    "pages/index/indexnav2/complaint",
+    "pages/index/indexnav3/live_box",
+    "pages/index/indexnav3/live_inner",
+    "pages/index/indexnav4/edge_hua",
+    "pages/index/indexnav4/shop_show",
+    "pages/index/indexnav4/shop_inner",
+    "pages/index/indexnav4/navigation"
   ],
   "subPackages": [],
   "window": {
@@ -37,6 +61,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap7.json"
+  "usingComponents": {}
 }

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商户注册",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "addressd": "/components/jm-address/jm-address"
+  }
+}

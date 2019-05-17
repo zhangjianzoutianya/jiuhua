@@ -1,0 +1,1 @@
+<view bind:__l="__l"><view class="sec1"><view class="sec-inner"><view class="texa"><textarea value="" placeholder="请写下您的意见或建议"></textarea><view class="texa-abs"><text>0</text>/200</view></view><view class="btn">提交</view></view></view></view>

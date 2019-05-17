@@ -1,0 +1,76 @@
+
+.map_list{
+	width: 100%;
+	position: relative;
+}
+.map {
+	width: 750rpx;
+	height: 835rpx;
+}
+.map_sou{
+	position: absolute;
+	top: 20rpx;
+	left: 0;
+	width: 94%;
+	padding: 0 26rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	z-index: 1;
+}
+.map_sou_left{
+	width: 62rpx;
+	height: 60rpx;
+	background: #FFFFFF;
+	border-radius: 10rpx;
+	text-align: center;
+}
+.sou_img{
+	width: 22rpx;
+	height: 22rpx;
+}
+.sou_img image{
+	width: 100%;
+	height: 100%;
+}
+.map_tit{
+	color: #C90009;
+	font-size: 20rpx;
+	margin-top: 18rpx;
+}
+.shop_sousu{
+	 position: relative;
+	 width: 87%;
+	 height: 60rpx;
+	 background: #F3F3F3;
+	 border-radius: 10rpx;
+}
+.shop_sousu_img{
+	width: 32rpx;
+	height: 32rpx;
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+.shop_sousu_img image{
+	width: 100%;
+	height: 100%;
+}
+.shop_sousu input{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 24rpx;
+	color: #999999;
+	border-radius: 10rpx;
+	background: #FFFFFF;
+}
+

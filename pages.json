@@ -4,20 +4,158 @@
             "path" : "pages/index/index",
             "style": {
 				"navigationBarTitleText": "九华首页"
+				// "navigationStyle":"custom"
             }
-        }
-        ,{
+        },{
             "path" : "pages/business/index",
             "style": {
             	"navigationBarTitleText": "智慧商业"
             }
-        }
-        ,{
+        },{
             "path" : "pages/user/index",
             "style": {
             	"navigationBarTitleText": "我的九华"
             }
-        }
+        },{
+		    "path" : "pages/user/login/home_page",
+		    "style": {
+		    	"navigationStyle":"custom"
+		    }
+		},{
+		    "path" : "pages/user/login/member_login",
+		    "style": {
+		    	"navigationBarTitleText": "会员登陆",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/staff_login",
+		    "style": {
+		    	"navigationBarTitleText": "员工通道",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/code_login",
+		    "style": {
+		    	"navigationBarTitleText": "验证码登陆",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/merchant_register",
+		    "style": {
+		    	"navigationBarTitleText": "商户注册",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/change_password",
+		    "style": {
+		    	"navigationBarTitleText": "忘记密码",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/index/indexnav1/wisdomIndex",
+		    "style": {
+				"navigationBarTitleText": "智@九华",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+            "path" : "pages/index/indexnav1/supermarket/supermarket",
+            "style" : {
+				"navigationBarTitleText": "无人超市",
+				"navigationBarBackgroundColor":"#fff"
+			}
+        },{
+		    "path" : "pages/index/indexnav1/supermarket/details",
+		    "style" : {
+				"navigationBarTitleText": "无人超市",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav1/supermarket/map",
+		    "style" : {
+				"navigationBarTitleText": "地图",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav5/food",
+		    "style": {
+				"navigationBarTitleText": "食@九华",
+				"navigationBarBackgroundColor":"#ff4c4c"
+			}
+		},{
+            "path" : "pages/index/indexnav5/supermarket/supermarket",
+            "style" : {
+				"navigationBarTitleText": "美天菜场",
+				"navigationBarBackgroundColor":"#fff"
+			}
+        },{
+		    "path" : "pages/index/indexnav5/supermarket/details",
+		    "style" : {
+				"navigationBarTitleText": "美天菜场",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+            "path" : "pages/index/indexnav2/index",
+            "style" : {
+				"navigationBarTitleText": "循@九华",
+				"navigationBarBackgroundColor":"#fff"
+			}
+        },{
+            "path" : "pages/index/indexnav2/regenerate",
+            "style" : {
+				"navigationBarTitleText": "再生资源科普",
+				"navigationBarBackgroundColor":"#6fc562",
+				"navigationBarTextStyle":"#fff",
+				"backgroundColor":"#6fc562"
+			}
+        },{
+            "path" : "pages/index/indexnav2/articleInner",
+            "style" : {
+				"navigationBarTitleText": "再生资源科普",
+				"navigationBarBackgroundColor":"#fff"
+			}
+        },{
+		    "path" : "pages/index/indexnav2/videoInner",
+		    "style" : {
+				"navigationBarTitleText": "再生资源科普",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav2/complaint",
+		    "style" : {
+				"navigationBarTitleText": "投诉建议",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+            "path" : "pages/index/indexnav3/live_box",
+            "style": {
+            	"navigationBarTitleText": "住@九华"
+            }
+        },{
+			"path" : "pages/index/indexnav3/live_inner",
+			"style": {
+				"navigationBarTitleText": "热门门店"
+			}
+		},{
+			"path" : "pages/index/indexnav4/edge_hua",
+			"style": {
+				"navigationBarTitleText": "缘@九华"
+			}
+		},{
+			"path" : "pages/index/indexnav4/shop_show",
+			"style": {
+				"navigationBarTitleText": "缘九华楼层"
+			}
+		},{
+			"path" : "pages/index/indexnav4/shop_inner",
+			"style": {
+				"navigationBarTitleText": "缘九华楼层内页"
+			}
+		},{
+			"path" : "pages/index/indexnav4/navigation",
+			"style": {
+				"navigationBarTitleText": "缘九华地图"
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

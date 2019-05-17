@@ -1,4 +1,6 @@
 
+.pages{
+}
 .banner{
 	margin-top: 29rpx;
 	margin-bottom: 50rpx;

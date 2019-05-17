@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var topSearch = function topSearch() {return __webpack_require__.e(/*! import() | components/topSearch */ "components/topSearch").then(__webpack_require__.bind(null, /*! ../../components/topSearch.vue */ "F:\\李亮\\uni-app\\九华\\components\\topSearch.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var topSearch = function topSearch() {return __webpack_require__.e(/*! import() | components/topSearch */ "components/topSearch").then(__webpack_require__.bind(null, /*! ../../components/topSearch.vue */ "F:\\李亮\\uni-app\\九华\\components\\topSearch.vue"));};var _default =
 
 
 
@@ -323,7 +323,13 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   mounted: function mounted() {
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    goClassPages: function goClassPages(url) {
+      uni.navigateTo({
+        url: url });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
