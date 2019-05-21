@@ -96,7 +96,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.logo-bg {
 		width: 100%;
 		height: 878upx;

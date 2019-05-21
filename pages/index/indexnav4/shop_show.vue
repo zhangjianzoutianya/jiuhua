@@ -247,7 +247,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.livr_box{
 		width: 100%;
 	}
@@ -325,7 +325,7 @@
 		width: 100%;
 	}
 	.soping_list_conent{
-		width: 94%;
+		width: 93%;
 		padding: 36upx 26upx;
 		display: flex;
 		justify-content: space-between;
@@ -347,6 +347,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border-radius: 6upx;
 	}
 	.ping_co{
 		width: 108upx;

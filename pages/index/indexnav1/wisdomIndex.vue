@@ -1,28 +1,31 @@
 <template>
 	<view>
+		<view class="banner">
 		<view class="uni-padding-wrap">
 			<view class="page-section swiper">
 				<view class="page-section-spacing">
-					<swiper class="swiper" :circular="circular" :indicator-dots="indicatorDots" :indicator-color="indicatorColor"
-					 :indicator-active-color="indicatorActiveColor" :autoplay="autoplay" :interval="interval" :duration="duration">
+					<swiper class="swiper" :circular="banner.circular" :indicator-dots="banner.indicatorDots" :indicator-color="banner.indicatorColor"
+					 :indicator-active-color="banner.indicatorActiveColor" :autoplay="banner.autoplay" :interval="banner.interval" :duration="banner.duration"
+					 :previous-margin="banner.previousMargin" :next-margin="banner.nextMargin">
 						<swiper-item>
-							<view class="swiper-item uni-bg-red">
+							<view class="swiper-item">
 								<image src="../../../static/index/indexnav1/banner.png" mode=""></image>
 							</view>
 						</swiper-item>
 						<swiper-item>
-							<view class="swiper-item uni-bg-green">
+							<view class="swiper-item">
 								<image src="../../../static/index/indexnav1/banner.png" mode=""></image>
 							</view>
 						</swiper-item>
 						<swiper-item>
-							<view class="swiper-item uni-bg-blue">
+							<view class="swiper-item">
 								<image src="../../../static/index/indexnav1/banner.png" mode=""></image>
 							</view>
 						</swiper-item>
 					</swiper>
 				</view>
 			</view>
+		</view>
 		</view>
 		<view class="unmanned">
 			<view class="unmanned-view" @click="supermarket">
@@ -233,47 +236,55 @@
 	export default {
 		data() {
 			return {
-				background: ['color1', 'color2', 'color3'],
-				indicatorDots: true,
-				circular: true,
-				indicatorColor: "rgb(221,221,221)",
-				indicatorActiveColor: "rgba(201,0,10,1)",
-				autoplay: true,
-				interval: 2000,
-				duration: 500
+				windowW:'',
+				banner:{
+					indicatorDots: true,
+					circular: true,
+					indicatorColor: "rgb(221,221,221)",
+					indicatorActiveColor: "rgba(201,0,10,1)",
+					autoplay: false,
+					interval: 2000,
+					duration: 500,
+					previousMargin:'',
+					nextMargin:'',
+				}
 			}
 		},
+		created(){
+			var _this=this;
+		},
+		mounted(){
+			var _this=this;
+			uni.getSystemInfo({
+				success: function (res) {
+					_this.windowW=res.windowWidth;
+					_this.banner.previousMargin=_this.windowW*30/375;
+					_this.banner.nextMargin=_this.windowW*20/375;
+				}
+			});
+		},
 		methods: {
-			changeIndicatorDots(e) {
-				this.indicatorDots = !this.indicatorDots
-			},
-			changeAutoplay(e) {
-				this.autoplay = !this.autoplay
-			},
 			supermarket() {
 				uni.navigateTo({
 				    url: 'supermarket/supermarket',
 				});
 			},
-
 		}
 	}
 </script>
 
-<style>
-	.swiper {
-		width: 100%;
-		height: 410upx;
+<style scoped>
+	.banner{
+		margin-top: 29upx;
+		margin-bottom: 30upx;
 	}
-
-	.swiper-item {
-		width: 100%;
-		height: 100%;
+	.banner .swiper {
+		height: 380upx;
 	}
 
 	.swiper-item>image {
-		width: 100%;
-		height: 100%;
+		width: 625upx;
+		height: 310upx;
 	}
 
 	.unmanned {
@@ -303,43 +314,43 @@
 
 	.unmanned-text {
 		text-align: center;
+		height: 28upx;
 		font-size: 28upx;
-		font-family: PingFang-SC-Regular;
 		font-weight: 400;
 		color: rgba(51, 51, 51, 1);
 	}
 
 	.sell-like-hot-cakes {
-		width: 698upx;
+		padding: 0 26upx;
 		margin: 0 auto;
-		margin-top: 70upx;
+		margin-top: 75upx;
 	}
 
 	.sell-like-hot-cakes-text {
+		height: 32upx;
 		font-size: 30upx;
-		font-family: PingFang-SC-Medium;
 		font-weight: bold;
 		color: rgba(51, 51, 51, 1);
-		line-height: 33upx;
+		line-height: 32upx;
 	}
 
 	.sell-like-hot-cakes-i {
-		width: 55upx;
-		height: 5upx;
-		margin-top: 10upx;
+		width: 35upx;
+		height: 4upx;
+		margin-top: 8upx;
 		background: rgba(201, 201, 201, 1);
 	}
 
 	.area {
 		margin-top: 32upx;
 		width: 698upx;
+		display: flex;
 	}
 
 	.area-view {
 		width: 226upx;
 		height: 292upx;
 		border-radius: 14upx;
-		float: left;
 		position: relative;
 	}
 
@@ -354,10 +365,9 @@
 
 	.mask {
 		position: absolute;
-		top: 0;
+		bottom: 15upx;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		padding:0 19upx;
 	}
 
 	.ranking {
@@ -367,37 +377,25 @@
 		opacity: 0.8;
 		border-radius: 32upx 0 32upx 0;
 		font-size: 26upx;
-		font-family: SourceHanSansCN-Regular;
-		font-weight: bold;
 		color: rgba(255, 255, 255, 1);
 		line-height: 32upx;
 		padding-left: 10upx;
-		margin-top: 134upx;
-		margin-left: 9upx;
 	}
 
 	.area-text {
-		
-		height: 25upx;
+		height: 27upx;
 		font-size: 26upx;
-		font-family: PingFang-SC-Regular;
-		font-weight: bold;
 		color: rgba(255, 255, 255, 1);
 		line-height: 27upx;
 		margin-top: 50upx;
-		margin-left: 19upx;
 	}
 
 	.area-name {
-		
-		height: 23upx;
+		height: 27upx;
 		font-size: 24upx;
-		font-family: PingFang-SC-Regular;
-		font-weight: bold;
 		color: rgba(255, 255, 255, 1);
 		line-height: 27upx;
 		margin-top: 19upx;
-		margin-left: 19upx;
 	}
 	.check-in {
 		margin-top: 356upx;
@@ -435,7 +433,6 @@
 		width: 60upx;
 		height: 60upx;
 		margin-left: 20upx;
-		
 	}
 	.merchant-img > view {
 		width:100upx;
@@ -460,18 +457,16 @@
 	}
 	.merchant-text1 {
 		margin-top: 50upx;
-		height:29upx;
+		height:30upx;
 		font-size:30upx;
-		font-family:PingFang-SC-Medium;
 		font-weight:bold;
 		color:rgba(51,51,51,1);
-		line-height:47upx;
+		line-height:30upx;
 	}
 	.merchant-text2 {
 		margin-top: 16upx;
-		height:21upx;
+		height:22upx;
 		font-size:22upx;
-		font-family:PingFang-SC-Medium;
 		font-weight:500;
 		color:rgba(153,153,153,1);
 	}
@@ -489,7 +484,6 @@
 		height:23upx;
 		line-height: 23upx;
 		font-size:23upx;
-		font-family:PingFang-SC-Medium;
 		font-weight:500;
 		color:rgba(102,102,102,1);
 	}

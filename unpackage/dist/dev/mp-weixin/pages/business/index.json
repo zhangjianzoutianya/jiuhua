@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "智慧商业",
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "top-search": "/components/topSearch"
+  }
 }

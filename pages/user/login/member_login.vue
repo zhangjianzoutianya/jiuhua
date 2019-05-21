@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view id="app">
 		<view class="logo">
 			<image src="../../../static/user/login/logo1.png" mode=""></image>
 		</view>
@@ -52,7 +52,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	#app {
+		overflow: hidden;
+	}
 	.logo {
 		width: 141upx;
 		height: 125upx;

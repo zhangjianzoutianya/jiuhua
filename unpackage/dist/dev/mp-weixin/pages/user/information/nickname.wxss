@@ -1,0 +1,53 @@
+
+#app.data-v-6a230819 {
+	overflow: hidden;
+}
+.modify.data-v-6a230819 {
+	width: 100%;
+	height: 94rpx;
+	border-bottom: 1rpx solid rgba(228, 228, 228, 1);
+	border-top: 1rpx solid rgba(228, 228, 228, 1);
+}
+.modify-img.data-v-6a230819 {
+	width: 25rpx;
+	height: 25rpx;
+	overflow: hidden;
+	float: right;
+	border-radius: 50%;
+	font-size: 0;
+	text-align: center;
+	line-height: 25rpx;
+
+	margin: 34.5rpx 20rpx;
+}
+.modify-img>image.data-v-6a230819 {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+.modify-input.data-v-6a230819 {
+	width: 500rpx;
+	height: 94rpx;
+	margin-left: 26rpx;
+	overflow: hidden;
+}
+.modify-input>input.data-v-6a230819 {
+	width: 500rpx;
+	height: 94rpx;
+	font-size: 28rpx;
+	font-family: PingFang-SC-Regular;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 94rpx;
+}
+.modify-text.data-v-6a230819 {
+	width: 100%;
+	height: 94rpx;
+	font-size:26rpx;
+	font-family:PingFang-SC-Regular;
+	font-weight:bold;
+	color:rgba(153,153,153,1);
+	line-height:94rpx;
+	padding-left: 26rpx;
+}
+

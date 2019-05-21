@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view id="app">
 		<view class="change-password">
 			<view class="user-view">
 				<view class="user-img">
@@ -57,7 +57,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	#app {
+		overflow: hidden;
+	}
 	.logo {
 		width: 141upx;
 		height: 125upx;

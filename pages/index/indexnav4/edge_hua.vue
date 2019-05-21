@@ -77,11 +77,14 @@
 					<scroll-view class="scroll-view_H" scroll-x="true">
 						<view class="scroll-view-item_P">
 							<view class="scroll-view-item_H">
-								<image src="../../../static/index/banner_live3.png" mode=""></image>
+								<view class="img_opi">
+									<image src="../../../static/index/banner_live3.png" mode=""></image>
+									<text>￥39899元/月起</text>
+								</view>
 								<view class="tet_atore">香奈儿集团杭州大江东义蓬街道...</view>
 								<view class="tet_atore_img">
 									<view class="tsore_img">
-										<image src="../../../static/index/gen3.png" mode=""></image>
+										<image src="../../../static/index/gen3.png" mode=""></image>										
 									</view>
 									<text>上海市浦东新区乔安路299号</text>
 								</view>
@@ -94,7 +97,10 @@
 						</view>					
 					    <view class="scroll-view-item_P">
 							<view class="scroll-view-item_H">
-								<image src="../../../static/index/banner_live4.png" mode=""></image>
+								<view class="img_opi">
+									<image src="../../../static/index/banner_live3.png" mode=""></image>
+									<text>￥39899元/月起</text>
+								</view>
 								<view class="tet_atore">香奈儿集团杭州大江东义蓬街道...</view>
 								<view class="tet_atore_img">
 									<view class="tsore_img">
@@ -111,7 +117,10 @@
 						</view>
 					    <view class="scroll-view-item_P">
 							<view class="scroll-view-item_H">
-								<image src="../../../static/index/banner_live5.png" mode=""></image>
+								<view class="img_opi">
+									<image src="../../../static/index/banner_live3.png" mode=""></image>
+									<text>￥39899元/月起</text>
+								</view>
 								<view class="tet_atore">香奈儿集团杭州大江东义蓬街道...</view>
 								<view class="tet_atore_img">
 									<view class="tsore_img">
@@ -185,7 +194,7 @@ export default {
 	
 </script>
 
-<style>
+<style scoped>
 	.livr_box{
 		padding: 0 26upx;
 	}
@@ -212,6 +221,7 @@ export default {
 		margin-bottom: 39upx;
 		display: flex;
 		justify-content: space-between;
+		font-weight: 550;
 	}
 	.box_conent{
 		font-size: 24upx;
@@ -284,7 +294,7 @@ export default {
 		line-height: 24upx;
 	}
 	.edge_lis_img{
-		width: 67upx;
+		width: 70upx;
 		height: 79upx;
 	}
 	.edge_lis_img image{
@@ -298,6 +308,7 @@ export default {
 	}
 	.colo_opi text{
 		margin-right: 20upx;
+		letter-spacing: 2upx;
 	}
 	.edge_title{
 		margin-bottom: 22upx;
@@ -322,10 +333,23 @@ export default {
 	.tet_atore_img text{
 		margin-left: 8upx;
 		font-size: 20upx;
+		margin-top: -4upx;
 	}
 	.tsore_img{
 		width: 22upx;
 		height: 25upx;
+	}
+	.img_opi{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	.img_opi text{
+		position: absolute;
+		bottom: 6%;
+		right: 5%;
+		color: #FFFFFF;
+		font-size: 28upx;
 	}
 	.tsore_img image{
 		width: 100%;
@@ -337,15 +361,16 @@ export default {
 		flex-wrap: wrap;
 	}
 	.tetore_ul text{
-		font-size: 18upx;
+		font-size: 20upx;
 		color: #999999;
-		padding: 6upx 16upx;
+		padding: 8upx 16upx;
 		margin-right: 14upx;
 		background: #F7F7F7;
 	}
 	.activity_center{
 		width: 100%;
 		margin-top: 77upx;
+		margin-bottom: 30upx;
 	}
 	.activity_lisy_img{
 		width: 100%;

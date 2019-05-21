@@ -1,10 +1,10 @@
 
-.choice {
+.choice.data-v-7aeb0417 {
 	background-color: #fff;
 	padding: 20rpx;
 	font-size: 28rpx;
 }
-.addList {
+.addList.data-v-7aeb0417 {
 	height: 570rpx;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -16,21 +16,21 @@
 	padding: 200rpx 0;
 	font-size: 28rpx;
 }
-.addList view {
+.addList view.data-v-7aeb0417 {
 	height: 70rpx;
 	line-height: 70rpx;
 }
-.addList::-webkit-scrollbar {
+.addList.data-v-7aeb0417::-webkit-scrollbar {
 	display: none
 }
-.addList view::-webkit-scrollbar {
+.addList view.data-v-7aeb0417::-webkit-scrollbar {
 	display: none
 }
-.check {
+.check.data-v-7aeb0417 {
 	color: #fff;
 	background-color: #bd1e2c;
 }
-.jm-modal {
+.jm-modal.data-v-7aeb0417 {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -53,13 +53,13 @@
 	transition: all 0.3s ease-in-out 0s;
 	pointer-events: none;
 }
-.jm-modal::before {
+.jm-modal.data-v-7aeb0417::before {
 	content: "\200B";
 	display: inline-block;
 	height: 100%;
 	vertical-align: middle;
 }
-.show1 {
+.show1.data-v-7aeb0417 {
 	opacity: 1;
 	-webkit-transition-duration: 0.3s;
 	     -o-transition-duration: 0.3s;
@@ -71,7 +71,7 @@
 	overflow-y: auto;
 	pointer-events: auto;
 }
-.dialog {
+.dialog.data-v-7aeb0417 {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
@@ -84,11 +84,11 @@
 	border-radius: 10rpx;
 	overflow: hidden;
 }
-.action {
+.action.data-v-7aeb0417 {
 	position: absolute;
 	right: 30rpx;
 }
-.content {
+.content.data-v-7aeb0417 {
 	position: absolute;
 	text-align: center;
 	width: calc(100% - 340rpx);
@@ -107,7 +107,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 }
-.showBox {
+.showBox.data-v-7aeb0417 {
 	background-color: #fff;
 	display: -webkit-box;
 	display: -webkit-flex;

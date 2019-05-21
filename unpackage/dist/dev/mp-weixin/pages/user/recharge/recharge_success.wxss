@@ -1,0 +1,40 @@
+
+#app.data-v-0018404a {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.complete.data-v-0018404a {
+	width: 268rpx;
+	height: 248rpx;
+	margin: 0 auto;
+	margin-top: 140rpx;
+}
+.complete>image.data-v-0018404a {
+	width: 100%;
+	height: 100%;
+}
+.complete-text.data-v-0018404a {
+	width: 100%;
+	height: 142rpx;
+	text-align: center;
+	line-height: 142rpx;
+	font-size: 34rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.complete-btn.data-v-0018404a {
+	width: 397rpx;
+	height: 62rpx;
+	background: rgba(201, 0, 9, 1);
+	border-radius: 31rpx;
+	margin: 20rpx auto;
+	font-size: 28rpx;
+	text-align: center;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	line-height: 62rpx;
+}
+

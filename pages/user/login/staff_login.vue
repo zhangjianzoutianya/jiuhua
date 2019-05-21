@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view id="app">
 		<view class="logo">
 			<image src="../../../static/user/login/logo1.png" mode=""></image>
 		</view>
@@ -57,7 +57,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	#app {
+		overflow: hidden;
+	}
 	.logo {
 		width: 141upx;
 		height: 125upx;
@@ -150,7 +153,7 @@
 		font-family: PingFang-SC-Medium;
 		font-weight: 500;
 		color: rgba(200, 1, 11, 1);
-		width: 160upx;
+		width: 631upx;
 		float: right;
 		text-align: right;
 	}

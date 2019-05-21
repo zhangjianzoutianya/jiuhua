@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "top-search": "/components/topSearch"
+  },
+  "component": true
+}

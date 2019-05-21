@@ -355,7 +355,7 @@
 	];
 </script>
 
-<style>
+<style scoped>
 	.choice {
 		background-color: #fff;
 		padding: 20upx;

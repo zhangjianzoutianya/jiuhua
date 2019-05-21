@@ -29,7 +29,7 @@
 				<image  src="../../../static/index/sec2_1.png" mode=""></image>
 				<view class="text">再生科普</view>
 			</view>
-			<view class="sec2_fex_list">
+			<view class="sec2_fex_list" @click="goMsg('circulation_station')">
 				<image src="../../../static/index/sec2_2.png" mode=""></image>
 				<view class="text">附近循环站</view>
 			</view>
@@ -114,7 +114,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.swiper {
 		width: 100%;
 		height: 328upx;

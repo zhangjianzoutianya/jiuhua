@@ -1,0 +1,291 @@
+
+#app.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+}
+#app>image.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+}
+.horizontal-bar.data-v-c78c23a8 {
+		width: 667rpx;
+		height: 38rpx;
+		position: absolute;
+		bottom: 601rpx;
+		left: 41.5rpx;
+		background: rgba(255, 69, 76, 1);
+		border-radius: 19rpx;
+}
+.horizontal-bar>view.data-v-c78c23a8 {
+		width: 635rpx;
+		height: 14rpx;
+		margin: 0 auto;
+		margin-top: 18rpx;
+		background: rgba(229, 24, 32, 1);
+}
+.detailed.data-v-c78c23a8 {
+		width: 635rpx;
+		height: 555rpx;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 0px 0rpx 20rpx 20rpx;
+		position: absolute;
+		left: 57.5rpx;
+		bottom: 58rpx;
+		overflow: hidden;
+}
+.detailed-title.data-v-c78c23a8 {
+		width: 632rpx;
+		height: 111rpx;
+		background: rgba(255, 245, 246, 1);
+		overflow: hidden;
+}
+.detailed-title>view.data-v-c78c23a8 {
+		width: 470rpx;
+		height: 64rpx;
+		background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 70, 77, 1)), to(rgba(255, 121, 69, 1)));
+		background: -o-linear-gradient(bottom, rgba(255, 70, 77, 1) 0%, rgba(255, 121, 69, 1) 100%);
+		background: linear-gradient(0deg, rgba(255, 70, 77, 1) 0%, rgba(255, 121, 69, 1) 100%);
+		border-radius: 32rpx;
+		font-size: 30rpx;
+		font-family: PingFang-SC-Medium;
+		font-weight: 500;
+		color: rgba(255, 245, 246, 1);
+		text-align: center;
+		line-height: 64rpx;
+		margin: 23rpx auto;
+}
+.days.data-v-c78c23a8 {
+		width: 100%;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		overflow: hidden;
+}
+.days1.data-v-c78c23a8 {
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+}
+.days1>view.data-v-c78c23a8:nth-child(1) {
+		text-align: center;
+		font-size: 80rpx;
+		font-family: PingFang-SC-Heavy;
+		font-weight: 800;
+		color: rgba(229, 24, 32, 1);
+		margin-top: 25rpx;
+		margin-bottom: 10rpx;
+		overflow: hidden;
+}
+.days1>view.data-v-c78c23a8:nth-child(2) {
+		font-size: 24rpx;
+		font-family: PingFang-SC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+		text-align: center;
+}
+.date-view.data-v-c78c23a8 {
+		width: 100%;
+		overflow: hidden;
+		padding-left: 26rpx;
+		padding-top: 48rpx;
+}
+.date-view>view.data-v-c78c23a8 {
+		float: left;
+}
+.date1.data-v-c78c23a8 {
+		overflow: hidden;
+		width: 52rpx;
+}
+.date2.data-v-c78c23a8 {
+		width: 48rpx;
+		height: 48rpx;
+		border: 1rpx solid rgba(153, 153, 153, 1);
+		border-radius: 50%;
+		overflow: hidden;
+		font-size: 24rpx;
+		font-family: PingFang-SC-Medium;
+		font-weight: 500;
+		text-align: center;
+		line-height: 48rpx;
+}
+.date6.data-v-c78c23a8 {
+		width: 52rpx;
+		height: 52rpx;
+
+		border-radius: 50%;
+		overflow: hidden;
+}
+.date6>image.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+}
+.date3.data-v-c78c23a8 {
+		font-size: 20rpx;
+		font-family: PingFang-SC-Medium;
+		font-weight: 500;
+		color: rgba(153, 153, 153, 1);
+		text-align: center;
+}
+.date4.data-v-c78c23a8 {
+		width: 29rpx;
+		height: 2rpx;
+		margin: 24rpx 5rpx;
+		background-color: rgba(153, 153, 153, 1);
+}
+.date5.data-v-c78c23a8 {
+		width: 29rpx;
+		height: 2rpx;
+		background-color: rgba(229, 24, 32, 1);
+}
+.sign-in.data-v-c78c23a8 {
+		width: 200rpx;
+		height: 58rpx;
+		background: rgba(255, 104, 75, 1);
+		border-radius: 29rpx;
+		font-size: 32rpx;
+		font-family: PingFang-SC-Medium;
+		font-weight: 500;
+		color: rgba(255, 255, 255, 1);
+		text-align: center;
+		line-height: 58rpx;
+		margin: 0 auto;
+		margin-top: 63rpx;
+}
+.popup.data-v-c78c23a8 {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 20;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-view.data-v-c78c23a8 {
+		width: 520rpx;
+		height: 733rpx;
+		position: absolute;
+		left: 53.5%;
+		top: 40%;
+		-webkit-transform: translate(-50%, -50%);
+		    -ms-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+		overflow: hidden;
+}
+.popup-view>view.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+}
+.panel.data-v-c78c23a8 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 30;
+		width: 470rpx;
+		height: 532rpx;
+		overflow: hidden;
+		border-radius: 8rpx;
+}
+.panel>image.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+}
+.panel-title.data-v-c78c23a8 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 50;
+		width: 470rpx;
+		height: 432rpx;
+}
+.panel-title1.data-v-c78c23a8 {
+		font-size:60rpx;
+font-family:PingFang-SC-Heavy;
+font-weight:800;
+color:rgba(229,24,32,1);
+text-shadow:0rpx 5rpx 9rpx rgba(210,110,2,0.7);
+
+background:-webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,1)), to(rgba(255,229,204,1)));
+
+background:-o-linear-gradient(top,rgba(255,255,255,1) 0%, rgba(255,229,204,1) 100%);
+
+background:linear-gradient(180deg,rgba(255,255,255,1) 0%, rgba(255,229,204,1) 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+text-align: center;
+margin-top: 30rpx;
+}
+.panel-title2.data-v-c78c23a8 {
+		width:330rpx;
+font-size:28rpx;
+margin: 0 auto;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(255,255,255,1);
+line-height:45rpx;
+text-align: center;
+margin-top: 60rpx;
+}
+.panel-title3.data-v-c78c23a8 {
+		width:200rpx;
+height:58rpx;
+border:1rpx solid rgba(255,255,255,1);
+border-radius:29rpx;
+margin: 0 auto;
+font-size:32rpx;
+line-height: 58rpx;
+text-align: center;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(255,255,255,1);
+margin-top: 50rpx;
+}
+.calendar.data-v-c78c23a8 {
+		position: absolute;
+		top: 0;
+		left: 13rpx;
+		z-index: 40;
+		width: 409rpx;
+		height: 398rpx;
+		overflow: hidden;
+}
+.calendar>image.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+}
+.count.data-v-c78c23a8 {
+		width: 100rpx;
+		height: 80rpx;
+		position: absolute;
+		top: 160rpx;
+		left: 160rpx;
+		z-index: 60;
+		text-align: center;
+		overflow: hidden;
+		font-size: 59rpx;
+		font-family: PingFang-SC-Medium;
+		font-weight: 500;
+		color: rgba(229, 24, 32, 1);
+		-webkit-transform: rotate(15deg);
+		    -ms-transform: rotate(15deg);
+		        transform: rotate(15deg);
+}
+.fork.data-v-c78c23a8 {
+		width: 50rpx;
+		height: 50rpx;
+		position: absolute;
+		top: 120rpx;
+		right: 0;
+		z-index: 70;
+		overflow: hidden;
+}
+.fork > image.data-v-c78c23a8 {
+		width: 100%;
+		height: 100%;
+}
+

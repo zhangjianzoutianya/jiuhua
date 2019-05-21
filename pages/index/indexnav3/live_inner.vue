@@ -9,12 +9,12 @@
 					龙湖九华杭州大江东岸紫去...
 				</view>
 				<view class="popular_title_right">
-					￥26-28
+					￥26-28万/年
 				</view>
 			</view>
 			<view class="popular_botom">
 				<text class="potom">4种房型</text>
-				<text class="potom_a">45-52m</text>
+				<text class="potom_a">45-52m <text>2</text></text>
 			</view>
 		</view>	
 		<view class="address">
@@ -127,7 +127,7 @@
 
 </script>
 
-<style>
+<style scoped>
 	.livr_box{
 		padding: 0 26upx;
 	}
@@ -218,6 +218,7 @@
 	}
 	.apartment_dplay{
 		width: 100%;
+		margin-bottom: 60upx;
 	}
 	.apartment_dplay_top{
 		font-size: 32upx;
@@ -306,7 +307,7 @@
 		width: 150upx;
 		height: 70upx;
 		border: 1upx solid #999999;
-		border-radius: 20upx;
+		border-radius: 50upx;
 		color: #666666;
 		font-size: 24upx;
 		margin-right: 30upx;
@@ -327,7 +328,7 @@
 		width: 270upx;
 		height: 70upx;
 		background: #C90009;
-		border-radius: 20upx;
+		border-radius: 50upx;
 		display: flex;
 		color: #FFFFFF;
 		font-size: 28upx;
@@ -345,5 +346,13 @@
 	.fied_list_img1>image{
 		width: 100%;
 		height: 100%;
+	}
+	.potom_a {
+		position: relative;
+	}
+	.potom_a text{
+		position: absolute;
+		top: -4upx;
+		right: -15upx;
 	}
 </style>

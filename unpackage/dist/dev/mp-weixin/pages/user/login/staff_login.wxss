@@ -1,5 +1,8 @@
 
-.logo {
+#app.data-v-47d0e3a8 {
+	overflow: hidden;
+}
+.logo.data-v-47d0e3a8 {
 	width: 141rpx;
 	height: 125rpx;
 	margin-top: 100rpx;
@@ -7,34 +10,34 @@
 	overflow: hidden;
 	margin-bottom: 68rpx;
 }
-.logo>image {
+.logo>image.data-v-47d0e3a8 {
 	width: 100%;
 	height: 100%;
 }
-.user-view {
+.user-view.data-v-47d0e3a8 {
 	width: 630rpx;
 	height: 106rpx;
 	margin: 0 auto;
 	overflow: hidden;
 	border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
-.user-img {
+.user-img.data-v-47d0e3a8 {
 	width: 34rpx;
 	height: 39rpx;
 	margin-top: 33rpx;
 	margin-right: 36rpx;
 	float: left;
 }
-.user-img>image {
+.user-img>image.data-v-47d0e3a8 {
 	width: 100%;
 	height: 100%;
 }
-.user-input {
+.user-input.data-v-47d0e3a8 {
 	width: 360rpx;
 	height: 106rpx;
 	overflow: hidden;
 }
-.user-input>input {
+.user-input>input.data-v-47d0e3a8 {
 	width: 360rpx;
 	height: 106rpx;
 
@@ -44,7 +47,7 @@
 	font-weight: 500;
 	color: rgba(153, 153, 153, 1);
 }
-.code {
+.code.data-v-47d0e3a8 {
 	width: 150rpx;
 	float: right;
 	text-align: right;
@@ -55,7 +58,7 @@
 	font-weight: 400;
 	color: rgba(200, 0, 10, 1);
 }
-.login {
+.login.data-v-47d0e3a8 {
 	width: 631rpx;
 	height: 80rpx;
 	background: rgba(200, 0, 10, 1);
@@ -70,45 +73,45 @@
 	color: rgba(255, 255, 255, 1);
 	margin-top: 72rpx;
 }
-.job-number {
+.job-number.data-v-47d0e3a8 {
 	width: 631rpx;
 	overflow: hidden;
 	margin: 0 auto;
 	margin-top: 20rpx;
 }
-.job {
+.job.data-v-47d0e3a8 {
 	font-size: 22rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(200, 1, 11, 1);
-	width: 160rpx;
+	width: 631rpx;
 	float: right;
 	text-align: right;
 }
-.weixin {
+.weixin.data-v-47d0e3a8 {
 	width: 100%;
 	overflow: hidden;
 	margin-top: 58rpx;
 }
-.weixin-text {
+.weixin-text.data-v-47d0e3a8 {
 	font-size: 28rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(204, 204, 204, 1);
 	text-align: center;
 }
-.weixin-inco {
+.weixin-inco.data-v-47d0e3a8 {
 	width: 83rpx;
 	height: 83rpx;
 	margin: 0 auto;
 	overflow: hidden;
 	margin-top: 38rpx;
 }
-.weixin-inco>image {
+.weixin-inco>image.data-v-47d0e3a8 {
 	width: 100%;
 	height: 100%;
 }
-.statement {
+.statement.data-v-47d0e3a8 {
 	width: 100%;
 	font-size: 24rpx;
 	font-family: PingFang-SC-Medium;
@@ -117,7 +120,7 @@
 	text-align: center;
 	margin-top: 82rpx;
 }
-.statement>text {
+.statement>text.data-v-47d0e3a8 {
 	color: rgba(200, 0, 10, 1);
 }
 

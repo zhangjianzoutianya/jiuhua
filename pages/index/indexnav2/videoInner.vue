@@ -106,7 +106,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.sec-inner{
 		width: 698upx;
 		margin: 0 auto;

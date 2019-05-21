@@ -239,7 +239,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.uni-padding-wrap {
 		width: 100%;
 		height: 414upx;
@@ -342,12 +342,11 @@
 
 	.mask {
 		position: absolute;
-		top: 0;
+		bottom: 15upx;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		padding:0 19upx;
 	}
-
+	
 	.ranking {
 		width: 99upx;
 		height: 32upx;
@@ -355,37 +354,25 @@
 		opacity: 0.8;
 		border-radius: 32upx 0 32upx 0;
 		font-size: 26upx;
-		font-family: SourceHanSansCN-Regular;
-		font-weight: bold;
 		color: rgba(255, 255, 255, 1);
 		line-height: 32upx;
 		padding-left: 10upx;
-		margin-top: 134upx;
-		margin-left: 9upx;
 	}
-
+	
 	.area-text {
-		
-		height: 25upx;
+		height: 27upx;
 		font-size: 26upx;
-		font-family: PingFang-SC-Regular;
-		font-weight: bold;
 		color: rgba(255, 255, 255, 1);
 		line-height: 27upx;
 		margin-top: 50upx;
-		margin-left: 19upx;
 	}
-
+	
 	.area-name {
-		
-		height: 23upx;
+		height: 27upx;
 		font-size: 24upx;
-		font-family: PingFang-SC-Regular;
-		font-weight: bold;
 		color: rgba(255, 255, 255, 1);
 		line-height: 27upx;
 		margin-top: 19upx;
-		margin-left: 19upx;
 	}
 	.check-in {
 		margin-top: 356upx;

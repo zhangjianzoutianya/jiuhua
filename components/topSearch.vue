@@ -33,7 +33,7 @@
 	}	
 </script>
 
-<style>
+<style scoped>
 	.top_search{
 		width: 497upx;
 		padding: 10upx 87upx 10upx 166upx;

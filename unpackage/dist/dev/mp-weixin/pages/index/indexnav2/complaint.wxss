@@ -1,15 +1,15 @@
 
-.sec-inner{
+.sec-inner.data-v-0cbbb0f8{
 	width: 699rpx;
 	margin: 0 auto;
 }
-.sec1{
+.sec1.data-v-0cbbb0f8{
 	margin-top:30rpx;
 }
-.texa{
+.texa.data-v-0cbbb0f8{
 	position: relative;
 }
-.texa textarea{
+.texa textarea.data-v-0cbbb0f8{
 	width: 699rpx;
 	height: 321rpx;
 	padding: 19rpx;
@@ -23,7 +23,7 @@
 	line-height: 1.5;
 	letter-spacing: 1rpx;
 }
-.texa-abs{
+.texa-abs.data-v-0cbbb0f8{
 	position: absolute;
 	bottom: 19rpx;
 	right: 19rpx;
@@ -32,7 +32,7 @@
 	font-weight:400;
 	color:rgba(153,153,153,1);
 }
-.btn{
+.btn.data-v-0cbbb0f8{
 	margin-top: 100rpx;
 	width:699rpx;
 	height:80rpx;

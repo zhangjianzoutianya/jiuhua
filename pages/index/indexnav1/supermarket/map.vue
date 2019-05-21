@@ -99,7 +99,7 @@
 		data() {
 			return {
 				title: 'map',
-				scale: 7,
+				scale: 0,
 				id: 1,
 				latitude: 39.909,
 				longitude: 116.39742,
@@ -107,42 +107,64 @@
 						id: 0,
 						latitude: 39.909,
 						longitude: 116.39742,
+						width: 23,
+						height: 28,
 						iconPath: '../../../../static/index/indexnav1/positioning5.png'
 					}, {
 						id: 1,
 						latitude: 37.909,
 						longitude: 116.39742,
+						width: 23,
+						height: 28,
 						iconPath: '../../../../static/index/indexnav1/positioning5.png'
 					}, {
 						id: 2,
 						latitude: 36.909,
 						longitude: 116.39742,
+						width: 23,
+						height: 28,
 						iconPath: '../../../../static/index/indexnav1/positioning5.png'
 					},
 					{
 						id: 3,
 						latitude: 38.909,
 						longitude: 115.39742,
+						width: 23,
+						height: 28,
 						iconPath: '../../../../static/index/indexnav1/positioning5.png'
 					}, {
 						id: 4,
 						latitude: 37.909,
 						longitude: 115.39742,
+						width: 23,
+						height: 28,
 						iconPath: '../../../../static/index/indexnav1/positioning5.png'
 					}
 				],
-
+				
 			}
 		},
 		methods: {
 			markertap(e) {
 				console.log(e.markerId);
 			}
-		}
+		},
+		onLoad() {
+			var _this = this;
+			
+			// #ifdef H5
+			_this.scale = 6;
+			// #endif
+			
+			// #ifndef H5
+			_this.scale = 7;
+			// #endif
+			
+		},
 	}
 </script>
 
-<style>
+<style scoped>
 	.map {
 		width: 750upx;
 		height: 835upx;
@@ -160,7 +182,8 @@
 		overflow-y: scroll;
 	}
 	/* #endif */
-	/* #ifdef MP-WEIXIN */
+	
+	/* #ifndef H5 */
 	.comm {
 		width: 100%;
 		overflow: hidden;

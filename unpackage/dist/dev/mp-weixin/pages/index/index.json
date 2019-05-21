@@ -1,6 +1,4 @@
 {
-  "navigationBarTitleText": "九华首页",
-  "usingComponents": {
-    "top-search": "/components/topSearch"
-  }
+  "navigationStyle": "custom",
+  "usingComponents": {}
 }

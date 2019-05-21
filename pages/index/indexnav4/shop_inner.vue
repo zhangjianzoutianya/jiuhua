@@ -130,7 +130,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 	.group_box{
 		width: 100%;
 	}
@@ -326,7 +326,7 @@
 		width: 150upx;
 		height: 70upx;
 		border: 1upx solid #999999;
-		border-radius: 20upx;
+		border-radius: 50upx;
 		color: #666666;
 		font-size: 24upx;
 		margin-right: 30upx;
@@ -347,7 +347,7 @@
 		width: 270upx;
 		height: 70upx;
 		background: #C90009;
-		border-radius: 20upx;
+		border-radius: 50upx;
 		display: flex;
 		color: #FFFFFF;
 		font-size: 28upx;

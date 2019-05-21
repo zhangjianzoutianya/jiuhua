@@ -159,7 +159,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.search {
 		width: 698upx;
 		height: 60upx;

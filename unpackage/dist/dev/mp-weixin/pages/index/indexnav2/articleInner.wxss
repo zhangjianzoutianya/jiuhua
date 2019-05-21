@@ -1,9 +1,9 @@
 
-.sec-inner{
+.sec-inner.data-v-c4e57792{
 	width: 699rpx;
 	margin: 0 auto;
 }
-.art-tit{
+.art-tit.data-v-c4e57792{
 	margin-top: 40rpx;
 	font-size:30rpx;
 	font-family:PingFang-SC-Bold;
@@ -12,38 +12,38 @@
 	line-height:1;
 	letter-spacing: 1rpx;
 }
-.art-tit2{
+.art-tit2.data-v-c4e57792{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	margin-top: 40rpx;
 }
-.art-tit2 text{
+.art-tit2 text.data-v-c4e57792{
 	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(153,153,153,1);
 	margin-right: 30rpx;
 }
-.art-content{
+.art-content.data-v-c4e57792{
 	margin-top: 40rpx;
 }
-.art-content-inner1{
+.art-content-inner1.data-v-c4e57792{
 	font-size:26rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(51,51,51,1);
 	line-height:1.5;
 }
-.art-content-inner2{
+.art-content-inner2.data-v-c4e57792{
 	margin-top: 40rpx;
 }
-.art-content-inner2 .art-content-inner2-img{
+.art-content-inner2 .art-content-inner2-img.data-v-c4e57792{
 	width: 699rpx;
 	height: 281rpx;
 }
-.art-content-inner3 .text{
+.art-content-inner3 .text.data-v-c4e57792{
 	font-size:26rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
@@ -52,12 +52,12 @@
 	text-indent: 2em;
 	margin-top: 40rpx;
 }
-.sec2{
+.sec2.data-v-c4e57792{
 	margin-top: 40rpx;
 	padding: 40rpx 0;
 	border-top: 1px solid rgba(241,241,241,1);
 }
-.sec2-inner{
+.sec2-inner.data-v-c4e57792{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -72,7 +72,7 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-.ipt input{
+.ipt input.data-v-c4e57792{
 	width:530rpx;
 	height:49rpx;
 	background:rgba(240,240,240,1);
@@ -83,18 +83,18 @@
 	padding-left: 20rpx;
 	letter-spacing: 2rpx;
 }
-.img1{
+.img1.data-v-c4e57792{
 	position: relative;
 }
-.img1 image{
+.img1 image.data-v-c4e57792{
 	width:31rpx;
 	height:29rpx;
 }
-.img2 image{
+.img2 image.data-v-c4e57792{
 	width:26rpx;
 	height:29rpx;
 }
-.img1-abs{
+.img1-abs.data-v-c4e57792{
 	height: 18rpx;
 	position: absolute;
 	left: 50%;

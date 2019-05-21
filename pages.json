@@ -3,55 +3,14 @@
 		{
             "path" : "pages/index/index",
             "style": {
-				"navigationBarTitleText": "九华首页"
-				// "navigationStyle":"custom"
+				"navigationStyle":"custom"
             }
         },{
             "path" : "pages/business/index",
             "style": {
-            	"navigationBarTitleText": "智慧商业"
+            	"navigationStyle":"custom"
             }
         },{
-            "path" : "pages/user/index",
-            "style": {
-            	"navigationBarTitleText": "我的九华"
-            }
-        },{
-		    "path" : "pages/user/login/home_page",
-		    "style": {
-		    	"navigationStyle":"custom"
-		    }
-		},{
-		    "path" : "pages/user/login/member_login",
-		    "style": {
-		    	"navigationBarTitleText": "会员登陆",
-				"navigationBarBackgroundColor":"#fff"
-		    }
-		},{
-		    "path" : "pages/user/login/staff_login",
-		    "style": {
-		    	"navigationBarTitleText": "员工通道",
-				"navigationBarBackgroundColor":"#fff"
-		    }
-		},{
-		    "path" : "pages/user/login/code_login",
-		    "style": {
-		    	"navigationBarTitleText": "验证码登陆",
-				"navigationBarBackgroundColor":"#fff"
-		    }
-		},{
-		    "path" : "pages/user/login/merchant_register",
-		    "style": {
-		    	"navigationBarTitleText": "商户注册",
-				"navigationBarBackgroundColor":"#fff"
-		    }
-		},{
-		    "path" : "pages/user/login/change_password",
-		    "style": {
-		    	"navigationBarTitleText": "忘记密码",
-				"navigationBarBackgroundColor":"#fff"
-		    }
-		},{
 		    "path" : "pages/index/indexnav1/wisdomIndex",
 		    "style": {
 				"navigationBarTitleText": "智@九华",
@@ -126,6 +85,24 @@
 				"navigationBarBackgroundColor":"#fff"
 			}
 		},{
+		    "path" : "pages/index/indexnav2/garbage_collection",
+		    "style" : {
+				"navigationBarTitleText": "可回收垃圾",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav2/circulation_station",
+		    "style" : {
+				"navigationBarTitleText": "循环站",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav2/station_inner",
+		    "style" : {
+				"navigationBarTitleText": "循环站内页",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
             "path" : "pages/index/indexnav3/live_box",
             "style": {
             	"navigationBarTitleText": "住@九华"
@@ -155,6 +132,171 @@
 			"style": {
 				"navigationBarTitleText": "缘九华地图"
 			}
+		},{
+			"path" : "pages/index/indexnav6/index_neighborhood",
+			"style": {
+				"navigationBarTitleText": "九华比邻"
+			}
+		},{
+			"path" : "pages/index/indexnav6/beauty_shop",
+			"style": {
+				"navigationBarTitleText": "找靓店"
+			}
+		},{
+			"path" : "pages/index/indexnav6/beautyshop_inner",
+			"style": {
+				"navigationBarTitleText": "找靓店内页"
+			}
+		},{
+			"path" : "pages/index/indexnav6/store_details",
+			"style": {
+				"navigationBarTitleText": "店铺详情"
+			}
+		},{
+			"path" : "pages/index/indexnav6/community_business",
+			"style": {
+				"navigationBarTitleText": "社区商业"
+			}
+		},{
+		    "path" : "pages/user/index",
+		    "style": {
+				"navigationStyle":"custom"
+		    }
+		},{
+		    "path" : "pages/user/login/home_page",
+		    "style": {
+		    	"navigationStyle":"custom"
+		    }
+		},{
+		    "path" : "pages/user/login/member_login",
+		    "style": {
+		    	"navigationBarTitleText": "会员登陆",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/staff_login",
+		    "style": {
+		    	"navigationBarTitleText": "员工通道",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/code_login",
+		    "style": {
+		    	"navigationBarTitleText": "验证码登陆",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/merchant_register",
+		    "style": {
+		    	"navigationBarTitleText": "商户注册",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+		    "path" : "pages/user/login/change_password",
+		    "style": {
+		    	"navigationBarTitleText": "忘记密码",
+				"navigationBarBackgroundColor":"#fff"
+		    }
+		},{
+			"path" : "pages/user/member/member",
+			"style": {
+				"navigationBarTitleText": "会员中心"
+			}
+		},{
+			"path" : "pages/user/setUp/set_up",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},{
+			"path" : "pages/user/setUp/bind_cell_phone",
+			"style": {
+				"navigationBarTitleText": "手机号绑定"
+			}
+		},{
+			"path" : "pages/user/information/information",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		},{
+			"path" : "pages/user/information/nickname",
+			"style": {
+				"navigationBarTitleText": "修改昵称"
+			}
+		},{
+			"path" : "pages/user/member/rule",
+			"style": {
+				"navigationBarTitleText": "升级规则"
+			}
+		},{
+			"path" : "pages/user/integral/index",
+			"style": {
+				"navigationBarTitleText": "我的积分"
+			}
+		},{
+			"path" : "pages/user/integral/integral_rule",
+			"style": {
+				"navigationBarTitleText": "我的积分"
+			}
+		},{
+			"path" : "pages/user/integral/sign_in",
+			"style": {
+				"navigationBarTitleText": "签到赚积分"
+			}
+		},{
+			"path" : "pages/user/integral/integral_mall",
+			"style": {
+				"navigationBarTitleText": "积分商城"
+			}
+		},{
+			"path" : "pages/user/integral/exchange_records",
+			"style": {
+				"navigationBarTitleText": "兑换记录"
+			}
+		},{
+			"path" : "pages/user/integral/integral_details",
+			"style": {
+				"navigationBarTitleText": "兑换详情"
+			}
+		},{
+			"path" : "pages/user/integral/integral_handle",
+			"style": {
+				"navigationBarTitleText": "兑换结果"
+			}
+		},{
+			"path" : "pages/user/integral/check_exchange_details",
+			"style": {
+				"navigationBarTitleText": "查看兑换详情"
+			}
+		},{
+			"path" : "pages/user/help/help",
+			"style": {
+				"navigationBarTitleText": "帮助中心"
+			}
+		},{
+			"path" : "pages/user/recharge/balance",
+			"style": {
+				"navigationBarTitleText": "余额"
+			}
+		},{
+			"path" : "pages/user/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充值"
+			}
+		},{
+			"path" : "pages/user/recharge/recharge_success",
+			"style": {
+				"navigationBarTitleText": "充值成功"
+			}
+		},{
+			"path" : "pages/user/recharge/recharge_record",
+			"style": {
+				"navigationBarTitleText": "充值记录"
+			}
+		},{
+			"path" : "pages/user/recharge/coupon",
+			"style": {
+				"navigationBarTitleText": "我的优惠券"
+			}
 		}
     ],
 	"globalStyle": {
@@ -163,28 +305,28 @@
 		"navigationBarBackgroundColor": "#ffffff",
 		"backgroundColor": "#ffffff"
 	},
-	"tabBar": {
-        "color": "#999999",
-        "selectedColor": "#C90009",
-        "borderStyle": "black",
-        "backgroundColor": "#ffffff",
-        "list": [{
-            "pagePath": "pages/index/index",
-            "iconPath": "static/navbar/navbar1_on.png",
-            "selectedIconPath": "static/navbar/navbar1.png",
-            "text": "九华首页"
-        }, {
-            "pagePath": "pages/business/index",
-            "iconPath": "static/navbar/navbar2_on.png",
-            "selectedIconPath": "static/navbar/navbar2.png",
-            "text": "智慧商业"
-        }, {
-            "pagePath": "pages/user/index",
-            "iconPath": "static/navbar/navbar3_on.png",
-            "selectedIconPath": "static/navbar/navbar3.png",
-            "text": "我的九华"
-        }]
-    },
+	// "tabBar": {
+ //        "color": "#999999",
+ //        "selectedColor": "#C90009",
+ //        "borderStyle": "black",
+ //        "backgroundColor": "#ffffff",
+ //        "list": [{
+ //            "pagePath": "pages/index/index",
+ //            "iconPath": "static/navbar/navbar1_on.png",
+ //            "selectedIconPath": "static/navbar/navbar1.png",
+ //            "text": "九华首页"
+ //        }, {
+ //            "pagePath": "pages/business/index",
+ //            "iconPath": "static/navbar/navbar2_on.png",
+ //            "selectedIconPath": "static/navbar/navbar2.png",
+ //            "text": "智慧商业"
+ //        }, {
+ //            "pagePath": "pages/user/index",
+ //            "iconPath": "static/navbar/navbar3_on.png",
+ //            "selectedIconPath": "static/navbar/navbar3.png",
+ //            "text": "我的九华"
+ //        }]
+ //    },
 	"condition" : { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式(list 的索引项)
 		"list": [

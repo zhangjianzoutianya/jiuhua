@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view id="app">
 		<view class="merchant" @click="selectPicturesLogo">
 			<view class="merchant-img">
 				<image :src="selectPictureslogo" mode=""></image>
@@ -137,9 +137,12 @@
 	}
 </script>
 
-<style>
-	page {
+<style scoped>
+
+	#app {
 		background: rgba(238, 238, 238, 1);
+		width: 100%;
+		height: 100%;
 	}
 
 	.merchant {

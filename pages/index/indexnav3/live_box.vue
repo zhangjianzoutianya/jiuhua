@@ -66,6 +66,7 @@
 					<view class="fdplay_conent">
 						<view class="fdplay_conent_img">
 							<image src="../../../static/index/fdplay_conent.png" mode=""></image>
+							<text class="zui_xin">最新</text>
 						</view>	
 						<view class="fdplay_conent_top">
 							 整租-3室1厅1卫
@@ -149,7 +150,7 @@ export default {
 	
 </script>
 
-<style>
+<style scoped>
 	.livr_box{
 		padding: 0 26upx;
 	}
@@ -190,10 +191,10 @@ export default {
 	}
 	.scroll-view-item_P{
 		display: inline-block;
-		width: 70%;
+		width: 60%;
 		height: 300upx;
 		font-size: 36upx;
-		margin-right: 5%;	
+		margin-right: 3%;	
 	}
 	.scroll-view-item_H {
 		display: inline-block;
@@ -204,14 +205,22 @@ export default {
 	.scroll-view-item_P:nth-child(3){
 		margin-right: 0;
 	}
-	.scroll-view-item_H  img{
+	.scroll-view-item_H  image{
 		width: 100%;
+		height: 100%;
 	}
 	.tet_atore{
 		width: 100%;
 		color: #333333;
 		font-size: 24upx;
 		line-height: 24upx;
+		height: 24upx;
+		margin-top: 20upx;
+		overflow: hidden;
+	    text-overflow: ellipsis;
+	    display: -webkit-box;
+	    -webkit-line-clamp: 1;
+	    -webkit-box-orient: vertical;
 	}
 	uni-image{
 		width: 100%;
@@ -221,7 +230,7 @@ export default {
 		width: 30%;
 		line-height: 60upx;
 		border: 1upx solid #C90009;
-		border-radius: 6upx;
+		border-radius: 10upx;
 		font-size: 24upx;
 		color: #C90009;
 		text-align: center;
@@ -258,6 +267,7 @@ export default {
 	.fdplay_conent_img{
 		width: 100%;
 		height: 218upx;
+		position: relative;
 	}
 	.fdplay_conent_img>image{
 		width: 100%;
@@ -283,5 +293,19 @@ export default {
 	}
 	.nent_bot{
 		margin-left: 10%;
+	}
+	.zui_xin{
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: inline-block;
+		width: 78upx;
+		height: 36upx;
+		background: #E2B54E;
+		font-size: 24upx;
+		color: #ffffff;
+		line-height: 36upx;
+		text-align: center;
+		border-top-right-radius: 12upx;
 	}
 </style>

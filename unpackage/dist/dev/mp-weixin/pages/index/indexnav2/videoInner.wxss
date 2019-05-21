@@ -1,18 +1,18 @@
 
-.sec-inner{
+.sec-inner.data-v-b85e83dc{
 	width: 698rpx;
 	margin: 0 auto;
 }
-.sec1{
+.sec1.data-v-b85e83dc{
 	margin-top: 40rpx;
 }
-.sec1-inner .img{
+.sec1-inner .img.data-v-b85e83dc{
 	position: relative;
 	border-radius: 20rpx;
 	overflow: hidden;
 	font-size: 0;
 }
-.sec1-inner .img:after{
+.sec1-inner .img.data-v-b85e83dc:after{
 	content: '';
 	display: block;
 	position: absolute;
@@ -22,11 +22,11 @@
 	bottom: 0;
 	background-color: rgba(0,0,0,0.5);
 }
-.sec1-inner .img .imgR{
+.sec1-inner .img .imgR.data-v-b85e83dc{
 	width: 698rpx;
 	height: 418rpx;
 }
-.imgs-abs{
+.imgs-abs.data-v-b85e83dc{
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -35,29 +35,29 @@
 	        transform: translate(-50%,-50%);
 	z-index: 1;
 }
-.imgs-abs image{
+.imgs-abs image.data-v-b85e83dc{
 	width: 89rpx;
 	height: 89rpx;
 }
-.sec1-inner .tit1{
+.sec1-inner .tit1.data-v-b85e83dc{
 	font-size:30rpx;
 	font-family:PingFang-SC-Bold;
 	font-weight:bold;
 	color:rgba(51,51,51,1);
 	margin-top: 20rpx;
 }
-.sec1-inner .tit2{
+.sec1-inner .tit2.data-v-b85e83dc{
 	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(153,153,153,1);
 	margin-top: 20rpx;
 }
-.sec2{
+.sec2.data-v-b85e83dc{
 	margin-top: 40rpx;
 	position: relative;
 }
-.sec2_abs{
+.sec2_abs.data-v-b85e83dc{
 	width:7rpx;
 	height:30rpx;
 	background:#6FC562;
@@ -65,14 +65,14 @@
 	left: 0;
 	top: 8rpx;
 }
-.sec2-inner .title{
+.sec2-inner .title.data-v-b85e83dc{
 	font-size:32rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(63,63,63,1);
 	letter-spacing: 1rpx;
 }
-.sec2-inner .videoss{
+.sec2-inner .videoss.data-v-b85e83dc{
 	width: 70rpx;
 	height: 28rpx;
 	background: #FF0018;
@@ -84,7 +84,7 @@
 	line-height: 28rpx;
 	border-radius: 5rpx;
 }
-.sec4-content-list{
+.sec4-content-list.data-v-b85e83dc{
 	padding: 40rpx 0;
 	border-top: 1px solid rgba(234,234,234,1);
 	display: -webkit-box;
@@ -92,14 +92,14 @@
 	display: -ms-flexbox;
 	display: flex;
 }
-.sec4-content-list .img{
+.sec4-content-list .img.data-v-b85e83dc{
 	position: relative;
 }
-.sec4-content-list .img image{
+.sec4-content-list .img image.data-v-b85e83dc{
 	width: 261rpx;
 	height: 172rpx;
 }
-.sec4-content-list .title{
+.sec4-content-list .title.data-v-b85e83dc{
 	height:70rpx;
 	font-size:30rpx;
 	font-family:PingFang-SC-Medium;
@@ -108,7 +108,7 @@
 	line-height:1.3;
 	overflow: hidden;
 }
-.sec4-content-list .title2{
+.sec4-content-list .title2.data-v-b85e83dc{
 	margin-top: 15rpx;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -120,7 +120,7 @@
 	        align-items: center;
 	margin-top: 50rpx;
 }
-.sec4-content-list .title2 text{
+.sec4-content-list .title2 text.data-v-b85e83dc{
 	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
@@ -128,7 +128,7 @@
 	margin-right: 15rpx;
 	letter-spacing: 1rpx;
 }
-.sec4-content-list .title2 .title2_1{
+.sec4-content-list .title2 .title2_1.data-v-b85e83dc{
 	font-size: 16rpx;
 	width: 22rpx;
 	height: 22rpx;
@@ -140,13 +140,13 @@
 	border-radius: 5rpx;
 	font-weight: bold;
 }
-.sec4-content-list:first-child{
+.sec4-content-list.data-v-b85e83dc:first-child{
 	border: none;
 }
-.sec4-content-list .flex-right{
+.sec4-content-list .flex-right.data-v-b85e83dc{
 	padding-left: 19rpx;
 }
-.sec4_play{
+.sec4_play.data-v-b85e83dc{
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -156,16 +156,16 @@
 	width: 53rpx;
 	height: 53rpx;
 }
-.sec4-content-list .sec4_play image{
+.sec4-content-list .sec4_play image.data-v-b85e83dc{
 	width: 53rpx;
 	height: 53rpx;
 }
-.sec3{
+.sec3.data-v-b85e83dc{
 	margin-top: 40rpx;
 	padding: 40rpx 0;
 	border-top: 1px solid rgba(241,241,241,1);
 }
-.sec3-inner{
+.sec3-inner.data-v-b85e83dc{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -180,7 +180,7 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-.ipt input{
+.ipt input.data-v-b85e83dc{
 	width:530rpx;
 	height:49rpx;
 	background:rgba(240,240,240,1);
@@ -191,18 +191,18 @@
 	padding-left: 20rpx;
 	letter-spacing: 2rpx;
 }
-.img1{
+.img1.data-v-b85e83dc{
 	position: relative;
 }
-.img1 image{
+.img1 image.data-v-b85e83dc{
 	width:31rpx;
 	height:29rpx;
 }
-.img2 image{
+.img2 image.data-v-b85e83dc{
 	width:26rpx;
 	height:29rpx;
 }
-.img1-abs{
+.img1-abs.data-v-b85e83dc{
 	height: 18rpx;
 	position: absolute;
 	left: 50%;

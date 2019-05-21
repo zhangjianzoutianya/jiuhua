@@ -6,7 +6,7 @@
 		<view class="sec1">
 			<view class="sec-inner">
 				<view class="sec1_fex sec1">
-					<view class="sec1_fex_list">
+					<view class="sec1_fex_list" @click="goMsg('garbage_collection')">
 						<image  src="../../../static/index/sec2_type1.png" mode=""></image>
 						<view class="text">可回收垃圾</view>
 					</view>
@@ -38,7 +38,7 @@
 						</view>
 						<view class="flex-right">
 							<view class="title">锻造生态环保为打好污染防治攻坚战保驾护航</view>
-							<view class="videoss">视频</view>
+							<!-- <view class="videoss">视频</view> -->
 							<view class="title2">
 								<view class="title2_1">热</view>
 								<text>服务到家</text>
@@ -47,7 +47,7 @@
 							</view>
 						</view>
 					</view>
-					<view class="sec4-content-list">
+					<view class="sec4-content-list" @click="goMsg('videoInner')">
 						<view class="img">
 							<image src="../../../static/index/sec2_but2.png" mode=""></image>
 							<view class="sec4_play">
@@ -55,8 +55,8 @@
 							</view>
 						</view>
 						<view class="flex-right">
-							<view class="title">生态环境部召开部常务会议生态环境部召开部常务会议 </view>
-							<view class="videoss">视频</view>
+							<view class="title">生态环境部召开部常务会议生态环境部召开部常务会议 <view class="videoss">视频</view></view>
+							
 							<view class="title2">
 								<!-- <view class="title2_1">热</view> -->
 								<text>服务到家</text>
@@ -101,7 +101,7 @@
 		}
 	}
 </script>
-<style>
+<style scoped>
 .banner_img image{
 	width: 750upx;
 	height: 333upx;
@@ -138,10 +138,10 @@
 	.sec2_abs{
 		width:7upx;
 		height:30upx;
-		background:rgba(60,123,249,1);
+		background:#6FC562;
 		position: absolute;
 		left: 0;
-		top: 8upx;
+		top: 15upx;
 	}
 	.sec2-inner .title{
 		font-size:32upx;
@@ -151,7 +151,7 @@
 		letter-spacing: 1upx;
 		display: inline-block;
 	}
-	.sec2-inner .videoss{
+	.title .videoss{
 		width: 60upx;
 		height: 28upx;
 		background: #FF0018;
@@ -178,7 +178,7 @@
 		height: 172upx;
 	}
 	.sec4-content-list .title{
-		height:70upx;
+		height:75upx;
 		font-size:30upx;
 		font-family:PingFang-SC-Medium;
 		font-weight:500;
@@ -187,10 +187,9 @@
 		overflow: hidden;
 	}
 	.sec4-content-list .title2{
-		margin-top: 15upx;
 		display: flex;
 		align-items: center;
-		margin-top: 50upx;
+		margin-top: 40upx;
 
 	}
 	.sec4-content-list .title2 text{
