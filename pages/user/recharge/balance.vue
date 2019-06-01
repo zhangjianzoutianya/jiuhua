@@ -6,7 +6,7 @@
 			</view>
 			<view class="money">
 				<view class="money-count">
-					5230<text>.00</text>
+					{{user_money}}
 				</view>
 				<view class="money-text">
 					账户余额（元）
@@ -17,80 +17,25 @@
 			余额消费记录
 		</view>
 		<view class="consumption">
-			<view class="consumption-view">
+			<view class="consumption-view" v-for="(list,index) in contentList" :key="index">
 				<view class="consumption-view1">
 					<view>
-						<text class="t2">-200.00</text>
+						<text class="t2">{{list.account}}</text>
 					</view>
 					<view>
-						05-05 12:12
+						{{list.pay_time}}
 					</view>
 				</view>
 				<view class="consumption-view2">
 					<view>
-						手机充值
+						{{list.pay_name}}
 					</view>
 					<view>
-						在线充值
+						{{list.pay_status}}
 					</view>
 				</view>
 			</view>
-			<view class="consumption-view">
-				<view class="consumption-view1">
-					<view>
-						<text class="t1">+200.00</text>
-					</view>
-					<view>
-						05-05 12:12
-					</view>
-				</view>
-				<view class="consumption-view2">
-					<view>
-						转账业务
-					</view>
-					<view>
-						交易号：235452872369424
-					</view>
-				</view>
-			</view>
-			<view class="consumption-view">
-				<view class="consumption-view1">
-					<view>
-						<text class="t2">-200.00</text>
-					</view>
-					<view>
-						05-05 12:12
-					</view>
-				</view>
-				<view class="consumption-view2">
-					<view>
-						付款
-					</view>
-					<view>
-						在线购物
-					</view>
-				</view>
-			</view>
-			<view class="consumption-view">
-				<view class="consumption-view1">
-					<view>
-						<text class="t2">-200.00</text>
-					</view>
-					<view>
-						05-05 12:12
-					</view>
-				</view>
-				<view class="consumption-view2">
-					<view>
-						社交
-					</view>
-					<view>
-						门店消费
-					</view>
-				</view>
-			</view>
-
-
+		<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 		</view>
 		<view class="null"></view>
 		<view class="operation">
@@ -110,23 +55,86 @@
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default {
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
-
+				token:'',
+				page:1,
+				allPages:'',
+				contentList:[],
+				user_money:'',
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
+		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.userConsume()
+		},
+		mounted:function(){
+			let _this=this;
+			_this.userConsume()
+		},
+		created:function(){
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
 		},
 		methods: {
 			recharge() {
 				uni.navigateTo({
 					url: 'recharge'
 				})
-			}
+			},
+			//记录
+			userConsume:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+					page:_this.page,
+				};
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.userConsume,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.recharge == null ||res.data.result.recharge==undefined ||res.data.result.recharge=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						_this.page++
+						_this.contentList = _this.contentList.concat(res.data.result.recharge);
+						_this.user_money = res.data.result.user_money;
+						_this.allPages = res.data.result.pages;
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}
+				}).catch(error =>{
+					
+				})
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.balanceBg {
 		width: 100%;
 		height: 237upx;

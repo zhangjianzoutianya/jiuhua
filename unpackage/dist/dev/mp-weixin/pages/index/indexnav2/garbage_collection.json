@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "可回收垃圾",
   "navigationBarBackgroundColor": "#fff",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more"
+  }
 }

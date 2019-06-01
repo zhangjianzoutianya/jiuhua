@@ -1,0 +1,207 @@
+
+.banner.data-v-63f7027f {
+	width: 100%;
+	height: 447rpx;
+	overflow: hidden;
+}
+.banner>image.data-v-63f7027f {
+	width: 100%;
+	height: 100%;
+}
+.comm-name.data-v-63f7027f {
+	width: 508rpx;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 30rpx;
+	line-height: 45rpx;
+	font-size: 28rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.amount.data-v-63f7027f {
+	width: 100%;
+	height: 30rpx;
+	font-size: 28rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(247, 105, 54, 1);
+	line-height: 30rpx;
+	text-align: center;
+	margin: 30rpx 0;
+}
+.null.data-v-63f7027f {
+	width: 750rpx;
+	height: 20rpx;
+	background: rgba(247, 247, 247, 1);
+}
+.count.data-v-63f7027f {
+	width: 100%;
+	height: 94rpx;
+	overflow: hidden;
+}
+.addition-and-subtraction.data-v-63f7027f {
+	width: 140rpx;
+	height: 40rpx;
+	float: right;
+	margin-top: 27rpx;
+	margin-right: 57rpx;
+	overflow: overlay;
+}
+.addition-and-subtraction>view.data-v-63f7027f {
+	float: left;
+}
+.reduce.data-v-63f7027f {
+	width: 40rpx;
+	height: 40rpx;
+	text-align: center;
+	color: #999999;
+	line-height: 40rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.num.data-v-63f7027f {
+	width: 60rpx;
+	height: 40rpx;
+	text-align: center;
+	line-height: 40rpx;
+	font-size: 28rpx;
+	background-color: #F4F5FA;
+}
+.add.data-v-63f7027f {
+	width: 40rpx;
+	height: 40rpx;
+	text-align: center;
+	color: #999999;
+	line-height: 40rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.count-text.data-v-63f7027f {
+	height: 94rpx;
+	line-height: 94rpx;
+	font-size: 28rpx;
+	padding-left: 25rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+}
+.details-text.data-v-63f7027f {
+	margin: 20rpx 25rpx;
+	overflow: hidden;
+}
+.details-text1.data-v-63f7027f {
+	font-size: 28rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+	line-height: 60rpx;
+}
+.details-text2.data-v-63f7027f {
+	font-size: 24rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+	line-height: 40rpx;
+}
+.operation.data-v-63f7027f {
+	width: 750rpx;
+	height: 88rpx;
+	background: rgba(201, 0, 9, 1);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	line-height: 88rpx;
+}
+.nul.data-v-63f7027f {
+	width: 88rpx;
+	height: 88rpx;
+}
+.popup.data-v-63f7027f {
+	position: fixed;
+	z-index: 20;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.alert.data-v-63f7027f {
+	width: 628rpx;
+	height: 305rpx;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 10rpx;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+.alert>view.data-v-63f7027f {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.alert-img.data-v-63f7027f {
+	width: 89rpx;
+	height: 89rpx;
+	margin: 0 auto;
+	margin-top: 31rpx;
+}
+.alert-img>image.data-v-63f7027f {
+	width: 100%;
+	height: 100%;
+}
+.alert-title.data-v-63f7027f {
+	margin-top: 30rpx;
+	height: 30rpx;
+	font-size: 28rpx;
+	text-align: center;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.alert-btn.data-v-63f7027f {
+	position: absolute;
+	width: 100%;
+	height: 75rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	left: 0;
+	bottom: 0;
+}
+.alert-btn>view.data-v-63f7027f {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: center;
+	line-height: 75rpx;
+}
+.no.data-v-63f7027f {
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(153, 153, 153, 1);
+	border-top: 1px solid rgba(238, 238, 238, 1);
+	border-right: 1px solid rgba(238, 238, 238, 1);
+}
+.yes.data-v-63f7027f {
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	border-top: 1px solid rgba(238, 238, 238, 1);
+	font-weight: 500;
+	color: rgba(201, 0, 9, 1);
+}
+

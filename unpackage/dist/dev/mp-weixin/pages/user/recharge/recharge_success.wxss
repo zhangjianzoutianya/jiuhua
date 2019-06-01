@@ -1,20 +1,20 @@
 
-#app.data-v-0018404a {
+#app {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
-.complete.data-v-0018404a {
+.complete {
 	width: 268rpx;
 	height: 248rpx;
 	margin: 0 auto;
 	margin-top: 140rpx;
 }
-.complete>image.data-v-0018404a {
+.complete>image {
 	width: 100%;
 	height: 100%;
 }
-.complete-text.data-v-0018404a {
+.complete-text {
 	width: 100%;
 	height: 142rpx;
 	text-align: center;
@@ -24,7 +24,7 @@
 	font-weight: 500;
 	color: rgba(51, 51, 51, 1);
 }
-.complete-btn.data-v-0018404a {
+.complete-btn {
 	width: 397rpx;
 	height: 62rpx;
 	background: rgba(201, 0, 9, 1);

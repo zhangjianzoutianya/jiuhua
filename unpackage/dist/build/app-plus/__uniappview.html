@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+                CSS.supports('top: constant(a)'))
+            document.write(
+                '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"九华","entryPagePath":"pages/index/index.html","page":{"pages/index/index.html":{"window":{"navigationStyle":"custom","usingComponents":{"index":"/pages/index/main","business":"/pages/business/index","user":"/pages/user/index"}}},"pages/business/index.html":{"window":{"navigationStyle":"custom","usingComponents":{"top-search":"/components/topSearch"}}},"pages/index/indexnav1/wisdomIndex.html":{"window":{"navigationBarTitleText":"智@九华","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav1/supermarket/supermarket.html":{"window":{"navigationBarTitleText":"无人超市","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav1/supermarket/details.html":{"window":{"navigationBarTitleText":"无人超市","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav1/supermarket/map.html":{"window":{"navigationBarTitleText":"地图","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav5/food.html":{"window":{"navigationBarTitleText":"食@九华","navigationBarBackgroundColor":"#ff4c4c","usingComponents":{}}},"pages/index/indexnav5/supermarket/supermarket.html":{"window":{"navigationBarTitleText":"美天菜场","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav5/supermarket/details.html":{"window":{"navigationBarTitleText":"美天菜场","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/index.html":{"window":{"navigationBarTitleText":"循@九华","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/regenerate.html":{"window":{"navigationBarTitleText":"再生资源科普","navigationBarBackgroundColor":"#6fc562","navigationBarTextStyle":"white","backgroundColor":"#6fc562","usingComponents":{}}},"pages/index/indexnav2/articleInner.html":{"window":{"navigationBarTitleText":"再生资源科普","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/videoInner.html":{"window":{"navigationBarTitleText":"再生资源科普","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/complaint.html":{"window":{"navigationBarTitleText":"投诉建议","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/garbage_collection.html":{"window":{"navigationBarTitleText":"可回收垃圾","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/circulation_station.html":{"window":{"navigationBarTitleText":"循环站","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav2/station_inner.html":{"window":{"navigationBarTitleText":"循环站内页","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/index/indexnav3/live_box.html":{"window":{"navigationBarTitleText":"住@九华","usingComponents":{}}},"pages/index/indexnav3/live_inner.html":{"window":{"navigationBarTitleText":"热门门店","usingComponents":{}}},"pages/index/indexnav4/edge_hua.html":{"window":{"navigationBarTitleText":"缘@九华","usingComponents":{}}},"pages/index/indexnav4/shop_show.html":{"window":{"navigationBarTitleText":"缘九华楼层","usingComponents":{}}},"pages/index/indexnav4/shop_inner.html":{"window":{"navigationBarTitleText":"缘九华楼层内页","usingComponents":{}}},"pages/index/indexnav4/navigation.html":{"window":{"navigationBarTitleText":"缘九华地图","usingComponents":{}}},"pages/index/indexnav6/index_neighborhood.html":{"window":{"navigationBarTitleText":"九华比邻","usingComponents":{}}},"pages/index/indexnav6/beauty_shop.html":{"window":{"navigationBarTitleText":"找靓店","usingComponents":{}}},"pages/index/indexnav6/beautyshop_inner.html":{"window":{"navigationBarTitleText":"找靓店内页","usingComponents":{}}},"pages/index/indexnav6/store_details.html":{"window":{"navigationBarTitleText":"店铺详情","usingComponents":{}}},"pages/index/indexnav6/community_business.html":{"window":{"navigationBarTitleText":"社区商业","usingComponents":{}}},"pages/user/index.html":{"window":{"navigationStyle":"custom","usingComponents":{}}},"pages/user/login/home_page.html":{"window":{"navigationStyle":"custom","usingComponents":{}}},"pages/user/login/member_login.html":{"window":{"navigationBarTitleText":"会员登陆","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/user/login/staff_login.html":{"window":{"navigationBarTitleText":"员工通道","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/user/login/code_login.html":{"window":{"navigationBarTitleText":"验证码登陆","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/user/login/merchant_register.html":{"window":{"navigationBarTitleText":"商户注册","navigationBarBackgroundColor":"#fff","usingComponents":{"addressd":"/components/jm-address/jm-address"}}},"pages/user/login/change_password.html":{"window":{"navigationBarTitleText":"忘记密码","navigationBarBackgroundColor":"#fff","usingComponents":{}}},"pages/user/member/member.html":{"window":{"navigationBarTitleText":"会员中心","usingComponents":{}}},"pages/user/setUp/set_up.html":{"window":{"navigationBarTitleText":"设置","usingComponents":{}}},"pages/user/setUp/bind_cell_phone.html":{"window":{"navigationBarTitleText":"手机号绑定","usingComponents":{}}},"pages/user/information/information.html":{"window":{"navigationBarTitleText":"个人信息","usingComponents":{}}},"pages/user/information/nickname.html":{"window":{"navigationBarTitleText":"修改昵称","usingComponents":{}}},"pages/user/member/rule.html":{"window":{"navigationBarTitleText":"升级规则","usingComponents":{}}},"pages/user/integral/index.html":{"window":{"navigationBarTitleText":"我的积分","usingComponents":{}}},"pages/user/integral/integral_rule.html":{"window":{"navigationBarTitleText":"我的积分","usingComponents":{}}},"pages/user/integral/sign_in.html":{"window":{"navigationBarTitleText":"签到赚积分","usingComponents":{}}},"pages/user/integral/integral_mall.html":{"window":{"navigationBarTitleText":"积分商城","usingComponents":{}}},"pages/user/integral/exchange_records.html":{"window":{"navigationBarTitleText":"兑换记录","usingComponents":{}}},"pages/user/integral/integral_details.html":{"window":{"navigationBarTitleText":"兑换详情","usingComponents":{}}},"pages/user/integral/integral_handle.html":{"window":{"navigationBarTitleText":"兑换结果","usingComponents":{}}},"pages/user/integral/check_exchange_details.html":{"window":{"navigationBarTitleText":"查看兑换详情","usingComponents":{}}},"pages/user/help/help.html":{"window":{"navigationBarTitleText":"帮助中心","usingComponents":{}}},"pages/user/recharge/balance.html":{"window":{"navigationBarTitleText":"余额","usingComponents":{}}},"pages/user/recharge/recharge.html":{"window":{"navigationBarTitleText":"充值","usingComponents":{}}},"pages/user/recharge/recharge_success.html":{"window":{"navigationBarTitleText":"充值成功","usingComponents":{}}},"pages/user/recharge/recharge_record.html":{"window":{"navigationBarTitleText":"充值记录","usingComponents":{}}},"pages/user/recharge/coupon.html":{"window":{"navigationBarTitleText":"我的优惠券","usingComponents":{}}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"九华","navigationBarBackgroundColor":"#ffffff","backgroundColor":"#ffffff"}},"tabBar":{"color":"","selectedColor":"","backgroundColor":"","borderStyle":"black","list":[],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/index/index","pages/business/index","pages/index/indexnav1/wisdomIndex","pages/index/indexnav1/supermarket/supermarket","pages/index/indexnav1/supermarket/details","pages/index/indexnav1/supermarket/map","pages/index/indexnav5/food","pages/index/indexnav5/supermarket/supermarket","pages/index/indexnav5/supermarket/details","pages/index/indexnav2/index","pages/index/indexnav2/regenerate","pages/index/indexnav2/articleInner","pages/index/indexnav2/videoInner","pages/index/indexnav2/complaint","pages/index/indexnav2/garbage_collection","pages/index/indexnav2/circulation_station","pages/index/indexnav2/station_inner","pages/index/indexnav3/live_box","pages/index/indexnav3/live_inner","pages/index/indexnav4/edge_hua","pages/index/indexnav4/shop_show","pages/index/indexnav4/shop_inner","pages/index/indexnav4/navigation","pages/index/indexnav6/index_neighborhood","pages/index/indexnav6/beauty_shop","pages/index/indexnav6/beautyshop_inner","pages/index/indexnav6/store_details","pages/index/indexnav6/community_business","pages/user/index","pages/user/login/home_page","pages/user/login/member_login","pages/user/login/staff_login","pages/user/login/code_login","pages/user/login/merchant_register","pages/user/login/change_password","pages/user/member/member","pages/user/setUp/set_up","pages/user/setUp/bind_cell_phone","pages/user/information/information","pages/user/information/nickname","pages/user/member/rule","pages/user/integral/index","pages/user/integral/integral_rule","pages/user/integral/sign_in","pages/user/integral/integral_mall","pages/user/integral/exchange_records","pages/user/integral/integral_details","pages/user/integral/integral_handle","pages/user/integral/check_exchange_details","pages/user/help/help","pages/user/recharge/balance","pages/user/recharge/recharge","pages/user/recharge/recharge_success","pages/user/recharge/recharge_record","pages/user/recharge/coupon"],"subPackages":[],"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"1.9.8","usingComponents":{"index":"/pages/index/main","business":"/pages/business/index","user":"/pages/user/index"}}
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                var wxss = page.replace('.html', '.wxss')
+                if (
+                    typeof __wxAppCode__ !== 'undefined' &&
+                    __wxAppCode__.hasOwnProperty(wxss)
+                ) {
+                    var setCssToHead = __wxAppCode__[wxss]
+                    typeof setCssToHead === 'function' && setCssToHead()
+                    document.dispatchEvent(new CustomEvent("generateFuncReady", {
+                        detail: {
+                            generateFunc: $gwx(page.replace('.html', '.wxml'))
+                        }
+                    }));
+                } else {
+                    plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+                }
+            };
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

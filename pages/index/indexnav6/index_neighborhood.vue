@@ -4,19 +4,9 @@
 			<view class="page-section swiper">
 				<view class="page-section-spacing">
 					<swiper class="swiper" :indicator-dots="banner.indicatorDots" :circular="banner.circular" :autoplay="banner.autoplay" :interval="banner.interval" :duration="banner.duration">
-						<swiper-item>
+						<swiper-item v-for="(item , index) in banner_list">
 							<view class="swiper-item">
-								<image width="100%" src="../../../static/index/sta_banner.png" mode=""></image>
-							</view>
-						</swiper-item>
-						<swiper-item>
-							<view class="swiper-item">
-								<image width="100%" src="../../../static/index/sta_banner.png" mode=""></image>
-							</view>
-						</swiper-item>
-						<swiper-item>
-							<view class="swiper-item">
-								<image width="100%" src="../../../static/index/sta_banner.png" mode=""></image>
+								<image width="100%" :src="item.ad_code" mode=""></image>
 							</view>
 						</swiper-item>
 					</swiper>
@@ -227,22 +217,46 @@
 					interval: 4000,
 					duration: 800,
 					circular:true 
-			},
-			
-		}
+				},
+				banner_list:[],
+			}
 		},
+		created(){
+			let _this=this;
+		},
+		mounted(){
+			let _this=this;
+			//baner
+			_this.getBanner();	
+		},	
 		methods:{
 			goMsg(url){
 				uni.navigateTo({
 					url:url
 				})
+			},
+			
+			//banner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:14,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner_list=res.data.result.banner;
+					}
+				},(error) =>{
+					
+				})
 			}
+			
 		}
 	
 	}
 </script>
 
-<style scoped>
+<style>
 	.neig_box{
 		/* padding: 0 26upx; */
 	}

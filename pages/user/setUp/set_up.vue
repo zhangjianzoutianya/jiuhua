@@ -31,7 +31,7 @@
 					手机号绑定
 				</view>
 			</view>
-			<view class="option-view">
+			<view class="option-view" @click="adress">
 				<image src="../../../static/user/more.png" mode=""></image>
 				
 				<view class="v2">
@@ -55,7 +55,7 @@
 		methods: {
 			login() {
 				uni.navigateTo({
-					url: "../login/home_page",
+					url: "../login/member_login",
 				})
 			},
 			resetPassword() {
@@ -67,12 +67,17 @@
 				uni.navigateTo({
 					url: "bind_cell_phone",
 				})
+			},
+			adress() {
+				uni.navigateTo({
+					url: "address",
+				})
 			}
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	#app {
 		background-color: #F7F7F7;
 		width: 100%;

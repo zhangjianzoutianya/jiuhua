@@ -1,0 +1,60 @@
+
+.station_list{
+	width: 100%;
+	border-top: 1rpx solid #F3F3F3;
+}
+.circula_list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	width: 94%;
+	border-bottom: 1rpx solid #EEEEEE;
+	padding: 23rpx 26rpx;
+}
+.cila_left_top{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	color: #333333;
+	font-size: 30rpx;
+}
+.cila_left_top text{
+	font-size:24rpx;
+	font-weight:500;
+	color:rgba(200,0,10,1);
+	border: 1rpx solid #C8000A;
+	text-align: center;
+	padding: 1rpx 6rpx;
+	border-radius: 10rpx;
+	margin-left: 10rpx;
+	display: inline-block;
+}
+.cila_left_botm{
+	color: #999999;
+	font-size: 30rpx;
+}
+.cila_right{
+	text-align: center;
+	width: 20%;
+}
+.cila_right_img{
+	width: 24rpx;
+	height: 28rpx;
+	margin: auto;
+}
+.cila_right_img image{
+	width: 100%;
+	height: 100%;
+}
+.cila_right_con{
+	margin-top: 15rpx;
+	color: #666666;
+	font-size: 26rpx;
+}
+

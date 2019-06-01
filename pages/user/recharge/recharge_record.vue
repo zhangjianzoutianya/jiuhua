@@ -1,13 +1,13 @@
 <template>
 	<view>
 		<view class="record">
-			<view class="record-view">
+			<view class="record-view" v-for="(list,index) in contentList" :key="index">
 				<view class="money">
 					<view>
-						-199.88
+						+{{list.account}}
 					</view>
 					<view>
-						<text class="t1">充值成功</text>
+						<text :class="list.pay_status==1?'t1':'t2'" v-text="list.pay_status==1?'充值成功':'充值失败'"></text>
 					</view>
 				</view>
 				<view class="record-image">
@@ -15,76 +15,14 @@
 				</view>
 				<view class="amount">
 					<view>
-						充值话费（200元）
+						{{list.pay_name}}
 					</view>
 					<view>
-						05-05 12:12
+						{{list.pay_time}}
 					</view>
 				</view>
 			</view>
-			<view class="record-view">
-				<view class="money">
-					<view>
-						-199.88
-					</view>
-					<view>
-						<text class="t2">充值失败</text>
-					</view>
-				</view>
-				<view class="record-image">
-					<image src="../../../static/user/recharge/phone.png" mode=""></image>
-				</view>
-				<view class="amount">
-					<view>
-						充值话费（200元）
-					</view>
-					<view>
-						05-05 12:12
-					</view>
-				</view>
-			</view>
-			<view class="record-view">
-				<view class="money">
-					<view>
-						-199.88
-					</view>
-					<view>
-						<text class="t2">充值失败</text>
-					</view>
-				</view>
-				<view class="record-image">
-					<image src="../../../static/user/recharge/phone.png" mode=""></image>
-				</view>
-				<view class="amount">
-					<view>
-						充值话费（200元）
-					</view>
-					<view>
-						05-05 12:12
-					</view>
-				</view>
-			</view>
-			<view class="record-view">
-				<view class="money">
-					<view>
-						-199.88
-					</view>
-					<view>
-						<text class="t2">充值失败</text>
-					</view>
-				</view>
-				<view class="record-image">
-					<image src="../../../static/user/recharge/phone.png" mode=""></image>
-				</view>
-				<view class="amount">
-					<view>
-						充值话费（200元）
-					</view>
-					<view>
-						05-05 12:12
-					</view>
-				</view>
-			</view>
+			<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 		</view>
 		<view class="null"></view>
 		<view class="recharge">
@@ -96,23 +34,84 @@
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default {
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
-
+				token:'',
+				page:1,
+				allPages:'',
+				contentList:[],
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
+		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.userRecharge()
+		},
+		created:function(){
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		mounted:function(){
+			var _this = this;
+			_this.userRecharge()
 		},
 		methods: {
 			recharge() {
 				uni.navigateTo({
 					url: 'recharge'
 				})
-			}
+			},
+			//记录
+			userRecharge:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+					page:_this.page,
+				};
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.userRecharge,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.recharge == null ||res.data.result.recharge==undefined ||res.data.result.recharge=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						_this.page++
+						_this.contentList = _this.contentList.concat(res.data.result.recharge) 
+						_this.allPages = res.data.result.pages;
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}
+				}).catch(error =>{
+					
+				})
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.record {
 		width: 100%;
 		overflow: hidden;

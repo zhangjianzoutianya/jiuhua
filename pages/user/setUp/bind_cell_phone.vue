@@ -52,7 +52,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.logo {
 		width: 182upx;
 		height: 182upx;

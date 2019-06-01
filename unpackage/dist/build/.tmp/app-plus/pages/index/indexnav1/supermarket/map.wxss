@@ -1,0 +1,121 @@
+
+.map.data-v-9ab72ea8 {
+	width: 750rpx;
+	height: 835rpx;
+}
+
+
+
+
+.comm.data-v-9ab72ea8 {
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	max-height: calc(100% - 835rpx);
+	overflow-y: scroll;
+}
+
+
+.comm.data-v-9ab72ea8::-webkit-scrollbar {
+	display: none
+}
+.title.data-v-9ab72ea8 {
+	width: 100%;
+	height: 78rpx;
+	border-bottom: 1rpx solid #eee;
+}
+.title>image.data-v-9ab72ea8 {
+	width: 20rpx;
+	height: 24rpx;
+	margin: 25rpx 10rpx 25rpx 26rpx;
+	float: left;
+}
+.title>view.data-v-9ab72ea8 {
+
+	font-size: 24rpx;
+	line-height: 78rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+}
+.merchant.data-v-9ab72ea8 {
+	width: 698rpx;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.merchant-view.data-v-9ab72ea8 {
+	width: 100%;
+	height: 231rpx;
+	overflow: hidden;
+	border-bottom: 1rpx solid rgba(233, 233, 233, 1);
+}
+.merchant-img.data-v-9ab72ea8 {
+	float: right;
+	margin-top: 72rpx;
+	width: 100rpx;
+}
+.merchant-img>image.data-v-9ab72ea8 {
+	width: 60rpx;
+	height: 60rpx;
+	margin-left: 20rpx;
+}
+.merchant-img>view.data-v-9ab72ea8 {
+	width: 100rpx;
+	height: 19rpx;
+	font-size: 24rpx;
+	color: rgba(153, 153, 153, 1);
+	text-align: center;
+	line-height: 30rpx;
+}
+.merchant-image.data-v-9ab72ea8 {
+	width: 158rpx;
+	height: 158rpx;
+	border-radius: 6rpx;
+	margin-top: 39rpx;
+	margin-right: 22rpx;
+	overflow: hidden;
+	float: left;
+}
+.merchant-image>image.data-v-9ab72ea8 {
+	width: 100%;
+	height: 100%;
+}
+.merchant-text1.data-v-9ab72ea8 {
+	margin-top: 50rpx;
+	height: 29rpx;
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 47rpx;
+}
+.merchant-text2.data-v-9ab72ea8 {
+	margin-top: 16rpx;
+	height: 21rpx;
+	font-size: 22rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(153, 153, 153, 1);
+}
+.merchant-text3.data-v-9ab72ea8 {
+	margin-top: 31rpx;
+	overflow: hidden;
+}
+.merchant-text3>image.data-v-9ab72ea8 {
+	width: 23rpx;
+	height: 23rpx;
+	margin-right: 10rpx;
+	float: left;
+}
+.merchant-text3>view.data-v-9ab72ea8 {
+	height: 23rpx;
+	line-height: 23rpx;
+	font-size: 23rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+}
+

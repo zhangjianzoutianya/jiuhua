@@ -179,7 +179,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.image-view {
 		width: 698upx;
 		height: 307upx;

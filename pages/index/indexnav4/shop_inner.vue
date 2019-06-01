@@ -130,7 +130,7 @@
 <script>
 </script>
 
-<style scoped>
+<style>
 	.group_box{
 		width: 100%;
 	}

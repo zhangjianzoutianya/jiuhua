@@ -1,22 +1,22 @@
 
-.record.data-v-366f0fa9 {
+.record {
 	width: 100%;
 	overflow: hidden;
 }
-.record-view.data-v-366f0fa9 {
+.record-view {
 	width: 100%;
 	height: 153rpx;
 	border-top: 1rpx solid rgba(238, 238, 238, 1);
 	overflow: hidden;
 }
-.money.data-v-366f0fa9 {
+.money {
 	width: 180rpx;
 	height: 100%;
 	float: right;
 	margin-right: 27rpx;
 	overflow: hidden;
 }
-.money>view.data-v-366f0fa9:nth-child(1) {
+.money>view:nth-child(1) {
 	width: 100%;
 	height: 30rpx;
 	line-height: 30rpx;
@@ -27,7 +27,7 @@
 	font-weight: 500;
 	color: rgba(51, 51, 51, 1);
 }
-.money>view.data-v-366f0fa9:nth-child(2) {
+.money>view:nth-child(2) {
 	width: 100%;
 	height: 22rpx;
 	margin-top: 18rpx;
@@ -36,13 +36,13 @@
 	font-weight: 500;
 	text-align: right;
 }
-.t1.data-v-366f0fa9 {
+.t1 {
 	color: rgba(9, 187, 7, 1);
 }
-.t2.data-v-366f0fa9 {
+.t2 {
 	color: rgba(201, 0, 9, 1);
 }
-.record-image.data-v-366f0fa9 {
+.record-image {
 	width: 70rpx;
 	height: 70rpx;
 	overflow: hidden;
@@ -54,7 +54,7 @@
 	margin-right: 33rpx;
 	position: relative;
 }
-.record-image>image.data-v-366f0fa9 {
+.record-image>image {
 	width: 27rpx;
 	height: 41rpx;
 	position: absolute;
@@ -64,11 +64,11 @@
 	    -ms-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 }
-.amount.data-v-366f0fa9 {
+.amount {
 	overflow: hidden;
 	height: 100%;
 }
-.amount>view.data-v-366f0fa9:nth-child(1) {
+.amount>view:nth-child(1) {
 	font-size: 28rpx;
 	font-family: PingFang-SC-Bold;
 	font-weight: bold;
@@ -77,7 +77,7 @@
 	line-height: 30rpx;
 	margin-top: 45rpx;
 }
-.amount>view.data-v-366f0fa9:nth-child(2) {
+.amount>view:nth-child(2) {
 	font-size: 24rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
@@ -86,7 +86,7 @@
 	line-height: 26rpx;
 	margin-top: 14rpx;
 }
-.recharge.data-v-366f0fa9 {
+.recharge {
 	width: 100%;
 	height: 98rpx;
 	position: fixed;
@@ -96,7 +96,7 @@
 	left: 0;
 	bottom: 0;
 }
-.recharge>view.data-v-366f0fa9 {
+.recharge>view {
 	width: 699rpx;
 	height: 60rpx;
 	background: rgba(201, 0, 9, 1);
@@ -109,7 +109,7 @@
 	text-align: center;
 	line-height: 60rpx;
 }
-.null.data-v-366f0fa9 {
+.null {
 	width: 98rpx;
 	height: 98rpx;
 }

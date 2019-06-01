@@ -116,7 +116,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.map {
 		width: 100%;
 		height: 83vh;

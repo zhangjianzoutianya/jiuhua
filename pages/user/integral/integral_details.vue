@@ -1,13 +1,13 @@
 <template>
 	<view>
 		<view class="banner">
-			<image src="../../../static/user/integral/banner01.jpg" mode=""></image>
+			<image :src="content.original_img" mode=""></image>
 		</view>
 		<view class="comm-name">
-			【积分兑换】拉克边桌简约时尚-公主风格甜美可爱
+			{{content.integral_name}}
 		</view>
 		<view class="amount">
-			200积分+10元
+			{{content.exchange_integral}}积分+{{content.shop_price}}元
 		</view>
 		<view class="null"></view>
 		<view class="count">
@@ -87,17 +87,32 @@
 		data() {
 			return {
 				num: 0,
-				popups: false
+				popups: false,
+				id:'',
+				content:'',
+				allNums:'',
 			}
+		},
+		onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
+			let _this = this;
+			_this.id = option.id;
+		},
+		mounted:function(){
+			var _this = this;
+			_this.userintegralDetail();
 		},
 		methods: {
 			reduce() {
 				var _this = this;
-				_this.num--
+				if(_this.num>=1){
+					_this.num--
+				}
 			},
 			add() {
 				var _this = this;
-				_this.num++
+				if(_this.num<_this.allNums){
+					_this.num++
+				}
 			},
 			popupIndex() {
 				var _this = this;
@@ -113,12 +128,27 @@
 				uni.navigateTo({
 					url:"integral_handle",
 				})
-			}
+			},
+			//详情
+			userintegralDetail:function(){
+				let _this=this;
+				let data={
+					integral_id:_this.id,
+				};
+				_this.$axios(_this.$baseUrl.userintegralDetail,data).then(res =>{
+					if(res.data.status==1){
+						_this.content = res.data.result.integral;
+						_this.allNums = res.data.result.integral.store_count;
+					}
+				}).catch(error =>{
+					
+				})
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.banner {
 		width: 100%;
 		height: 447upx;

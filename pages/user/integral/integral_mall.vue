@@ -12,7 +12,7 @@
 			</view>
 		</view>
 		<view class="banner">
-			<image src="../../../static/user/integral/banner.png" mode=""></image>
+			<image :src="banner" mode=""></image>
 		</view>
 		<view class="integral" @click="exchangeRecords">
 			<image src="../../../static/index/gen1.png" mode=""></image>
@@ -23,7 +23,7 @@
 				积
 			</view>
 			<view class="integral3">
-				3000积分
+				{{user_points}}积分
 			</view>
 		</view>
 		<view class="index_class">
@@ -61,73 +61,68 @@
 			<image class="img2" src="../../../static/user/integral/right.png" mode=""></image>
 		</view>
 		<view class="comm">
-			<view class="comm-info" @click="integralDetails">
+			<view class="comm-info" @click="integralDetails('integral_details',list.integral_id)" v-for="(list,index) in pointShopList" :key="index">
 				<view class="comm-img">
-					<image src="../../../static/user/integral/comm1.png" mode=""></image>
+					<image :src="list.original_img" mode=""></image>
 				</view>
 				<view class="commtitle">
-					特提亚工作灯高端品质
+					{{list.integral_name}}
 				</view>
 				<view class="commtime">
-                    200积分+50元
+                    {{list.exchange_integral}}积分+{{list.shop_price}}元
 				</view>
 				<view class="exchange">
 					立即兑换
 				</view>
 			</view>
-			<view class="comm-info">
-				<view class="comm-img">
-					<image src="../../../static/user/integral/comm2.png" mode=""></image>
-				</view>
-				<view class="commtitle">
-					特提亚工作灯高端品质
-				</view>
-				<view class="commtime">
-			        200积分+50元
-				</view>
-				<view class="exchange">
-					立即兑换
-				</view>
-			</view>
-			<view class="comm-info">
-				<view class="comm-img">
-					<image src="../../../static/user/integral/comm3.png" mode=""></image>
-				</view>
-				<view class="commtitle">
-					特提亚工作灯高端品质
-				</view>
-				<view class="commtime">
-			        200积分+50元
-				</view>
-				<view class="exchange">
-					立即兑换
-				</view>
-			</view>
-			<view class="comm-info">
-				<view class="comm-img">
-					<image src="../../../static/user/integral/comm1.png" mode=""></image>
-				</view>
-				<view class="commtitle">
-					特提亚工作灯高端品质
-				</view>
-				<view class="commtime">
-			        200积分+50元
-				</view>
-				<view class="exchange">
-					立即兑换
-				</view>
-			</view>
+			
 		</view>
+		<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 	</view>
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default {
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
-
+				banner:{},
+				token:'',
+				page:1,
+				user_points:'',
+				allPages:'',
+				pointShopList:[],
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
 		},
+		created:function(){ 
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.pointShop();
+		},
+		mounted(){
+			let _this=this;
+			//baner
+			_this.getBanner();	
+			_this.pointShop();
+		},	
 		methods: {
 			goClassPages:function(url){
 				uni.navigateTo({
@@ -139,16 +134,70 @@
 					url:"exchange_records",
 				})
 			},
-			integralDetails() {
-				uni.redirectTo({
-					url:"integral_details",
+			integralDetails(url,id) {
+				if(id!=''){
+					url = url+'?id='+id
+				}
+				uni.navigateTo({
+					url:url
+				})
+			},
+			
+			//banner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:1,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner=res.data.result.banner[0];
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			//列表
+			pointShop:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+					page:_this.page,
+					
+				};
+				if (_this.loadingType !== 0) {//loadingType!=0;直接返回
+					return false;
+				}
+				
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.pointShop,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.integral == null ||res.data.result.integral==undefined ||res.data.result.integral=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						_this.page++
+						_this.pointShopList = _this.pointShopList.concat(res.data.result.integral)
+						_this.user_points = res.data.result.user_points;
+						_this.allPages = res.data.result.pages;
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}
+				}).catch(error =>{
+					
 				})
 			}
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.sou-su {
 		width: 100%;
 		height: 94upx;
@@ -404,13 +453,17 @@ float: left;
 	}
 	.commtitle {
 		width: 100%;
-		height: 30upx;
+		min-height: 30upx;
 		font-size:28upx;
-		line-height: 30upx;
+		line-height: 1.5;
 		text-align: center;
-font-family:PingFang-SC-Medium;
-font-weight:500;
-color:rgba(51,51,51,1);
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(51,51,51,1);
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		overflow: hidden;
 margin-top: 31upx;
 	}
 	.commtime {

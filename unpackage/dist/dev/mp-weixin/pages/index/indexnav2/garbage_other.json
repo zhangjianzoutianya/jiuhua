@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "其他垃圾",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more"
+  }
+}

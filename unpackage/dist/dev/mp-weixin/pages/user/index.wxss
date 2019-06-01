@@ -1,27 +1,27 @@
 
-.pages.data-v-3291f45a {
+.user .pages {
 	background-color: #F7F7F7;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
 }
-.nav-view.data-v-3291f45a {
+.user .nav-view {
 	width: 750rpx;
 	height: 454rpx;
 	overflow: hidden;
 	position: relative;
 }
-.nav-bg.data-v-3291f45a {
+.user .nav-bg {
 	width: 100%;
 	height: 366rpx;
 	overflow: hidden;
 }
-.nav-bg>image.data-v-3291f45a {
+.user .nav-bg>image {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-.information.data-v-3291f45a {
+.user .information {
 	position: absolute;
 	width: 100%;
 	height: 130rpx;
@@ -29,7 +29,7 @@
 	left: 0;
 	overflow: hidden;
 }
-.sign-in.data-v-3291f45a {
+.user .sign-in {
 	width: 119rpx;
 	height: 66rpx;
 	background: rgba(255, 255, 255, 0.3);
@@ -44,7 +44,7 @@
 	float: right;
 	text-align: center;
 }
-.logo-img.data-v-3291f45a {
+.user .logo-img {
 	width: 130rpx;
 	height: 130rpx;
 	border-radius: 65rpx;
@@ -53,16 +53,16 @@
 	float: left;
 	overflow: hidden;
 }
-.logo-img>image.data-v-3291f45a {
+.user .logo-img>image {
 	width: 100%;
 	height: 100%;
 }
-.name-view.data-v-3291f45a {
+.user .name-view {
 	width: 400rpx;
 	height: 130rpx;
 	overflow: hidden;
 }
-.name-view1.data-v-3291f45a {
+.user .name-view1 {
 	width: 400rpx;
 	height: 130rpx;
 	overflow: hidden;
@@ -72,13 +72,13 @@
 	font-weight: bold;
 	color: rgba(255, 255, 255, 1);
 }
-.name-view1>text.data-v-3291f45a:nth-child(1) {
+.user .name-view1>text:nth-child(1) {
 	padding-right: 10rpx;
 }
-.name-view1>text.data-v-3291f45a:nth-child(2) {
+.user .name-view1>text:nth-child(2) {
 	padding-left: 10rpx;
 }
-.name.data-v-3291f45a {
+.user .name {
 	width: 100%;
 	height: 74rpx;
 	line-height: 74rpx;
@@ -87,16 +87,16 @@
 	font-weight: bold;
 	color: rgba(255, 255, 255, 1);
 }
-.name-img.data-v-3291f45a {
+.user .name-img {
 	width: 97rpx;
 	height: 36rpx;
 	overflow: hidden;
 }
-.name-img>image.data-v-3291f45a {
+.user .name-img>image {
 	width: 100%;
 	height: 100%;
 }
-.balance.data-v-3291f45a {
+.user .balance {
 	position: absolute;
 	width: 698rpx;
 	height: 154rpx;
@@ -112,7 +112,7 @@
 	display: -ms-flexbox;
 	display: flex;
 }
-.info.data-v-3291f45a {
+.user .info {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
@@ -120,44 +120,44 @@
 	width: 100%;
 	height: 100%;
 }
-.info>view.data-v-3291f45a {
+.user .info>view {
 	text-align: center;
 }
-.info>view.data-v-3291f45a:nth-child(1) {
+.user .info>view:nth-child(1) {
 	font-size: 30rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(51, 51, 51, 1);
 	margin-top: 35rpx;
 }
-.info>view.data-v-3291f45a:nth-child(2) {
+.user .info>view:nth-child(2) {
 	font-size: 24rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(51, 51, 51, 1);
 	margin-top: 15rpx;
 }
-.paging.data-v-3291f45a {
+.user .paging {
 	width: 750rpx;
 	height: 88rpx;
 	background: rgba(255, 255, 255, 1);
 	margin-top: 20rpx;
 	overflow: hidden;
 }
-.more.data-v-3291f45a {
+.user .more {
 	width: 18rpx;
 	height: 30rpx;
 	float: right;
 	margin: 29rpx;
 }
-.paging-img.data-v-3291f45a {
+.user .paging-img {
 	width: 30rpx;
 	height: 28rpx;
 	margin: 32rpx 30rpx;
 
 	float: left;
 }
-.paging-title.data-v-3291f45a {
+.user .paging-title {
 	width: 300rpx;
 	height: 88rpx;
 	line-height: 88rpx;

@@ -1,18 +1,18 @@
 
-#app.data-v-38a97e5e {
+#app {
 	background-color: #F7F7F7;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
-.logo.data-v-38a97e5e {
+.logo {
 	width: 100%;
 	height: 150rpx;
 	overflow: hidden;
 	background-color: rgb(255, 255, 255);
 	margin-top: 20rpx;
 }
-.logo-img.data-v-38a97e5e {
+.logo-img {
 	width: 107rpx;
 	height: 107rpx;
 	border-radius: 50%;
@@ -20,11 +20,11 @@
 	float: right;
 	overflow: hidden;
 }
-.logo-img>image.data-v-38a97e5e {
+.logo-img>image {
 	width: 100%;
 	height: 100%;
 }
-.title.data-v-38a97e5e {
+.title {
 	font-size: 30rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
@@ -32,23 +32,23 @@
 	line-height: 150rpx;
 	margin-left: 31rpx;
 }
-.option.data-v-38a97e5e {
+.option {
 	width: 100%;
 	margin-top: 20rpx;
 	overflow: hidden;
 	background-color: rgb(255, 255, 255);
 }
-.option-view.data-v-38a97e5e {
+.option-view {
 	width: 698rpx;
 	height: 98rpx;
 	border-bottom: 1rpx solid rgb(221, 221, 221);
 	overflow: hidden;
 	margin: 0 auto;
 }
-.option-view.data-v-38a97e5e:last-child {
+.option-view:last-child {
 	border-bottom: 1rpx solid rgba(255, 255, 255, 1);
 }
-.option-view2.data-v-38a97e5e {
+.option-view2 {
 	width: 100%;
 	height: 98rpx;
 	overflow: hidden;
@@ -56,7 +56,7 @@
 	margin-top: 38rpx;
 	background-color: rgb(255, 255, 255);
 }
-.option-view2>image.data-v-38a97e5e {
+.option-view2>image {
 	width: 14rpx;
 	height: 24rpx;
 	margin-top: 37rpx;
@@ -64,14 +64,14 @@
 	margin-left: 20rpx;
 	margin-right: 26rpx;
 }
-.option-view>image.data-v-38a97e5e {
+.option-view>image {
 	width: 14rpx;
 	height: 24rpx;
 	margin-top: 37rpx;
 	float: right;
 	margin-left: 20rpx;
 }
-.v3.data-v-38a97e5e {
+.v3 {
 	font-size: 30rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
@@ -79,7 +79,7 @@
 	line-height: 98rpx;
 	margin-left: 31rpx;
 }
-.v1.data-v-38a97e5e {
+.v1 {
 	float: right;
 	line-height: 98rpx;
 	font-size: 30rpx;
@@ -87,14 +87,14 @@
 	font-weight: 500;
 	color: rgba(153, 153, 153, 1);
 }
-.v2.data-v-38a97e5e {
+.v2 {
 	font-size: 30rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(51, 51, 51, 1);
 	line-height: 98rpx;
 }
-.option-view1.data-v-38a97e5e {
+.option-view1 {
 	width: 100%;
 	height: 80rpx;
 	overflow: hidden;
@@ -106,5 +106,9 @@
 	background-color: rgba(255, 255, 255, 1);
 	color: rgba(51, 51, 51, 1);
 	line-height: 80rpx;
+}
+.uni-input{
+	width: 375rpx;
+	text-align: right;
 }
 

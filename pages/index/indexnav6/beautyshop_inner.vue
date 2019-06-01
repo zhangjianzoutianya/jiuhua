@@ -145,7 +145,7 @@
 		}
 	}
 </script>
-<style scoped>
+<style>
 	.garbage{
 		padding: 15upx 26upx;
 		border-top: 1upx solid #EEEEEE;

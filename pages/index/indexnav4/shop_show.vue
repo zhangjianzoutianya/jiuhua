@@ -247,7 +247,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.livr_box{
 		width: 100%;
 	}

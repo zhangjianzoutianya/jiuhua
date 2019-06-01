@@ -1,5 +1,5 @@
 <template>
-	<view id="app">
+	<view id="app" class="user">
 		<view class="pages">
 			<view class="nav-view">
 				<view class="nav-bg">
@@ -99,11 +99,11 @@
 					我的公益
 				</view>
 			</view>
-			<view class="paging">
+			<view class="paging" @click="goPaging('setUp/set_up')">
 				<image class="more" src="../../static/user/more.png" mode=""></image>
 				<image class="paging-img" src="../../static/user/set_up.png" mode=""></image>
 			
-				<view class="paging-title" @click="goPaging('setUp/set_up')">
+				<view class="paging-title">
 					设置
 				</view>
 			</view>
@@ -134,40 +134,42 @@
 					url: "/pages/user/integral/sign_in",
 				})
 			},
+			childMethod() {
+			},
 		}
 	}
 </script>
 
-<style scoped>
 
-	
-	.pages {
+<style>
+
+	.user .pages {
 		background-color: #F7F7F7;
 		overflow: hidden;
 		width: 100%;
 		height: 100%;
 	}
 
-	.nav-view {
+	.user .nav-view {
 		width: 750upx;
 		height: 454upx;
 		overflow: hidden;
 		position: relative;
 	}
 
-	.nav-bg {
+	.user .nav-bg {
 		width: 100%;
 		height: 366upx;
 		overflow: hidden;
 	}
 
-	.nav-bg>image {
+	.user .nav-bg>image {
 		width: 100%;
 		height: 100%;
 		position: relative;
 	}
 
-	.information {
+	.user .information {
 		position: absolute;
 		width: 100%;
 		height: 130upx;
@@ -176,7 +178,7 @@
 		overflow: hidden;
 	}
 
-	.sign-in {
+	.user .sign-in {
 		width: 119upx;
 		height: 66upx;
 		background: rgba(255, 255, 255, 0.3);
@@ -192,7 +194,7 @@
 		text-align: center;
 	}
 
-	.logo-img {
+	.user .logo-img {
 		width: 130upx;
 		height: 130upx;
 		border-radius: 65upx;
@@ -202,18 +204,18 @@
 		overflow: hidden;
 	}
 
-	.logo-img>image {
+	.user .logo-img>image {
 		width: 100%;
 		height: 100%;
 	}
 
-	.name-view {
+	.user .name-view {
 		width: 400upx;
 		height: 130upx;
 		overflow: hidden;
 	}
 
-	.name-view1 {
+	.user .name-view1 {
 		width: 400upx;
 		height: 130upx;
 		overflow: hidden;
@@ -224,15 +226,15 @@
 		color: rgba(255, 255, 255, 1);
 	}
 
-	.name-view1>text:nth-child(1) {
+	.user .name-view1>text:nth-child(1) {
 		padding-right: 10upx;
 	}
 
-	.name-view1>text:nth-child(2) {
+	.user .name-view1>text:nth-child(2) {
 		padding-left: 10upx;
 	}
 
-	.name {
+	.user .name {
 		width: 100%;
 		height: 74upx;
 		line-height: 74upx;
@@ -242,18 +244,18 @@
 		color: rgba(255, 255, 255, 1);
 	}
 
-	.name-img {
+	.user .name-img {
 		width: 97upx;
 		height: 36upx;
 		overflow: hidden;
 	}
 
-	.name-img>image {
+	.user .name-img>image {
 		width: 100%;
 		height: 100%;
 	}
 
-	.balance {
+	.user .balance {
 		position: absolute;
 		width: 698upx;
 		height: 154upx;
@@ -266,17 +268,17 @@
 		display: flex;
 	}
 
-	.info {
+	.user .info {
 		flex: 1;
 		width: 100%;
 		height: 100%;
 	}
 
-	.info>view {
+	.user .info>view {
 		text-align: center;
 	}
 
-	.info>view:nth-child(1) {
+	.user .info>view:nth-child(1) {
 		font-size: 30upx;
 		font-family: PingFang-SC-Medium;
 		font-weight: 500;
@@ -284,7 +286,7 @@
 		margin-top: 35upx;
 	}
 
-	.info>view:nth-child(2) {
+	.user .info>view:nth-child(2) {
 		font-size: 24upx;
 		font-family: PingFang-SC-Medium;
 		font-weight: 500;
@@ -292,7 +294,7 @@
 		margin-top: 15upx;
 	}
 
-	.paging {
+	.user .paging {
 		width: 750upx;
 		height: 88upx;
 		background: rgba(255, 255, 255, 1);
@@ -300,7 +302,7 @@
 		overflow: hidden;
 	}
 
-	.more {
+	.user .more {
 		width: 18upx;
 		height: 30upx;
 		float: right;
@@ -310,7 +312,7 @@
 
 
 
-	.paging-img {
+	.user .paging-img {
 		width: 30upx;
 		height: 28upx;
 		margin: 32upx 30upx;
@@ -319,7 +321,7 @@
 	}
 
 
-	.paging-title {
+	.user .paging-title {
 		width: 300upx;
 		height: 88upx;
 		line-height: 88upx;

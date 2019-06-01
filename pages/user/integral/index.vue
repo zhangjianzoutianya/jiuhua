@@ -2,11 +2,11 @@
 	<view>
 		<view class="integral">
 			<view class="integral-img">
-				<image src="../../../static/user/integral/integralBg.jpg" mode=""></image>
+				<image :src="banner.ad_code" mode=""></image>
 			</view>
 			<view class="integral-text">
 				<view class="integral-txt">
-					3000
+					{{allNum}}
 				</view>
 				<view class="integral-txt1">
 					总积分
@@ -26,42 +26,16 @@
 			积分明细
 		</view>
 		<view class="detailed">
-			<view class="detailed-view">
-				<view class="raction positive-number">
-					+20
+			<view class="detailed-view" v-for="(list,index) in point_list" :key="index">
+				<view class="raction" :class="list.is_add==1?'positive-number':'negative'" >
+					<text v-text="list.is_add==1?'+':'-'"></text>{{list.pay_points}}
 				</view>
 				<view class="detailed-title">
 					<view class="detailed-name">
-						购物返现
+						{{list.desc}}
 					</view>
 					<view class="detailed-time">
-						2019-05-05  12:12:44
-					</view>
-				</view>
-			</view>
-			<view class="detailed-view">
-				<view class="raction negative">
-					-200
-				</view>
-				<view class="detailed-title">
-					<view class="detailed-name">
-						兑换商品
-					</view>
-					<view class="detailed-time">
-						2019-05-05  12:12:44
-					</view>
-				</view>
-			</view>
-			<view class="detailed-view">
-				<view class="raction positive-number">
-					+10
-				</view>
-				<view class="detailed-title">
-					<view class="detailed-name">
-						签到
-					</view>
-					<view class="detailed-time">
-						2019-05-05  12:12:44
+						{{list.change_time}}
 					</view>
 				</view>
 			</view>
@@ -73,8 +47,26 @@
 	export default {
 		data() {
 			return {
-
+				banner:{},
+				token:'',
+				allNum:'',
+				point_list:[],
 			}
+		},
+		created:function(){ 
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		mounted(){
+			let _this=this;
+			//baner
+			_this.getBanner();	
+			_this.userPoint()
 		},
 		methods: {
 			rule() {
@@ -91,12 +83,44 @@
 				uni.navigateTo({
 					url: "sign_in",
 				})
-			}
+			},
+			
+			//banner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:10,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner=res.data.result.banner[0];
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			//积分记录
+			userPoint:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+				};
+				_this.$axios(_this.$baseUrl.userPoint,data).then(res =>{
+					if(res.data.status==1){
+						_this.allNum = res.data.result.user_points;
+						_this.point_list = res.data.result.point_list;
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.integral {
 		width: 100%;
 		height: 238upx;
@@ -140,7 +164,6 @@
 		line-height: 24upx;
 		color: rgba(255, 255, 255, 1);
 	}
-
 	.shop {
 		width: 190upx;
 		height: 52upx;
@@ -171,7 +194,6 @@
 		right: 18upx;
 		z-index: 20;
 	}
-
 	.sign-in {
 		width: 128upx;
 		height: 44upx;
@@ -216,7 +238,6 @@
 		font-size:28upx;
 		font-family:PingFang-SC-Bold;
 		font-weight:bold;
-		
 		float: right;
 		text-align: right;
 		margin: 61.5upx 29upx;
@@ -235,18 +256,18 @@
 		height: 30upx;
 		line-height: 30upx;
 		font-size:28upx;
-font-family:PingFang-SC-Bold;
-font-weight:bold;
-color:rgba(51,51,51,1);
-margin-top: 45upx;
+		font-family:PingFang-SC-Bold;
+		font-weight:bold;
+		color:rgba(51,51,51,1);
+		margin-top: 45upx;
 	}
 	.detailed-time {
 		height: 26upx;
 		line-height: 26upx;
 		margin-top: 14upx;
 		font-size:24upx;
-font-family:PingFang-SC-Medium;
-font-weight:500;
-color:rgba(153,153,153,1);
+		font-family:PingFang-SC-Medium;
+		font-weight:500;
+		color:rgba(153,153,153,1);
 	}
 </style>

@@ -1,0 +1,213 @@
+
+.image-view.data-v-674ad460 {
+	width: 698rpx;
+	height: 307rpx;
+	margin: 10rpx auto;
+}
+.image-view>image.data-v-674ad460 {
+	width: 100%;
+	height: 100%;
+}
+.introduction.data-v-674ad460 {
+	width: 698rpx;
+	margin: 37rpx auto;
+}
+.introduction1.data-v-674ad460 {
+	height: 60rpx;
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 60rpx;
+}
+.introduction2.data-v-674ad460 {
+	height: 60rpx;
+	font-size: 26rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+	line-height: 60rpx;
+}
+.introduction3.data-v-674ad460 {
+	height: 60rpx;
+}
+.introduction3>image.data-v-674ad460 {
+	width: 23rpx;
+	height: 28rpx;
+	margin-top: 16rpx;
+	float: left;
+	margin-right: 11rpx;
+}
+.introduction3>view.data-v-674ad460 {
+	height: 25rpx;
+	font-size: 26rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+	line-height: 60rpx;
+}
+.introduction4.data-v-674ad460 {
+	height: 60rpx;
+}
+.introduction4>image.data-v-674ad460 {
+	width: 23rpx;
+	height: 28rpx;
+	margin-top: 16rpx;
+	float: left;
+	margin-right: 11rpx;
+}
+.introduction4>view.data-v-674ad460 {
+	height: 25rpx;
+	font-size: 26rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+	line-height: 60rpx;
+}
+.cuisine.data-v-674ad460 {
+	width: 698rpx;
+	margin: 10rpx auto;
+}
+.cuisine-text.data-v-674ad460 {
+	height: 100rpx;
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 100rpx;
+}
+.horizontal.data-v-674ad460 {
+	width: 698rpx;
+	height: 20rpx;
+	background: rgba(204, 210, 216, 1);
+	border-radius: 10rpx;
+	position: relative;
+}
+.dishes.data-v-674ad460 {
+	width: 682rpx;
+	height: 481rpx;
+	background: rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(191, 191, 191, 0.26);
+	        box-shadow: 0rpx 0rpx 16rpx 0rpx rgba(191, 191, 191, 0.26);
+	position: absolute;
+	top: 10rpx;
+	left: 8rpx;
+}
+.dishes1.data-v-674ad460 {
+	width: 100%;
+	height: 75rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.dishes1>view.data-v-674ad460 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: center;
+	line-height: 75rpx;
+	font-size: 28rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+.dishes2.data-v-674ad460 {
+	width: 100%;
+	height: 75rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	border-bottom: 1rpx solid #eee;
+}
+.dishes2>view.data-v-674ad460 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	text-align: center;
+	line-height: 75rpx;
+	font-size: 28rpx;
+}
+.dishes2>view.data-v-674ad460:nth-child(1) {
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1);
+}
+.dishes2>view.data-v-674ad460:nth-child(2) {
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(102, 102, 102, 1)
+}
+.dishes2>view.data-v-674ad460:nth-child(3) {
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(201, 0, 9, 1);
+}
+.dishes2>view.data-v-674ad460:nth-child(4) {
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(253, 135, 39, 1);
+}
+.dishes2>view:nth-child(4)>image.data-v-674ad460 {
+	width: 12rpx;
+	height: 18rpx;
+	padding-left: 5rpx;
+}
+.dishes-img.data-v-674ad460 {
+	width: 20rpx;
+	height: 20rpx;
+	margin: 20rpx auto;
+}
+.dishes-img>image.data-v-674ad460 {
+	width: 100%;
+	height: 100%;
+}
+.recommend.data-v-674ad460 {
+	width: 698rpx;
+	margin: 0 auto;
+	margin-top: 505rpx;
+}
+.recommend-text.data-v-674ad460 {
+	height:100rpx;
+	font-size:30rpx;
+	font-family:PingFang-SC-Medium;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	line-height:100rpx;
+}
+.comm.data-v-674ad460 {
+	width: 100%;
+	overflow: hidden;
+}
+.comm1.data-v-674ad460 {
+	width: 218rpx;
+	overflow: hidden;
+	float: left;
+	margin-bottom: 20rpx;
+}
+.comm1.data-v-674ad460:nth-child(3n+2) {
+	margin-left: 22rpx;
+	margin-right: 22rpx;
+}
+.comm-img.data-v-674ad460 {
+	width: 218rpx;
+	height: 156rpx;
+}
+.comm-img > image.data-v-674ad460 {
+	width: 100%;
+	height: 100%;
+}
+.comm-text.data-v-674ad460 {
+	width: 100%;
+	text-align: center;
+	height: 60rpx;
+	font-size:26rpx;
+	font-family:PingFang-SC-Regular;
+	font-weight:bold;
+	color:rgba(102,102,102,1);
+	line-height:60rpx;
+}
+

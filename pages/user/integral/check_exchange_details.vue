@@ -72,7 +72,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	#app {
 		background-color: #F7F7F7;
 		overflow: hidden;

@@ -1,9 +1,9 @@
 
-.map.data-v-258d2fd5 {
+.map {
 	width: 100%;
 	height: 83vh;
 }
-.shop_lisu.data-v-258d2fd5{
+.shop_lisu{
 	 padding: 20rpx 26rpx;
 	 display: -webkit-box;
 	 display: -webkit-flex;
@@ -14,7 +14,7 @@
 	     -ms-flex-pack: justify;
 	         justify-content: space-between;
 }
-.shop_sousu.data-v-258d2fd5{
+.shop_sousu{
 	 position: relative;
 	 width: 90%;
 	 height: 60rpx;
@@ -22,7 +22,7 @@
 	 border-radius: 10rpx;
 	 margin-top: 14rpx;
 }
-.shop_sousu_img.data-v-258d2fd5{
+.shop_sousu_img{
 	width: 32rpx;
 	height: 32rpx;
 	position: absolute;
@@ -32,11 +32,11 @@
 	    -ms-transform: translate(-50%,-50%);
 	        transform: translate(-50%,-50%);
 }
-.shop_sousu_img image.data-v-258d2fd5{
+.shop_sousu_img image{
 	width: 100%;
 	height: 100%;
 }
-.shop_sousu input.data-v-258d2fd5{
+.shop_sousu input{
 	width: 85%;
 	height: 100%;
 	font-size: 24rpx;
@@ -44,19 +44,19 @@
 	border-radius: 10rpx;
 	padding-left: 15%;
 }
-.info_imh.data-v-258d2fd5{
+.info_imh{
 	width: 26rpx;
 	height: 30rpx;
 	margin-top: 20rpx;
 }
-.info_imh image.data-v-258d2fd5{
+.info_imh image{
 	width: 100%;
 	height: 100%;
 }
-.info_map.data-v-258d2fd5{
+.info_map{
 	padding: 20rpx 26rpx;
 }
-.map_box.data-v-258d2fd5{
+.map_box{
 	width: 100%;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -67,21 +67,21 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-.map_box_left.data-v-258d2fd5{
+.map_box_left{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 }
-.map_box_left_img.data-v-258d2fd5{
+.map_box_left_img{
 	width: 38rpx;
 	height: 50rpx;
 }
-.map_box_left_img image.data-v-258d2fd5{
+.map_box_left_img image{
 	width: 100%;
 	height:100%;
 }
-.map_box_left text.data-v-258d2fd5{
+.map_box_left text{
 	height:31rpx;
 	line-height: 40rpx;
 	font-size:32rpx;
@@ -90,11 +90,11 @@
 	color:rgba(51,51,51,1);
 	margin-left:15rpx;
 }
-.map_box_right.data-v-258d2fd5{
+.map_box_right{
 	width: 16rpx;
 	height: 27rpx;
 }
-.map_box_right image.data-v-258d2fd5{
+.map_box_right image{
 	width: 100%;
 	height: 100%;
 }

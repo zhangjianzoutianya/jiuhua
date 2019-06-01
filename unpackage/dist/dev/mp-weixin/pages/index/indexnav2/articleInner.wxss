@@ -1,9 +1,9 @@
 
-.sec-inner.data-v-c4e57792{
+.sec-inner{
 	width: 699rpx;
 	margin: 0 auto;
 }
-.art-tit.data-v-c4e57792{
+.art-tit{
 	margin-top: 40rpx;
 	font-size:30rpx;
 	font-family:PingFang-SC-Bold;
@@ -12,38 +12,38 @@
 	line-height:1;
 	letter-spacing: 1rpx;
 }
-.art-tit2.data-v-c4e57792{
+.art-tit2{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	margin-top: 40rpx;
 }
-.art-tit2 text.data-v-c4e57792{
+.art-tit2 text{
 	font-size:24rpx;
 	font-family:PingFang-SC-Medium;
 	font-weight:500;
 	color:rgba(153,153,153,1);
 	margin-right: 30rpx;
 }
-.art-content.data-v-c4e57792{
+.art-content{
 	margin-top: 40rpx;
 }
-.art-content-inner1.data-v-c4e57792{
+.art-content-inner1{
 	font-size:26rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
 	color:rgba(51,51,51,1);
 	line-height:1.5;
 }
-.art-content-inner2.data-v-c4e57792{
+.art-content-inner2{
 	margin-top: 40rpx;
 }
-.art-content-inner2 .art-content-inner2-img.data-v-c4e57792{
+.art-content-inner2 .art-content-inner2-img{
 	width: 699rpx;
 	height: 281rpx;
 }
-.art-content-inner3 .text.data-v-c4e57792{
+.art-content-inner3 .text{
 	font-size:26rpx;
 	font-family:PingFang-SC-Regular;
 	font-weight:400;
@@ -52,12 +52,17 @@
 	text-indent: 2em;
 	margin-top: 40rpx;
 }
-.sec2.data-v-c4e57792{
-	margin-top: 40rpx;
+.sec2{
+	width: 100%;
 	padding: 40rpx 0;
 	border-top: 1px solid rgba(241,241,241,1);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+	z-index: 999;
 }
-.sec2-inner.data-v-c4e57792{
+.sec2-inner{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -72,7 +77,7 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 }
-.ipt input.data-v-c4e57792{
+.ipt input{
 	width:530rpx;
 	height:49rpx;
 	background:rgba(240,240,240,1);
@@ -83,18 +88,18 @@
 	padding-left: 20rpx;
 	letter-spacing: 2rpx;
 }
-.img1.data-v-c4e57792{
+.img1{
 	position: relative;
 }
-.img1 image.data-v-c4e57792{
+.img1 image{
 	width:31rpx;
 	height:29rpx;
 }
-.img2 image.data-v-c4e57792{
+.img2 image{
 	width:26rpx;
 	height:29rpx;
 }
-.img1-abs.data-v-c4e57792{
+.img1-abs{
 	height: 18rpx;
 	position: absolute;
 	left: 50%;
@@ -109,5 +114,103 @@
 	line-height: 18rpx;
 	text-align: center;
 	padding: 0 5rpx;
+}
+/*  */
+.lis {
+	padding: 24rpx 15rpx;
+	border-bottom: 1px solid #eee;
+}
+.detail_pingjia_f1_left {
+	height: 80rpx;
+}
+.detail_pingjia_f1_img {
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+.detail_pingjia_f1_img image{
+	width: 100%;
+	height: 100%;
+}
+.detail_pingjia_f1_txt {
+	height: 80rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	float: left;
+	margin-left: 16rpx;
+}
+.detail_pingjia_f1_txt1 {
+	font-size: 28rpx;
+	color: #1a1a1a;
+	line-height: 1;
+}
+.detail_pingjia_f1_txt2 {
+	font-size: 22rpx;
+	line-height: 1;
+	color: #333;
+	margin-top: 14rpx;
+}
+.detail_pingjia_f1_right image {
+	display: inline-block;
+	vertical-align: middle;
+	width: 28rpx;
+	margin-top: 26rpx;
+}
+.detail_pingjia_f1_right text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 22rpx;
+	color: #666;
+	margin-top: 26rpx;
+	margin-left: 10rpx;
+}
+.content_pinglun_content {
+	font-size: 26rpx;
+	color: #333333;
+	line-height: 1.5;
+	margin-top: 15rpx;
+	padding-left: 96rpx;
+	margin-bottom: 4rpx;
+}
+.hundredSurnamesNewsInner_bot1 image {
+	display: inline-block;
+	vertical-align: middle;
+	height: 28rpx;
+}
+.hundredSurnamesNewsInner_bot1 text {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 24rpx;
+	color: #999;
+	line-height: 1;
+	margin-left: 17rpx;
+}
+.hundredSurnamesNewsInner_bot2 image {
+	display: inline-block;
+	vertical-align: middle;
+	height: 28rpx;
+	margin-left: 28rpx;
+}
+.hundredSurnamesNewsInner_bot {
+	padding: 28rpx 17rpx;
+	background: #f6f7f7;
+}
+.sec1{
+	padding-bottom: 30rpx;
+	border-bottom: 1px solid #eee;
 }
 

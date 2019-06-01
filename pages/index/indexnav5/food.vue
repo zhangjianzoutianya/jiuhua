@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="uni-padding-wrap">
-			<image src="../../../static/index/indexnav5/001.png" mode=""></image>
+			<image :src="banner" mode=""></image>
 		</view>
 		<view class="unmanned">
 			<view class="unmanned-view" @click="supermarket">
@@ -59,7 +59,7 @@
 					</view>
 				</view>
 				<view class="area-view">
-					<image src="../../../static/index/indexnav1/6.png" mode=""></image>
+					<image src="../../../static/index/indexnav1/5.png" mode=""></image>
 					<view class="mask">
 						<view class="ranking">
 							TOP.2
@@ -73,7 +73,7 @@
 					</view>
 				</view>
 				<view class="area-view">
-					<image src="../../../static/index/indexnav1/7.png" mode=""></image>
+					<image src="../../../static/index/indexnav1/5.png" mode=""></image>
 					<view class="mask">
 						<view class="ranking">
 							TOP.3
@@ -219,9 +219,18 @@
 				indicatorActiveColor: "rgba(201,0,10,1)",
 				autoplay: true,
 				interval: 2000,
-				duration: 500
+				duration: 500,
+				banner:{},
 			}
 		},
+		created(){
+			let _this=this;
+		},
+		mounted(){
+			let _this=this;
+			//baner
+			_this.getBanner();
+		},	
 		methods: {
 			changeIndicatorDots(e) {
 				this.indicatorDots = !this.indicatorDots
@@ -234,12 +243,27 @@
 				    url: 'supermarket/supermarket',
 				});
 			},
+			
+			//banner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:8,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner=res.data.result.banner[0];
+					}
+				}).catch(error =>{
+					
+				})
+			}
 
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.uni-padding-wrap {
 		width: 100%;
 		height: 414upx;

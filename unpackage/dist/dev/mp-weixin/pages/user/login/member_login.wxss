@@ -1,8 +1,8 @@
 
-#app.data-v-b272cfdc {
+#app {
 	overflow: hidden;
 }
-.logo.data-v-b272cfdc {
+.logo {
 	width: 141rpx;
 	height: 125rpx;
 	margin-top: 100rpx;
@@ -10,34 +10,34 @@
 	overflow: hidden;
 	margin-bottom: 68rpx;
 }
-.logo>image.data-v-b272cfdc {
+.logo>image {
 	width: 100%;
 	height: 100%;
 }
-.user-view.data-v-b272cfdc {
+.user-view {
 	width: 630rpx;
 	height: 106rpx;
 	margin: 0 auto;
 	overflow: hidden;
 	border-bottom: 1px solid rgba(230, 230, 230, 1);
 }
-.user-img.data-v-b272cfdc {
+.user-img {
 	width: 34rpx;
 	height: 39rpx;
 	margin-top: 33rpx;
 	margin-right: 36rpx;
 	float: left;
 }
-.user-img>image.data-v-b272cfdc {
+.user-img>image {
 	width: 100%;
 	height: 100%;
 }
-.user-input.data-v-b272cfdc {
+.user-input {
 	width: 360rpx;
 	height: 106rpx;
 	overflow: hidden;
 }
-.user-input>input.data-v-b272cfdc {
+.user-input>input {
 	width: 360rpx;
 	height: 106rpx;
 
@@ -47,7 +47,7 @@
 	font-weight: 500;
 	color: rgba(153, 153, 153, 1);
 }
-.code.data-v-b272cfdc {
+.code {
 	width: 150rpx;
 	float: right;
 	text-align: right;
@@ -58,7 +58,7 @@
 	font-weight: 400;
 	color: rgba(200, 0, 10, 1);
 }
-.login.data-v-b272cfdc {
+.login {
 	width: 631rpx;
 	height: 80rpx;
 	background: rgba(200, 0, 10, 1);
@@ -73,30 +73,30 @@
 	color: rgba(255, 255, 255, 1);
 	margin-top: 72rpx;
 }
-.weixin.data-v-b272cfdc {
+.weixin {
 	width: 100%;
 	overflow: hidden;
 	margin-top: 58rpx;
 }
-.weixin-text.data-v-b272cfdc {
+.weixin-text {
 	font-size: 28rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	color: rgba(204, 204, 204, 1);
 	text-align: center;
 }
-.weixin-inco.data-v-b272cfdc {
+.weixin-inco {
 	width: 83rpx;
 	height: 83rpx;
 	margin: 0 auto;
 	overflow: hidden;
 	margin-top: 38rpx;
 }
-.weixin-inco>image.data-v-b272cfdc {
+.weixin-inco>image {
 	width: 100%;
 	height: 100%;
 }
-.statement.data-v-b272cfdc {
+.statement {
 	width: 100%;
 	font-size: 24rpx;
 	font-family: PingFang-SC-Medium;
@@ -105,7 +105,7 @@
 	text-align: center;
 	margin-top: 82rpx;
 }
-.statement>text.data-v-b272cfdc {
+.statement>text {
 	color: rgba(200, 0, 10, 1);
 }
 

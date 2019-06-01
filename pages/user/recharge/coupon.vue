@@ -9,7 +9,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="coupon-view" v-if="navIndex == 0">
+		<view class="coupon-view" v-show="navIndex == 0">
 			<!-- <view class="discount">
 				<view class="discount1">
 					<image src="../../../static/user/recharge/discount.png" mode=""></image>
@@ -19,15 +19,15 @@
 				</view>
 			</view> -->
 			<view class="coupon-data">
-				<view class="couponBg">
+				<view class="couponBg" v-for="(list,index) in contList" :key="index">
 					<image src="../../../static/user/recharge/coupon1.png" mode=""></image>
 					<view class="coupon-text">
 						<view class="coupon-text1">
 							<view>
-								30<text>%</text>
+								<text>￥</text>{{list.money}}
 							</view>
 							<view>
-								折扣
+								满减
 							</view>
 						</view>
 						<view class="coupon-text2">
@@ -35,86 +35,31 @@
 						</view>
 						<view class="coupon-text3">
 							<view>
-								电子产品折扣券
+								{{list.name}}
 							</view>
 							<view>
-								本商城购买电子产品优惠30%限本人使用
+								满{{list.condition}}可用
 							</view>
 						</view>
 					</view>
 					<view class="validity">
-						有效期：2018年4月5日  ——  2019年4月6日
+						有效期：{{list.use_start_time}}  ——  {{list.use_end_time}}
 					</view>
 				</view>
-				
-				<view class="couponBg">
-					<image src="../../../static/user/recharge/coupon2.png" mode=""></image>
-					<view class="coupon-text">
-						<view class="coupon-text1">
-							<view>
-								<text>￥</text>20
-							</view>
-							<view>
-								满减
-							</view>
-						</view>
-						<view class="coupon-text2">
-							<image src="../../../static/user/recharge/yifu.png" mode=""></image>
-						</view>
-						<view class="coupon-text3">
-							<view>
-								服饰类满减券
-							</view>
-							<view>
-								本商城服饰类产品全部可用满100可用
-							</view>
-						</view>
-					</view>
-					<view class="validity">
-						有效期：2018年4月5日  ——  2019年4月6日
-					</view>
-				</view>
-				
-				<view class="couponBg">
-					<image src="../../../static/user/recharge/coupon3.png" mode=""></image>
-					<view class="coupon-text">
-						<view class="coupon-text1">
-							<view>
-								<text>￥</text>10
-							</view>
-							<view>
-								满减
-							</view>
-						</view>
-						<view class="coupon-text2">
-							<image src="../../../static/user/recharge/shuma.png" mode=""></image>
-						</view>
-						<view class="coupon-text3">
-							<view>
-								数码产品满减券
-							</view>
-							<view>
-								本商城服饰类产品全部可用满50可用
-							</view>
-						</view>
-					</view>
-					<view class="validity">
-						有效期：2018年4月5日  ——  2019年4月6日
-					</view>
-				</view>
+				<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 			</view>
 		</view>
-		<view class="coupon-view" v-if="navIndex == 1">
+		<view class="coupon-view" v-show="navIndex == 1">
 			<view class="coupon-data">
-				<view class="couponBg">
+				<view class="couponBg" v-for="(list,index) in contList" :key="index">
 					<image src="../../../static/user/recharge/coupon1.png" mode=""></image>
 					<view class="coupon-text">
 						<view class="coupon-text1">
 							<view>
-								30<text>%</text>
+								<text>￥</text>{{list.money}}
 							</view>
 							<view>
-								折扣
+								满减
 							</view>
 						</view>
 						<view class="coupon-text2">
@@ -122,129 +67,54 @@
 						</view>
 						<view class="coupon-text3">
 							<view>
-								电子产品折扣券
+								{{list.name}}
 							</view>
 							<view>
-								本商城购买电子产品优惠30%限本人使用
+								满{{list.condition}}可用
 							</view>
 						</view>
 					</view>
 					<view class="validity">
-						有效期：2018年4月5日 —— 2019年4月6日
-					</view>
-					<view class="mask">
-						<view>
-							已使用
-						</view>
+						有效期：{{list.use_start_time}}  ——  {{list.use_end_time}}
 					</view>
 				</view>
-
-				<view class="couponBg">
-					<image src="../../../static/user/recharge/coupon2.png" mode=""></image>
-					<view class="coupon-text">
-						<view class="coupon-text1">
-							<view>
-								<text>￥</text>20
-							</view>
-							<view>
-								满减
-							</view>
-						</view>
-						<view class="coupon-text2">
-							<image src="../../../static/user/recharge/yifu.png" mode=""></image>
-						</view>
-						<view class="coupon-text3">
-							<view>
-								服饰类满减券
-							</view>
-							<view>
-								本商城服饰类产品全部可用满100可用
-							</view>
-						</view>
-					</view>
-					<view class="validity">
-						有效期：2018年4月5日 —— 2019年4月6日
-					</view>
-					<view class="mask">
-						<view>
-							已使用
-						</view>
-					</view>
-				</view>
-
-				<view class="couponBg">
-					<image src="../../../static/user/recharge/coupon3.png" mode=""></image>
-					<view class="coupon-text">
-						<view class="coupon-text1">
-							<view>
-								<text>￥</text>10
-							</view>
-							<view>
-								满减
-							</view>
-						</view>
-						<view class="coupon-text2">
-							<image src="../../../static/user/recharge/shuma.png" mode=""></image>
-						</view>
-						<view class="coupon-text3">
-							<view>
-								数码产品满减券
-							</view>
-							<view>
-								本商城服饰类产品全部可用满50可用
-							</view>
-						</view>
-					</view>
-					<view class="validity">
-						有效期：2018年4月5日 —— 2019年4月6日
-					</view>
-					<view class="mask">
-						<view>
-							已使用
-						</view>
-					</view>
-				</view>
+				<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 			</view>
+			
 		</view>
 
-		<view class="coupon-view" v-if="navIndex == 2">
+		<view class="coupon-view" v-show="navIndex == 2">
 			<view class="coupon-data">
-				<view class="couponBg">
+				<view class="couponBg" v-for="(list,index) in contList" :key="index">
 					<image src="../../../static/user/recharge/coupon1.png" mode=""></image>
-					<view class="couponBg1">
-						<view class="coupon-text">
-							<view class="coupon-text1">
-								<view>
-									30<text>%</text>
-								</view>
-								<view>
-									折扣
-								</view>
-							</view>
-							<view class="coupon-text2">
-								<image src="../../../static/user/recharge/shoubiao.png" mode=""></image>
-							</view>
-							<view class="coupon-text3">
-								<view>
-									电子产品折扣券
-								</view>
-								<view>
-									本商城购买电子产品优惠30%限本人使用
-								</view>
-							</view>
-						</view>
-						<view class="validity">
-							有效期：2018年4月5日 —— 2019年4月6日
-						</view>
-						<view class="mask1">
+					<view class="coupon-text">
+						<view class="coupon-text1">
 							<view>
-								已过期
+								<text>￥</text>{{list.money}}
+							</view>
+							<view>
+								满减
+							</view>
+						</view>
+						<view class="coupon-text2">
+							<image src="../../../static/user/recharge/shoubiao.png" mode=""></image>
+						</view>
+						<view class="coupon-text3">
+							<view>
+								{{list.name}}
+							</view>
+							<view>
+								满{{list.condition}}可用
 							</view>
 						</view>
 					</view>
+					<view class="validity">
+						有效期：{{list.use_start_time}}  ——  {{list.use_end_time}}
+					</view>
 				</view>
+				<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 
-				<view class="couponBg">
+				<!-- <view class="couponBg">
 					<image src="../../../static/user/recharge/coupon2.png" mode=""></image>
 					<view class="couponBg1">
 						<view class="coupon-text">
@@ -314,14 +184,18 @@
 						</view>
 					</view>
 					
-				</view>
+				</view> -->
 			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default {
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
 				navList: [{
@@ -335,18 +209,88 @@
 					count: 1
 				}],
 				navIndex: 0,
+				token:'',
+				page:'',
+				type:0,
+				allPages:1,
+				page:1,
+				contList:[],
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
+		},
+		created:function(){ 
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.userCoupon();
+		},
+		mounted:function(){
+			var _this = this;
+			_this.userCoupon();
 		},
 		methods: {
 			navIndexs(index) {
 				var _this = this;
-				_this.navIndex = index
-			}
+				_this.navIndex = index;
+				_this.type = index;
+				_this.page = 1;
+				_this.contList = []
+				_this.userCoupon()
+			},
+			userCoupon:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+					type:_this.type,
+					page:_this.page
+				};
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.userCoupon,data).then(res =>{
+					if(res.data.status==1){
+						if(_this.page!=1){
+							if (res.data.result.logs == null ||res.data.result.logs==undefined ||res.data.result.logs=='' ) {//没有数据
+							    _this.loadingType = 2;
+							    uni.hideNavigationBarLoading();//关闭加载动画
+							    return;
+							}
+						}
+						_this.page++
+						_this.contList = _this.contList.concat(res.data.result.logs)
+						_this.navList[0].count = res.data.result.count1;
+						_this.navList[1].count = res.data.result.count2;
+						_this.navList[2].count = res.data.result.count3;
+						_this.allPages = res.data.result.pages
+						console.log(_this.allPages)
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}
+				}).catch(error =>{
+					
+				})
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.nav {
 		width: 100%;
 		height: 80upx;
@@ -429,7 +373,7 @@
 	}
 
 	.coupon-text1>view:nth-child(1) {
-		font-size: 62upx;
+		font-size: 50upx;
 		font-family: SourceHanSansCN-Regular;
 		font-weight: bold;
 		color: rgba(255, 255, 255, 1);

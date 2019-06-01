@@ -7,19 +7,9 @@
 					<swiper class="swiper" :circular="banner.circular" :indicator-dots="banner.indicatorDots" :indicator-color="banner.indicatorColor"
 					 :indicator-active-color="banner.indicatorActiveColor" :autoplay="banner.autoplay" :interval="banner.interval" :duration="banner.duration"
 					 :previous-margin="banner.previousMargin" :next-margin="banner.nextMargin">
-						<swiper-item>
+						<swiper-item v-for="(item , index) in banner_list">
 							<view class="swiper-item">
-								<image src="../../../static/index/indexnav1/banner.png" mode=""></image>
-							</view>
-						</swiper-item>
-						<swiper-item>
-							<view class="swiper-item">
-								<image src="../../../static/index/indexnav1/banner.png" mode=""></image>
-							</view>
-						</swiper-item>
-						<swiper-item>
-							<view class="swiper-item">
-								<image src="../../../static/index/indexnav1/banner.png" mode=""></image>
+								<image :src="item.ad_code" mode=""></image>
 							</view>
 						</swiper-item>
 					</swiper>
@@ -83,7 +73,7 @@
 					</view>
 				</view>
 				<view class="area-view">
-					<image src="../../../static/index/indexnav1/6.png" mode=""></image>
+					<image src="../../../static/index/indexnav1/5.png" mode=""></image>
 					<view class="mask">
 						<view class="ranking">
 							TOP.2
@@ -97,7 +87,7 @@
 					</view>
 				</view>
 				<view class="area-view">
-					<image src="../../../static/index/indexnav1/7.png" mode=""></image>
+					<image src="../../../static/index/indexnav1/5.png" mode=""></image>
 					<view class="mask">
 						<view class="ranking">
 							TOP.3
@@ -247,7 +237,8 @@
 					duration: 500,
 					previousMargin:'',
 					nextMargin:'',
-				}
+				},
+				banner_list:[],
 			}
 		},
 		created(){
@@ -262,6 +253,10 @@
 					_this.banner.nextMargin=_this.windowW*20/375;
 				}
 			});
+			
+			//baner
+			_this.getBanner();	
+			
 		},
 		methods: {
 			supermarket() {
@@ -269,11 +264,27 @@
 				    url: 'supermarket/supermarket',
 				});
 			},
+			
+			//baner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:5,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner_list=res.data.result.banner;
+					}
+				}).catch(error =>{
+					
+				})
+				
+			}
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.banner{
 		margin-top: 29upx;
 		margin-bottom: 30upx;
@@ -398,7 +409,7 @@
 		margin-top: 19upx;
 	}
 	.check-in {
-		margin-top: 356upx;
+		margin-top: 35upx;
 		width: 100%;
 		height: 210upx;
 		overflow: hidden;

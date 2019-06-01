@@ -7,9 +7,9 @@
 				我们为您提供更多帮助
 			</view>
 			<view class="search">
-				<image src="../../../static/user/help/search.png" mode=""></image>
+				<image src="../../../static/user/help/search.png" mode="" @click="articleHelp()"></image>
 				<view class="search-input">
-					<input type="text" value="" placeholder="输入关键词搜索问题与答案" placeholder-style="color:rgba(255,255,255,1);" />
+					<input type="text" value="" placeholder="输入关键词搜索问题与答案" placeholder-style="color:rgba(255,255,255,1);" v-model="keys" confirm-type="search" @confirm="articleHelp()"/>
 				</view>
 			</view>
 		</view>
@@ -17,55 +17,98 @@
 			<view class="problem">
 				常见问题
 			</view>
-			<view class="problem-info">
+			<view class="problem-info" v-for="(list,index) in contList" :key="index">
 				<view class="problem-info1">
-					Q：如何获得积分？
+					Q：{{list.title}}
 				</view>
-				<view class="problem-info2">
-					用户可以通过签到、购物获得积分。
+				<view class="problem-info2" v-html="list.content">
+					
 				</view>
 			</view>
-			<view class="problem-info">
-				<view class="problem-info1">
-					Q：客服电话是多少？
-				</view>
-				<view class="problem-info2">
-					客服热线：400-5662-468
-				</view>
-			</view>
-			<view class="problem-info">
-				<view class="problem-info1">
-					Q：如何修改登录密码？
-				</view>
-				<view class="problem-info2">
-					在APP登录页面【登录】按钮左下角点击【找回密码】，输入手机号及验证码可以重新设置密码。
-				</view>
-			</view>
+			<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 		</view>
-		<view class="view-more">
+		
+		<view class="" style="height: 108upx; background: #FFFFFF;">
+			
+		</view>
+	<!-- 	<view class="view-more">
 			查看更多<image src="../../../static/user/help/more.png" mode=""></image>
-		</view>
+		</view> -->
 		<view class="customer-service">
 			<image src="../../../static/user/help/customer_service.png" mode=""></image>
 			联系客服
+		</view>
+		<view class="customer-service-bg">
+			
 		</view>
 	</view>
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default {
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
-
+				keys:'',
+				page:1,
+				contList:[],
+				allPages:'',
+				cony:'',
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
 		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.articleHelp();
+		},
+		mounted:function(){
+			var _this = this;
+			_this.articleHelp();
+		},
 		methods: {
-
+			//搜索
+			articleHelp:function(){
+				let _this=this;
+				if(_this.cony!=_this.keys){
+					_this.cony = _this.keys
+					_this.page = 1;
+					_this.contList = [];
+				}
+				let data={
+					keys:_this.keys,
+					page:_this.page,
+				};
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.articleHelp,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.search == null ||res.data.result.search==undefined ||res.data.result.search=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						_this.page++
+						_this.contList = _this.contList.concat(res.data.result.search)
+						_this.allPages = res.data.result.pages;
+					}
+				}).catch(error =>{
+					
+				})
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.help-img {
 		width: 100%;
 		height: 336upx;
@@ -189,16 +232,27 @@
 		height: 68upx;
 		background: linear-gradient(0deg, rgba(201, 0, 9, 1) 0%, rgba(255, 69, 78, 1) 100%);
 		border-radius: 10upx;
-		margin: 0 auto;
 		font-size: 28upx;
 		text-align: center;
 		font-family: PingFang-SC-Medium;
 		font-weight: 500;
 		color: rgba(255, 255, 255, 1);
 		line-height: 68upx;
-		margin-top: 60upx;
+		position: fixed;
+		left: 50%;
+		bottom: 20upx;
+		transform: translateX(-50%);
+		z-index: 99;
 	}
-
+	.customer-service-bg{
+		width: 100%;
+		background: #FFFFFF;
+		height: 108upx;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		z-index: 98;
+	}
 	.customer-service>image {
 		width: 24upx;
 		height: 24upx;

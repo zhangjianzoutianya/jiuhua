@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "index": "/pages/index/main",
+    "business": "/pages/business/index",
+    "user": "/pages/user/index"
+  }
+}

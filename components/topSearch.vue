@@ -1,4 +1,4 @@
-<template nane="topSearch">
+<template name="topSearch">
 	<view class="top_search">
 		<view class="top_search_map"><text>{{title}}</text><image src="../static/index/topSearch_icon.png"></image></view>
 		<image class="top_search_icon" src="../static/index/topSearch_s.png"></image>

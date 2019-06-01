@@ -5,19 +5,9 @@
 			        <view class="page-section swiper">
 			            <view class="page-section-spacing">
 			                <swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :circular="circular" :interval="interval" :duration="duration">
-			                    <swiper-item>
+			                    <swiper-item v-for="(item , index) in banner_list">
 			                        <view class="swiper-item uni_live_img">
-										<image  src="../../../static/index/banner_live.png"></image>
-									</view>
-			                    </swiper-item>
-			                    <swiper-item>
-			                        <view class="swiper-item uni_live_img">
-										<image  src="../../../static/index/banner_live1.png"></image>
-									</view>
-			                    </swiper-item>
-			                    <swiper-item>
-			                        <view class="swiper-item uni_live_img">
-										<image  src="../../../static/index/banner_live2.png"></image>
+										<image  :src="item.ad_code"></image>
 									</view>
 			                    </swiper-item>
 			                </swiper>
@@ -39,13 +29,13 @@
 						</navigator>					
 					    <navigator url="live_inner" class="scroll-view-item_P">
 							<view class="scroll-view-item_H">
-								<image src="../../../static/index/banner_live4.png" mode=""></image>
+								<image src="../../../static/index/banner_live3.png" mode=""></image>
 								<view class="tet_atore">香奈儿集团杭州大江东义蓬街道...</view>
 							</view>
 						</navigator>
 					    <navigator url="live_inner" class="scroll-view-item_P">
 							<view class="scroll-view-item_H">
-								<image src="../../../static/index/banner_live5.png" mode=""></image>
+								<image src="../../../static/index/banner_live3.png" mode=""></image>
 								<view class="tet_atore">香奈儿集团杭州大江东义蓬街道...</view>
 							</view>
 						</navigator>
@@ -143,14 +133,39 @@ export default {
 			scrollTop: 0,
             old: {
                 scrollTop: 0
-            }
+            },
+			banner_list:[],
         }
-    }		
+    },		
+	created(){
+		let _this=this;
+	},
+	mounted(){
+		let _this=this;
+		//baner
+		_this.getBanner();	
+	},
+	methods: {
+		//banner
+		getBanner:function(){
+			let _this=this;
+			let data={
+				id:12,
+			};
+			_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+				if(res.data.status==1){
+					_this.banner_list=res.data.result.banner;
+				}
+			}).catch(error =>{
+				
+			})
+		}
+	}
 }	
 	
 </script>
 
-<style scoped>
+<style>
 	.livr_box{
 		padding: 0 26upx;
 	}

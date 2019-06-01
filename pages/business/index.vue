@@ -1,6 +1,6 @@
 <template>
+	<view id="app" class="business">	
 	<view class="pages">
-		
 		<topSearch :title="mapName"></topSearch>
 		
 		<view class="business_list business_list_1">
@@ -153,6 +153,7 @@
 		
 		
 	</view>
+	</view>
 </template>
 
 <script>
@@ -181,20 +182,22 @@
 					url:url,
 				})
 			},
+			childMethod() {
+			},
 		}
 	}
 </script>
 
-<style scoped>
-	.pages{
+<style>
+	.business .pages{
 		padding-top: 45upx;
 		padding-bottom: 100upx;
 	}
-	.business_list{
+	.business .business_list{
 		padding: 60upx 27upx 40upx 27upx;
 		border-bottom: 20upx solid rgba(247,247,247,1);
 	}
-	.business_h5{
+	.business .business_h5{
 		position: relative;
 		font-size:32upx;
 		font-weight:500;
@@ -203,7 +206,7 @@
 		padding-bottom: 20upx;
 		margin-bottom: 35upx;
 	}
-	.business_h5:before{
+	.business .business_h5:before{
 		content: '';
 		position: absolute;
 		bottom: 0;
@@ -212,7 +215,7 @@
 		height:4upx;
 		background-color: rgba(201,0,9,1);
 	}
-	.business_h5 .txt{
+	.business .business_h5 .txt{
 		height:24upx;
 		font-size:24upx;
 		color:rgba(201,0,9,1);
@@ -221,90 +224,90 @@
 		top: 0;
 		right: 0;
 	}
-	.business_h5 .txt image{
+	.business .business_h5 .txt image{
 		display: inline-block;
 		width:12upx;
 		height:22upx;
 		margin-left: 10upx;
 	}
-	.business_list_1 .business_list_banner{
+	.business .business_list_1 .business_list_banner{
 		width: 100%;
 	}
-	.business_list_1 .business_list_banner image{
+	.business .business_list_1 .business_list_banner image{
 		width: 695upx;
 		height: 345upx;
 	}
 	
-	.unmanned {
+	.business .unmanned {
 		width: 100%;
 		height: 150upx;
 		overflow: hidden;
 		display: flex;
 		margin-top: 46upx;
 	}
-	.unmanned-view {
+	.business .unmanned-view {
 		flex: 1;
 		height: 100%;
 	}
-	.unmanned-img {
+	.business .unmanned-img {
 		width: 109upx;
 		height: 109upx;
 		margin: 0 auto;
 		overflow: hidden;
 	}
-	.unmanned-img>image {
+	.business .unmanned-img>image {
 		width: 100%;
 		height: 100%;
 	}
-	.unmanned-text {
+	.business .unmanned-text {
 		text-align: center;
 		height: 28upx;
 		font-size: 28upx;
 		font-weight: 400;
 		color: rgba(51, 51, 51, 1);
 	}
-	.sell-like-hot-cakes {
+	.business .sell-like-hot-cakes {
 		margin: 0 auto;
 		margin-top: 53upx;
 	}
-	.sell-like-hot-cakes-text {
+	.business .sell-like-hot-cakes-text {
 		height: 32upx;
 		font-size: 30upx;
 		font-weight: bold;
 		color: rgba(51, 51, 51, 1);
 		line-height: 32upx;
 	}
-	.sell-like-hot-cakes-i {
+	.business .sell-like-hot-cakes-i {
 		width: 35upx;
 		height: 4upx;
 		margin-top: 8upx;
 		background: rgba(201, 201, 201, 1);
 	}
-	.area {
+	.business .area {
 		margin-top: 32upx;
 		width: 698upx;
 		display: flex;
 	}
-	.area-view {
+	.business .area-view {
 		width: 226upx;
 		height: 292upx;
 		border-radius: 14upx;
 		position: relative;
 	}
-	.area-view:nth-child(2) {
+	.business .area-view:nth-child(2) {
 		margin: 0 10upx;
 	}
-	.area-view>image {
+	.business .area-view>image {
 		width: 100%;
 		height: 100%;
 	}
-	.mask {
+	.business .mask {
 		position: absolute;
 		bottom: 15upx;
 		left: 0;
 		padding:0 19upx;
 	}
-	.ranking {
+	.business .ranking {
 		width: 99upx;
 		height: 32upx;
 		background: linear-gradient(0deg, rgba(232, 129, 54, 1) 0%, rgba(232, 70, 53, 1) 100%);
@@ -315,50 +318,50 @@
 		line-height: 32upx;
 		padding-left: 10upx;
 	}
-	.area-text {
+	.business .area-text {
 		height: 27upx;
 		font-size: 26upx;
 		color: rgba(255, 255, 255, 1);
 		line-height: 27upx;
 		margin-top: 50upx;
 	}
-	.area-name {
+	.business .area-name {
 		height: 27upx;
 		font-size: 24upx;
 		color: rgba(255, 255, 255, 1);
 		line-height: 27upx;
 		margin-top: 19upx;
 	}
-	.business_list_2 .business_list_banner image{
+	.business .business_list_2 .business_list_banner image{
 		width: 698upx;
 		height: 305upx;
 	}
-	.business_list_3 .business_list_banner image{
+	.business .business_list_3 .business_list_banner image{
 		width: 698upx;
 		height: 358upx;
 	}
-	.business_list_4 .business_list_banner image{
+	.business .business_list_4 .business_list_banner image{
 		width: 698upx;
 		height: 357upx;
 	}
-	.business_list_5{
+	.business .business_list_5{
 		padding: 60upx 0upx 40upx 0upx;
 	}
-	.business_list_5 .business_list_banner image{
+	.business .business_list_5 .business_list_banner image{
 		width: 750upx;
 		height: 412upx;
 	}
-	.business_list_5 .business_h5{
+	.business .business_list_5 .business_h5{
 		padding-left: 27upx;
 		padding-right: 27upx;
 	}
-	.business_list_5 .business_h5:before{
+	.business .business_list_5 .business_h5:before{
 		left: 27upx;
 	}
-	.business_list_5 .business_h5 .txt{
+	.business .business_list_5 .business_h5 .txt{
 		right: 27upx;
 	}
-	.business_list_6 .business_list_banner image{
+	.business .business_list_6 .business_list_banner image{
 		width: 698upx;
 		height: 358upx;
 	}

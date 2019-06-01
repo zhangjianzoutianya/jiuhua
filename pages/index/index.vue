@@ -1,8 +1,8 @@
 <template>
 	<view class="pages">
-		<index v-if="PageCur=='index'"></index>	
-		<business v-if="PageCur=='business'"></business>	
-		<user v-if="PageCur=='user'"></user>	
+		<index v-if="PageCur=='index'" ref="mainindex"></index>	
+		<business v-if="PageCur=='business'" ref="mainindex"></business>	
+		<user v-if="PageCur=='user'" ref="mainindex"></user>	
 		<view class="footer">
 			<view class="footer_list" :class="activeIndex==index?'active':''" v-for="(item,index) in footer_nav" @click=NavChange(index,item.PageCur)>
 				<image :src="activeIndex==index ? item.select_icon : item.icon"></image>
@@ -55,11 +55,14 @@
 				_this.activeIndex=index;
 				_this.PageCur=PageCur;
 			}
+		},
+		onShow(e) {
+			this.$refs.mainindex.childMethod();
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.pages{
 		
 	}

@@ -51,7 +51,7 @@
 	
 </script>
 
-<style scoped>
+<style>
 	.map_list{
 		width: 100%;
 		position: relative;

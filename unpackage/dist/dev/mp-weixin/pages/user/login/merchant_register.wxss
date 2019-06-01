@@ -1,17 +1,17 @@
 
-#app.data-v-67c2a09c {
+#app {
 	background: rgba(238, 238, 238, 1);
 	width: 100%;
 	height: 100%;
 }
-.merchant.data-v-67c2a09c {
+.merchant {
 	width: 100%;
 	height: 105rpx;
 	background-color: rgb(255, 255, 255);
 	overflow: hidden;
 	border-top: 1rpx solid rgba(228, 228, 228, 1);
 }
-.merchant-img.data-v-67c2a09c {
+.merchant-img {
 	width: 65rpx;
 	height: 65rpx;
 	overflow: hidden;
@@ -20,11 +20,11 @@
 	margin-right: 59rpx;
 	border-radius: 50%;
 }
-.merchant-img>image.data-v-67c2a09c {
+.merchant-img>image {
 	width: 100%;
 	height: 100%;
 }
-.merchant-text.data-v-67c2a09c {
+.merchant-text {
 	line-height: 105rpx;
 	font-size: 28rpx;
 	font-family: PingFang-SC-Medium;
@@ -32,29 +32,29 @@
 	color: rgba(51, 51, 51, 1);
 	padding-left: 61rpx;
 }
-.detailed.data-v-67c2a09c {
+.detailed {
 	width: 100%;
 	overflow: hidden;
 	background-color: rgb(255, 255, 255);
 	margin-top: 20rpx;
 }
-.detailed-view.data-v-67c2a09c {
+.detailed-view {
 	width: 630rpx;
 	height: 108rpx;
 	border-bottom: 1rpx solid rgba(230, 230, 230, 1);
 	margin: 0 auto;
 	overflow: hidden;
 }
-.detailed-view.data-v-67c2a09c:last-child {
+.detailed-view:last-child {
 	border-bottom: 1rpx solid rgba(255, 255, 255, 1);
 }
-.detailed-view>image.data-v-67c2a09c {
+.detailed-view>image {
 	width: 17rpx;
 	height: 30rpx;
 	margin-top: 38rpx;
 	float: right;
 }
-.detailed-name.data-v-67c2a09c {
+.detailed-name {
 	line-height: 108rpx;
 	width: 200rpx;
 	font-size: 28rpx;
@@ -63,13 +63,13 @@
 	color: rgba(51, 51, 51, 1);
 	float: left;
 }
-.detailed-input.data-v-67c2a09c {
+.detailed-input {
 	width: 350rpx;
 	height: 108rpx;
 	overflow: hidden;
 	line-height: 108rpx;
 }
-.detailed-input>input.data-v-67c2a09c {
+.detailed-input>input {
 	height: 108rpx;
 	line-height: 108rpx;
 	font-size: 28rpx;
@@ -77,7 +77,7 @@
 	font-weight: 500;
 	color: rgba(153, 153, 153, 1);
 }
-.detailed-input>view.data-v-67c2a09c {
+.detailed-input>view {
 	height: 108rpx;
 	line-height: 108rpx;
 	font-size: 28rpx;
@@ -85,7 +85,7 @@
 	font-weight: 500;
 	color: rgba(153, 153, 153, 1);
 }
-.license.data-v-67c2a09c {
+.license {
 	width: 100%;
 	height: 106rpx;
 	font-size: 32rpx;
@@ -95,22 +95,22 @@
 	line-height: 106rpx;
 	margin-left: 61rpx;
 }
-.license-img.data-v-67c2a09c {
+.license-img {
 	width: 100%;
 	background-color: rgba(255, 255, 255, 1);
 	overflow: hidden;
 }
-.license-image.data-v-67c2a09c {
+.license-image {
 	width: 150rpx;
 	height: 150rpx;
 	margin: 103rpx auto;
 	overflow: hidden;
 }
-.license-image>image.data-v-67c2a09c {
+.license-image>image {
 	width: 100%;
 	height: 100%;
 }
-.submission.data-v-67c2a09c {
+.submission {
 	width: 631rpx;
 	height: 80rpx;
 	background: rgba(200, 0, 10, 1);

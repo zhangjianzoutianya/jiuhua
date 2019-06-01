@@ -1,79 +1,103 @@
 <template>
 	<view>
 		<view class="comm">
-			<view class="comm-info">
+			<view class="comm-info" v-for="(list,index) in contentList" :key="index">
 				<view class="comm-img">
-					<image src="../../../static/user/integral/comm001.png" mode=""></image>
+					<image :src="list.original_img" mode=""></image>
 				</view>
 				<view class="comm-title">
 					<view class="comm-text">
-						拉克边桌简约时尚，公主风格
+						{{list.integral_name}}
 					</view>
 					<view class="comm-msg">
 						<view class="comm-data">
-							-200积分+10元
+							{{list.exchange_integral}}积分+{{list.shop_price}}元
 						</view>
 						<view class="comm-time">
-							2019-05-05  12:12
+							{{list.add_time}}
 						</view>
 					</view>
 				</view>
 			</view>
-			<view class="comm-info">
-				<view class="comm-img">
-					<image src="../../../static/user/integral/comm002.png" mode=""></image>
-				</view>
-				<view class="comm-title">
-					<view class="comm-text">
-						普鲁林三分式悬挂储物件普鲁林三分式悬挂储物件
-					</view>
-					<view class="comm-msg">
-						<view class="comm-data">
-							-200积分+10元
-						</view>
-						<view class="comm-time">
-							2019-05-05  12:12
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="comm-info">
-				<view class="comm-img">
-					<image src="../../../static/user/integral/comm003.png" mode=""></image>
-				</view>
-				<view class="comm-title">
-					<view class="comm-text">
-						特提亚工作灯高端品质特提亚工作灯高端品质
-                        
-					</view>
-					<view class="comm-msg">
-						<view class="comm-data">
-							-200积分+10元
-						</view>
-						<view class="comm-time">
-							2019-05-05  12:12
-						</view>
-					</view>
-				</view>
-			</view>
+			<uniLoadMore v-if="allPages>1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 		</view>
 	</view>
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default {
+		components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
-				
+				token:'',
+				page:1,
+				allPages:'',
+				contentList:[],
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
 		},
+		created:function(){
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.userExchange()
+		},
+		mounted:function(){
+			let _this=this;
+			_this.userExchange()
+		},
 		methods: {
-			
+			//记录
+			userExchange:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+					page:_this.page,
+				};
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.userExchange,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.list == null ||res.data.result.list==undefined ||res.data.result.list=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						_this.page++
+						_this.contentList = _this.contentList.concat(res.data.result.list);
+						_this.allPages = res.data.result.pages;
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}
+				}).catch(error =>{
+					
+				})
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.comm {
 		width: 100%;
 		overflow: hidden;

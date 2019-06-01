@@ -1,13 +1,13 @@
 
-.map_list.data-v-7dbd40c9{
+.map_list{
 	width: 100%;
 	position: relative;
 }
-.map.data-v-7dbd40c9 {
+.map {
 	width: 750rpx;
 	height: 835rpx;
 }
-.map_sou.data-v-7dbd40c9{
+.map_sou{
 	position: absolute;
 	top: 20rpx;
 	left: 0;
@@ -23,34 +23,34 @@
 	        justify-content: space-between;
 	z-index: 1;
 }
-.map_sou_left.data-v-7dbd40c9{
+.map_sou_left{
 	width: 62rpx;
 	height: 60rpx;
 	background: #FFFFFF;
 	border-radius: 10rpx;
 	text-align: center;
 }
-.sou_img.data-v-7dbd40c9{
+.sou_img{
 	width: 22rpx;
 	height: 22rpx;
 }
-.sou_img image.data-v-7dbd40c9{
+.sou_img image{
 	width: 100%;
 	height: 100%;
 }
-.map_tit.data-v-7dbd40c9{
+.map_tit{
 	color: #C90009;
 	font-size: 20rpx;
 	margin-top: 18rpx;
 }
-.shop_sousu.data-v-7dbd40c9{
+.shop_sousu{
 	 position: relative;
 	 width: 87%;
 	 height: 60rpx;
 	 background: #F3F3F3;
 	 border-radius: 10rpx;
 }
-.shop_sousu_img.data-v-7dbd40c9{
+.shop_sousu_img{
 	width: 32rpx;
 	height: 32rpx;
 	position: absolute;
@@ -60,11 +60,11 @@
 	    -ms-transform: translate(-50%,-50%);
 	        transform: translate(-50%,-50%);
 }
-.shop_sousu_img image.data-v-7dbd40c9{
+.shop_sousu_img image{
 	width: 100%;
 	height: 100%;
 }
-.shop_sousu input.data-v-7dbd40c9{
+.shop_sousu input{
 	width: 100%;
 	height: 100%;
 	text-align: center;

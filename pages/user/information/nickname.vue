@@ -5,7 +5,7 @@
 				<image src="../../../static/user/close.png" mode=""></image>
 			</view>
 			<view class="modify-input">
-				<input type="text" value="" placeholder="请输入昵称" />
+				<input type="text" value="" placeholder="请输入昵称" v-model="user_name" confirm-type="search" @confirm="editUser()" />
 			</view>
 		</view>
 		<view class="modify-text">
@@ -13,21 +13,57 @@
 		</view>
 	</view>
 </template>
-
 <script>
 	export default {
 		data() {
 			return {
-
+				user_name:'',
+				token:''
 			}
 		},
+		created:function(){
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
+			let _this = this;
+			_this.user_name = option.name;
+		},
 		methods: {
-
-		}
+			//修改昵称
+			editUser:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+					name:_this.user_name,
+				};
+				_this.$axios(_this.$baseUrl.editUser,data).then(res =>{
+					if(res.data.status==1){
+						uni.showToast({
+							title: res.data.msg,
+							icon:'success',
+							position:'center',
+							duration: 2000
+						})
+						setTimeout(function(){
+							uni.navigateBack({})
+						},1500)
+					}
+				}).catch(error =>{
+					
+				})
+			},
+		},
 	}
 </script>
 
-<style scoped>
+<style>
 	#app {
 		overflow: hidden;
 	}

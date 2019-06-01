@@ -1,0 +1,155 @@
+
+.information.data-v-c4527828 {
+	width: 750rpx;
+	height: 411rpx;
+	overflow: hidden;
+	position: relative;
+}
+.information-bg.data-v-c4527828 {
+	width: 100%;
+	height: 100%;
+}
+.an-crown.data-v-c4527828 {
+	width: 206rpx;
+	height: 187rpx;
+	left: 272rpx;
+	top: 49rpx;
+	position: absolute;
+	overflow: hidden;
+}
+.rule.data-v-c4527828 {
+	width: 110rpx;
+	height: 33rpx;
+	background: rgba(109, 129, 147, 1);
+	border-radius: 17rpx;
+	font-size: 20rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgb(220, 220, 220);
+	text-align: center;
+	line-height: 33rpx;
+	position: absolute;
+	top: 18rpx;
+	right: 25rpx;
+	z-index: 20;
+}
+.an-crown>image.data-v-c4527828 {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.an-crown-text.data-v-c4527828 {
+	width: 100%;
+	height: 30rpx;
+	font-size: 20rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+	position: absolute;
+	top: 174rpx;
+	left: 0;
+	text-align: center;
+	line-height: 30rpx;
+}
+.member.data-v-c4527828 {
+	position: absolute;
+	width: 700rpx;
+	height: 60rpx;
+	top: 268rpx;
+	left: 25rpx;
+	overflow: hidden;
+}
+.member>view.data-v-c4527828 {
+	float: left;
+}
+.member-img.data-v-c4527828 {
+	width: 60rpx;
+	height: 60rpx;
+	overflow: hidden;
+}
+.member-img>image.data-v-c4527828 {
+	width: 100%;
+	height: 100%;
+}
+.member-view.data-v-c4527828 {
+	width: 144rpx;
+	height: 1rpx;
+	background-color: rgba(190, 190, 190, 1);
+	margin: 29rpx 4rpx;
+	overflow: hidden;
+}
+.member-view>view.data-v-c4527828 {
+	height: 1rpx;
+	background-color: rgba(255, 216, 69, 1);
+}
+.member-text.data-v-c4527828 {
+	position: absolute;
+	width: 700rpx;
+	height: 25rpx;
+	bottom: 34rpx;
+	left: 25rpx;
+	overflow: hidden;
+}
+.member-text>view.data-v-c4527828 {
+	width: 50%;
+	height: 25rpx;
+	font-size: 22rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(255, 232, 150, 1);
+	line-height: 25rpx;
+}
+.member-text>view.data-v-c4527828:nth-child(1) {
+	float: right;
+	text-align: right;
+}
+.equity.data-v-c4527828 {
+	width: 100%;
+	height: 92rpx;
+	overflow: hidden;
+	text-align: center;
+	font-size: 28rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(232, 183, 65, 1);
+	line-height: 92rpx;
+}
+.classification.data-v-c4527828 {
+	margin-top: 17rpx;
+	width: 100%;
+	height: 177rpx;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.classification-view.data-v-c4527828 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	width: 100%;
+	height: 100%;
+}
+.classification-img.data-v-c4527828 {
+	width: 100rpx;
+	height: 100rpx;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.classification-img>image.data-v-c4527828 {
+	width: 100%;
+	height: 100%;
+}
+.classification-text.data-v-c4527828 {
+	width: 100%;
+	height: 77rpx;
+	line-height: 77rpx;
+	text-align: center;
+	font-size: 24rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: 500;
+	color: rgba(51, 51, 51, 1);
+}
+

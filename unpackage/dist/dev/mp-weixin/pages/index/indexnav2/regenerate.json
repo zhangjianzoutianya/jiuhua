@@ -3,5 +3,7 @@
   "navigationBarBackgroundColor": "#6fc562",
   "navigationBarTextStyle": "white",
   "backgroundColor": "#6fc562",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more"
+  }
 }

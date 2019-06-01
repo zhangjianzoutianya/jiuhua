@@ -96,7 +96,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.logo-bg {
 		width: 100%;
 		height: 878upx;
@@ -178,7 +178,7 @@
 		width: 628upx;
 		height: 668upx;
 		background: rgba(0, 0, 0, 0.6);
-		opacity: 0.66;
+		opacity: 0.9;
 		border-radius: 10upx 10upx 0 0;
 		position: absolute;
 		bottom: 0;

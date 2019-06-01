@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "循@九华",
   "navigationBarBackgroundColor": "#fff",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more"
+  }
 }

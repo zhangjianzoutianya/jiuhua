@@ -1,15 +1,15 @@
 
-.comm.data-v-ebc22b9e {
+.comm {
 		width: 100%;
 		overflow: hidden;
 }
-.comm-info.data-v-ebc22b9e {
+.comm-info {
 		width: 100%;
 		height: 189rpx;
 		border-top: 1rpx solid rgba(238,238,238,1);
 		overflow: hidden;
 }
-.comm-img.data-v-ebc22b9e {
+.comm-img {
 		width: 170rpx;
 		height: 125rpx;
 		margin: 30rpx 25rpx;
@@ -17,17 +17,17 @@
 		overflow: hidden;
 		border-radius: 10rpx;
 }
-.comm-img > image.data-v-ebc22b9e {
+.comm-img > image {
 		width: 100%;
 		height: 100%;
 }
-.comm-title.data-v-ebc22b9e {
+.comm-title {
 		width: 500rpx;
 		height: 125rpx;
 		margin-top: 30rpx;
 		overflow: hidden;
 }
-.comm-text.data-v-ebc22b9e {
+.comm-text {
 		width: 100%;
 		height: 80rpx;
 		line-height: 40rpx;
@@ -37,13 +37,13 @@ font-family:PingFang-SC-Medium;
 font-weight:500;
 color:rgba(51,51,51,1);
 }
-.comm-msg.data-v-ebc22b9e {
+.comm-msg {
 		width: 100%;
 		height: 25rpx;
 		margin-top: 15rpx;
 		overflow: hidden;
 }
-.comm-data.data-v-ebc22b9e {
+.comm-data {
 		float: right;
 		text-align: right;
 		font-size:24rpx;
@@ -52,7 +52,7 @@ font-family:PingFang-SC-Medium;
 font-weight:500;
 color:rgba(201,0,9,1);
 }
-.comm-time.data-v-ebc22b9e {
+.comm-time {
 		font-size:24rpx;
 		line-height: 25rpx;
 font-family:PingFang-SC-Medium;

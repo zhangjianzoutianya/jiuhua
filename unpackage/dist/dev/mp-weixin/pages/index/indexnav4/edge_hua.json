@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "缘@九华",
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-load-more": "/components/uni-load-more"
+  }
 }

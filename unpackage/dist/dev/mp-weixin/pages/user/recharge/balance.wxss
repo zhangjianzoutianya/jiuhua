@@ -1,15 +1,15 @@
 
-.balanceBg.data-v-0e9a041c {
+.balanceBg {
 	width: 100%;
 	height: 237rpx;
 	overflow: hidden;
 	position: relative;
 }
-.balanceBg>image.data-v-0e9a041c {
+.balanceBg>image {
 	width: 100%;
 	height: 100%;
 }
-.money.data-v-0e9a041c {
+.money {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -17,7 +17,7 @@
 	left: 0;
 	overflow: hidden;
 }
-.money-count.data-v-0e9a041c {
+.money-count {
 	font-size: 74rpx;
 	font-family: PingFang-SC-Bold;
 	font-weight: bold;
@@ -25,17 +25,17 @@
 	color: rgba(255, 255, 255, 1);
 	line-height: 150rpx;
 }
-.money-count>text.data-v-0e9a041c {
+.money-count>text {
 	font-size: 50rpx;
 }
-.money-text.data-v-0e9a041c {
+.money-text {
 	font-size: 24rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
 	text-align: center;
 	color: rgba(255, 255, 255, 1);
 }
-.record.data-v-0e9a041c {
+.record {
 	width: 100%;
 	height: 77rpx;
 	line-height: 77rpx;
@@ -46,24 +46,24 @@
 	padding-left: 27rpx;
 	background: rgba(241, 239, 242, 1);
 }
-.consumption.data-v-0e9a041c {
+.consumption {
 	width: 100%;
 	overflow: hidden;
 }
-.consumption-view.data-v-0e9a041c {
+.consumption-view {
 	width: 100%;
 	height: 154rpx;
 	border-bottom: 1rpx solid rgba(238, 238, 238, 1);
 	overflow: hidden;
 }
-.consumption-view1.data-v-0e9a041c {
+.consumption-view1 {
 	width: 280rpx;
 	height: 154rpx;
 	overflow: hidden;
 	float: right;
 	margin-right: 26rpx;
 }
-.consumption-view1>view.data-v-0e9a041c:nth-child(1) {
+.consumption-view1>view:nth-child(1) {
 	font-size: 28rpx;
 	height: 30rpx;
 	width: 100%;
@@ -73,7 +73,7 @@
 	margin-top: 46rpx;
 	text-align: right;
 }
-.consumption-view1>view.data-v-0e9a041c:nth-child(2) {
+.consumption-view1>view:nth-child(2) {
 	font-size: 24rpx;
 	height: 26rpx;
 	width: 100%;
@@ -84,19 +84,19 @@
 	margin-top: 18rpx;
 	text-align: right;
 }
-.t1.data-v-0e9a041c {
+.t1 {
 	color: rgba(9, 187, 7, 1);
 }
-.t2.data-v-0e9a041c {
+.t2 {
 	color: rgba(201, 0, 9, 1);
 }
-.consumption-view2.data-v-0e9a041c {
+.consumption-view2 {
 	width: 440rpx;
 	height: 154rpx;
 	overflow: hidden;
 	float: right;
 }
-.consumption-view2>view.data-v-0e9a041c:nth-child(1) {
+.consumption-view2>view:nth-child(1) {
 	font-size: 28rpx;
 	font-family: PingFang-SC-Bold;
 	font-weight: bold;
@@ -107,7 +107,7 @@
 	padding-left: 26rpx;
 	margin-top: 46rpx;
 }
-.consumption-view2>view.data-v-0e9a041c:nth-child(2) {
+.consumption-view2>view:nth-child(2) {
 	font-size: 22rpx;
 	font-family: PingFang-SC-Medium;
 	font-weight: 500;
@@ -118,7 +118,7 @@
 	margin-top: 18rpx;
 	padding-left: 26rpx;
 }
-.operation.data-v-0e9a041c {
+.operation {
 	position: fixed;
 	width: 100%;
 	height: 98rpx;
@@ -132,13 +132,13 @@
 	overflow: hidden;
 	background-color: rgba(255, 255, 255, 1);
 }
-.operation>view.data-v-0e9a041c {
+.operation>view {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
 }
-.cash-withdrawal>view.data-v-0e9a041c {
+.cash-withdrawal>view {
 	width: 327rpx;
 	height: 60rpx;
 	background: rgba(255, 228, 229, 1);
@@ -151,7 +151,7 @@
 	text-align: center;
 	line-height: 60rpx;
 }
-.recharge>view.data-v-0e9a041c {
+.recharge>view {
 	width: 327rpx;
 	height: 60rpx;
 	background: rgba(201, 0, 9, 1);
@@ -164,7 +164,7 @@
 	text-align: center;
 	line-height: 60rpx;
 }
-.null.data-v-0e9a041c {
+.null {
 	width: 98rpx;
 	height: 98rpx;
 }

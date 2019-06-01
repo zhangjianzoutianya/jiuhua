@@ -91,6 +91,24 @@
 				"navigationBarBackgroundColor":"#fff"
 			}
 		},{
+		    "path" : "pages/index/indexnav2/garbage_harmful",
+		    "style" : {
+				"navigationBarTitleText": "有害垃圾",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav2/garbage_food",
+		    "style" : {
+				"navigationBarTitleText": "厨余垃圾",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
+		    "path" : "pages/index/indexnav2/garbage_other",
+		    "style" : {
+				"navigationBarTitleText": "其他垃圾",
+				"navigationBarBackgroundColor":"#fff"
+			}
+		},{
 		    "path" : "pages/index/indexnav2/circulation_station",
 		    "style" : {
 				"navigationBarTitleText": "循环站",
@@ -211,6 +229,21 @@
 			"path" : "pages/user/setUp/bind_cell_phone",
 			"style": {
 				"navigationBarTitleText": "手机号绑定"
+			}
+		},{
+			"path" : "pages/user/setUp/address",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},{
+			"path" : "pages/user/setUp/address_inner",
+			"style": {
+				"navigationBarTitleText": "地址修改"
+			}
+		},{
+			"path" : "pages/user/setUp/address_add",
+			"style": {
+				"navigationBarTitleText": "新增地址"
 			}
 		},{
 			"path" : "pages/user/information/information",

@@ -13,7 +13,7 @@
 			<view class="days">
 				<view class="days1">
 					<view>
-						5
+						{{signList.user_points}}
 					</view>
 
 					<view>
@@ -22,7 +22,7 @@
 				</view>
 				<view class="days1">
 					<view>
-						1
+						{{signList.continue_day}}
 					</view>
 					<view>
 						连续签到天数
@@ -31,88 +31,108 @@
 			</view>
 			<view class="date-view">
 				<view class="date1">
-					<!-- <view class="date2">
-						1
-					</view> -->
-					<view class="date6">
+					<view class="date2" v-if="datas2[0]==0">
+						+1
+					</view>
+					<view class="date6" v-else-if="datas2[0]==1" >
 						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
 					</view>
 					<view class="date3">
-						5.06
+						{{datas[0]}}
 					</view>
 				</view>
 				<view class="date4">
-					<!-- <view class="date5"></view> -->
 				</view>
 				<view class="date1">
 
-					<view class="date2">
-						1
+					<view class="date2" v-if="datas2[1]==0">
+						+2
+					</view>
+					<view class="date6" v-else-if="datas2[1]==1" >
+						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
 					</view>
 					<view class="date3">
-						5.06
+						{{datas[1]}}
 					</view>
 				</view>
 				<view class="date4">
-					<!-- <view class="date5"></view> -->
 				</view>
 				<view class="date1">
 
-					<view class="date2">
-						1
+					<view class="date2" v-if="datas2[2]==0">
+						+3
+					</view>
+					<view class="date6" v-else-if="datas2[2]==1" >
+						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
 					</view>
 					<view class="date3">
-						5.06
+						{{datas[2]}}
 					</view>
 				</view>
 				<view class="date4">
 					<!-- <view class="date5"></view> -->
 				</view>
 				<view class="date1">
-					<view class="date2">
-						1
+					<view class="date2" v-if="datas2[3]==0">
+						+4
+					</view>
+					<view class="date6" v-else-if="datas2[3]==1" >
+						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
 					</view>
 					<view class="date3">
-						5.06
+						{{datas[3]}}
 					</view>
 				</view>
 				<view class="date4">
 					<!-- <view class="date5"></view> -->
 				</view>
 				<view class="date1">
-					<view class="date2">
-						1
+					<view class="date2" v-if="datas2[4]==0">
+						+5
+					</view>
+					<view class="date6" v-else-if="datas2[4]==1" >
+						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
 					</view>
 					<view class="date3">
-						5.06
+						{{datas[4]}}
+					</view>
+				</view>
+				<view class="date4">
+				</view>
+				<view class="date1">
+					<view class="date2" v-if="datas2[5]==0">
+						+6
+					</view>
+					<view class="date6" v-else-if="datas2[5]==1" >
+						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
+					</view>
+					<view class="date3">
+						{{datas[5]}}
 					</view>
 				</view>
 				<view class="date4">
 					<!-- <view class="date5"></view> -->
 				</view>
 				<view class="date1">
-					<view class="date2">
-						1
+					<view class="date2" v-if="datas2[6]==0">
+						+7
+					</view>
+					<view class="date6" v-else-if="datas2[6]==1" >
+						<image src="../../../static/user/integral/check_mark.png" mode=""></image>
 					</view>
 					<view class="date3">
-						5.06
-					</view>
-				</view>
-				<view class="date4">
-					<!-- <view class="date5"></view> -->
-				</view>
-				<view class="date1">
-					<view class="date2">
-						1
-					</view>
-					<view class="date3">
-						5.06
+						{{datas[6]}}
 					</view>
 				</view>
 
 			</view>
-			<view class="sign-in" @click="signIn">
-				签到
+			<view class="sign-in-isin">
+				<view v-if="signList.signin==2" class="sign-in" @click="signIn">
+					签到
+				</view>
+				<view v-else-if="signList.signin==1" class="sign-in">
+					已签到
+				</view>
 			</view>
 		</view>
 
@@ -126,7 +146,7 @@
 								签到成功
 							</view>
 							<view class="panel-title2">
-								您已连续签到2天，连续签到获取更多积分吧！
+								您已连续签到{{goesCotnet.continue_day}}天，连续签到获取更多积分吧！
 							</view>
 							<view class="panel-title3" @click="signIn">
 								知道了
@@ -136,7 +156,7 @@
 					<view class="calendar">
 						<image src="../../../static/user/integral/calendar.png" mode=""></image>
 						<view class="count">
-							+5
+							+{{goesCotnet.pay_points}}
 						</view>
 					</view>
 					<view class="fork" @click="signIn">
@@ -153,8 +173,26 @@
 	export default {
 		data() {
 			return {
-				popupIndex: false
+				popupIndex: false,
+				token:'',
+				signList:{},
+				datas:[],
+				datas2:[],
+				goesCotnet:{}
 			}
+		},
+		created:function(){ 
+			var _this = this;
+			uni.getStorage({
+				 key: 'token',
+				 success: function (res) {
+					 _this.token = res.data
+				}
+			})
+		},
+		mounted: function () {
+			var _this = this;
+			_this.signIns();
 		},
 		methods: {
 			signIn() {
@@ -163,13 +201,45 @@
 					_this.popupIndex = false
 				} else{
 					_this.popupIndex = true
+					let data={
+						channel:1,
+						token:_this.token,
+					};
+					_this.$axios(_this.$baseUrl.userSign,data).then(res =>{
+						if(res.data.status==1){
+							_this.goesCotnet = res.data.result;
+							_this.signIns();
+						}
+					}).catch(error =>{
+						
+					})
 				}
-			}
+				
+			},
+			signIns:function(){
+				let _this=this;
+				let data={
+					channel:1,
+					token:_this.token,
+				};
+				_this.$axios(_this.$baseUrl.signIn,data).then(res =>{
+					if(res.data.status==1){
+						_this.signList = res.data.result;
+						_this.datas = res.data.result.data;
+						_this.datas2 = res.data.result.is_sign;
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			userSign:function(){
+				
+			},
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	#app {
 		width: 100%;
 		height: 100%;
@@ -325,6 +395,11 @@
 		background-color: rgba(229, 24, 32, 1);
 	}
 
+	.sign-in-isin{
+		display: flex;
+		justify-content: center;
+	}
+	
 	.sign-in {
 		width: 200upx;
 		height: 58upx;

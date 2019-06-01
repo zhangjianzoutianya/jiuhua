@@ -127,7 +127,7 @@
 
 </script>
 
-<style scoped>
+<style>
 	.livr_box{
 		padding: 0 26upx;
 	}

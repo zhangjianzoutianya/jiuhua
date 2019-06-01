@@ -1,4 +1,5 @@
 <template name="index">
+	<view id="app" class="main">
 	<view class="pages">
 		
 		<topSearch :title="mapName"></topSearch>
@@ -8,19 +9,9 @@
 				<view class="page-section swiper">
 					<view class="page-section-spacing">
 						<swiper class="swiper" :circular="banner.circular" :indicator-dots="banner.indicatorDots" :indicator-color="banner.indicatorColorOff" :indicator-active-color="banner.indicatorColorOn" :autoplay="banner.autoplay" :interval="banner.interval" :duration="banner.duration" :display-multiple-items="banner.displayItems" :previous-margin="banner.previousM" :next-margin="banner.nextM">
-							<swiper-item>
+							<swiper-item v-for="(item , index) in banner_list">
 								<view class="swiper-item">
-									<image src="../../static/index/banner.png"></image>
-								</view>
-							</swiper-item>
-							<swiper-item>
-								<view class="swiper-item">
-									<image src="../../static/index/banner.png"></image>
-								</view>
-							</swiper-item>
-							<swiper-item>
-								<view class="swiper-item">
-									<image src="../../static/index/banner.png"></image>
+									<image :src="item.ad_code"></image>
 								</view>
 							</swiper-item>
 						</swiper>
@@ -98,46 +89,13 @@
 					<view class="page-section swiper">
 						<view class="page-section-spacing">
 							<swiper class="swiper" :circular="hdzx.circular" :autoplay="hdzx.autoplay" :interval="hdzx.interval" :duration="hdzx.duration" :display-multiple-items="hdzx.displayItems" :previous-margin="hdzx.previousM" :next-margin="hdzx.nextM">
-								<swiper-item>
+								<swiper-item v-for="(list1,index1) in contentList1" :key="index1" @click="goClassPages('./indexnav2/articleInner',list1.article_id)">
 									<view class="swiper-item">
 										<view class="index_hdzx_list">
-											<image src="../../static/index/index_hdzx_1.png"></image>
+											<image :src="list1.thumb"></image>
 											<view class="index_hdzx_txt">
-												<text class="h">九华集团召开二季度工作推进会议</text>
-												<text class="p">九华集团召开二季度工作推进会议...</text>
-											</view>
-										</view>
-									</view>
-								</swiper-item>
-								<swiper-item>
-									<view class="swiper-item">
-										<view class="index_hdzx_list">
-											<image src="../../static/index/index_hdzx_2.png"></image>
-											<view class="index_hdzx_txt">
-												<text class="h">端午节来临之际</text>
-												<text class="p">九华特此给每位员工</text>
-											</view>
-										</view>
-									</view>
-								</swiper-item>
-								<swiper-item>
-									<view class="swiper-item">
-										<view class="index_hdzx_list">
-											<image src="../../static/index/index_hdzx_1.png"></image>
-											<view class="index_hdzx_txt">
-												<text class="h">九华集团召开二季度工作推进会议</text>
-												<text class="p">九华集团召开二季度工作推进会议...</text>
-											</view>
-										</view>
-									</view>
-								</swiper-item>
-								<swiper-item>
-									<view class="swiper-item">
-										<view class="index_hdzx_list">
-											<image src="../../static/index/index_hdzx_2.png"></image>
-											<view class="index_hdzx_txt">
-												<text class="h">端午节来临之际</text>
-												<text class="p">九华特此给每位员工</text>
+												<text class="h">{{list1.title}}</text>
+												<text class="p">{{list1.description}}</text>
 											</view>
 										</view>
 									</view>
@@ -161,42 +119,12 @@
 					<view class="page-section swiper">
 						<view class="page-section-spacing">
 							<swiper class="swiper" :circular="syzx.circular" :autoplay="syzx.autoplay" :interval="syzx.interval" :duration="syzx.duration" :display-multiple-items="syzx.displayItems" :next-margin="syzx.nextM">
-								<swiper-item>
+								<swiper-item v-for="(list2,index2) in contentList2" :key="index2" @click="goClassPages('./indexnav2/articleInner',list2.article_id)">
 									<view class="swiper-item">
 										<view class="index_hdzx_list">
-											<image src="../../static/index/index_syzx_1.png"></image>
+											<image :src="list2.thumb"></image>
 											<view class="index_hdzx_txt">
-												<text class="h">5月22日，商场开业</text>
-											</view>
-										</view>
-									</view>
-								</swiper-item>
-								<swiper-item>
-									<view class="swiper-item">
-										<view class="index_hdzx_list">
-											<image src="../../static/index/index_syzx_2.png"></image>
-											<view class="index_hdzx_txt">
-												<text class="h">推出最新家庭住宅</text>
-											</view>
-										</view>
-									</view>
-								</swiper-item>
-								<swiper-item>
-									<view class="swiper-item">
-										<view class="index_hdzx_list">
-											<image src="../../static/index/index_syzx_1.png"></image>
-											<view class="index_hdzx_txt">
-												<text class="h">5月22日，商场开业</text>
-											</view>
-										</view>
-									</view>
-								</swiper-item>
-								<swiper-item>
-									<view class="swiper-item">
-										<view class="index_hdzx_list">
-											<image src="../../static/index/index_syzx_2.png"></image>
-											<view class="index_hdzx_txt">
-												<text class="h">推出最新家庭住宅</text>
+												<text class="h">{{list2.title}}</text>
 											</view>
 										</view>
 									</view>
@@ -255,6 +183,7 @@
 		
 		
 	</view>
+	</view>
 </template>
 
 
@@ -306,14 +235,18 @@
 					duration: 500,
 					displayItems: 2,
 					nextM: '',
-				}
+				},
+				banner_list:[],
+				contentList1:[],
+				contentList2:[],
 			}
 		},
 		created(){
-			var _this=this;
+			let _this=this;
 		},
 		mounted(){
-			var _this=this;
+			let _this=this;
+			//轮播自适应
 			uni.getSystemInfo({
 				success: function (res) {
 					_this.windowW=res.windowWidth;
@@ -324,53 +257,106 @@
 					_this.syzx.nextM=_this.windowW*0/375;
 				}
 			});
+			
+			//baner
+			_this.getBanner();	
+			_this.events1();
+			_this.events2();
 		},
 		methods: {
-			goClassPages:function(url){
+			goClassPages(url,id){
+				if(id!=''){
+					url = url+'?id='+id
+				}
 				uni.navigateTo({
-					url:url,
+					url:url
 				})
 			},
-		}
+			//banner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:2,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner_list = res.data.result.banner;
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			// 活动列表
+			events1:function(){
+				let _this=this;
+				let data={
+					type:7,
+				};
+				_this.$axios(_this.$baseUrl.events1,data).then(res =>{
+					if(res.data.status==1){
+						_this.contentList1 = res.data.result.articles;
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			// 商业列表
+			events2:function(){
+				let _this=this;
+				let data={
+					type:8,
+				};
+				_this.$axios(_this.$baseUrl.events1,data).then(res =>{
+					if(res.data.status==1){
+						_this.contentList2 = res.data.result.articles;
+					}
+				}).catch(error =>{
+					
+				})
+			},
+			childMethod() {
+			},
+		},
+		
 	}
 </script>
 
-<style scoped>
-	.pages{
+<style>
+	.main .pages{
 		padding-top: 45upx;
 		padding-bottom: 50upx;
 	}
-	.banner{
+	.main .banner{
 		margin-top: 29upx;
 		margin-bottom: 50upx;
 	}
-	.banner .swiper-item image{
+	.main .banner .swiper-item image{
 		width: 652upx;
 		height: 330upx;
 	}
-	.banner .swiper{
+	.main .banner .swiper{
 		height: 383upx;
 	}
 	
-	.index_class{
+	.main .index_class{
 		padding: 0 26upx;
 		display: flex;
 		flex-wrap:wrap;
 	}
-	.index_class .index_class_item{
+	.main .index_class .index_class_item{
 		width:220upx;
 		height:119upx;
 		border-radius:10upx;
 		position: relative;
 	}
-	.index_class_item image{
+	.main .index_class_item image{
 		width: 84upx;
 		height: 65upx;
 		position: absolute;
 		bottom: 0;
 		right: 18upx;
 	}
-	.index_class .index_class_item text{
+	.main .index_class .index_class_item text{
 		position: absolute;
 		top: 26upx;
 		left: 11upx;
@@ -379,57 +365,57 @@
 		font-weight:bold;
 		line-height:23upx;
 	}
-	.index_class .index_class_item.item1 text{
+	.main .index_class .index_class_item.item1 text{
 		color:rgba(255,173,62,1);
 	}
-	.index_class .index_class_item.item2 text{
+	.main .index_class .index_class_item.item2 text{
 		color:rgba(235,89,88,1);
 	}
-	.index_class .index_class_item.item3 text{
+	.main .index_class .index_class_item.item3 text{
 		color:rgba(112,155,245,1);
 	}
-	.index_class .index_class_item.item4 text{
+	.main .index_class .index_class_item.item4 text{
 		color:rgba(234,84,83,1);
 	}
-	.index_class .index_class_item.item5 text{
+	.main .index_class .index_class_item.item5 text{
 		color:rgba(112,155,245,1);
 	}
-	.index_class .index_class_item.item6 text{
+	.main .index_class .index_class_item.item6 text{
 		color:rgba(255,173,62,1);
 	}
 	
-	.index_class .index_class_item.item1{
+	.main .index_class .index_class_item.item1{
 		background:rgba(255,237,213,1);
 		margin-right: 19upx;
 		margin-bottom: 19upx;
 	}
-	.index_class .index_class_item.item2{
+	.main .index_class .index_class_item.item2{
 		background:rgba(255,221,220,1);
 		margin-right: 19upx;
 		margin-bottom: 19upx;
 	}
-	.index_class .index_class_item.item3{
+	.main .index_class .index_class_item.item3{
 		background:rgba(207,227,255,1);
 		margin-right: 0upx;
 		margin-bottom: 19upx;
 	}
-	.index_class .index_class_item.item4{
+	.main .index_class .index_class_item.item4{
 		background:rgba(255,221,220,1);
 		margin-right: 19upx;
 	}
-	.index_class .index_class_item.item5{
+	.main .index_class .index_class_item.item5{
 		background:rgba(207,227,255,1);
 		margin-right: 19upx;
 	}
-	.index_class .index_class_item.item6{
+	.main .index_class .index_class_item.item6{
 		background:rgba(255,237,213,1);
 		margin-right: 0upx;
 	}
-	.index_notice{
+	.main .index_notice{
 		padding: 0 26upx;
 		margin: 96upx 0;
 	}
-	.index_notice_con{
+	.main .index_notice_con{
 		height:88upx;
 		background:rgba(255,255,255,1);
 		box-shadow:0upx 0upx 7upx 0upx rgba(191, 191, 191, 0.35);
@@ -437,17 +423,17 @@
 		position: relative;
 		padding: 0 46upx 0 98upx;
 	}
-	.index_notice_con>image{
+	.main .index_notice_con>image{
 		position: absolute;
 		width: 50upx;
 		height: 41upx;
 		top: 24upx;
 		left: 15upx;
 	}
-	.index_notice .swiper{
+	.main .index_notice .swiper{
 		height: 88upx;
 	}
-	.index_notice .swiper-item text{
+	.main .index_notice .swiper-item text{
 		font-size:28upx;
 		font-weight:500;
 		color:rgba(51,51,51,1);
@@ -458,15 +444,15 @@
 		-webkit-line-clamp: 1;
 		overflow: hidden;
 	}
-	.index_hdzx{
+	.main .index_hdzx{
 		width: 100%;
 	}
-	.index_hdzx_h{
+	.main .index_hdzx_h{
 		padding: 0 26upx;
 		position: relative;
 		margin-bottom: 18upx;
 	}
-	.index_hdzx_h text.h{
+	.main .index_hdzx_h text.h{
 		display: block;
 		height:32upx;
 		font-size:32upx;
@@ -475,7 +461,7 @@
 		line-height:32upx;
 		margin-bottom: 18upx;
 	}
-	.index_hdzx_h text.p{
+	.main .index_hdzx_h text.p{
 		display: block;
 		height:24upx;
 		font-size:22upx;
@@ -483,32 +469,32 @@
 		color:rgba(153,153,153,1);
 		line-height:24upx;
 	}
-	.index_hdzx_h image{
+	.main .index_hdzx_h image{
 		position: absolute;
 		width: 12upx;
 		height: 22upx;
 		top: 5upx;
 		right: 26upx;
 	}
-	.index_hdzx_con{
+	.main .index_hdzx_con{
 		padding: 10upx;
 	}
-	.index_hdzx_con .swiper{
+	.main .index_hdzx_con .swiper{
 		height: 482upx;
 	}
-	.index_hdzx_list{
+	.main .index_hdzx_list{
 		width: 530upx;
 		box-shadow:0upx 0upx 7upx 0upx rgba(191, 191, 191, 0.35);
 		border-radius:10upx;
 	}
-	.index_hdzx_list image{
+	.main .index_hdzx_list image{
 		width: 530upx;
 		height: 307upx;
 	}
-	.index_hdzx_txt{
+	.main .index_hdzx_txt{
 		padding: 28upx 15upx;
 	}
-	.index_hdzx_txt text.h{
+	.main .index_hdzx_txt text.h{
 		height:30upx;
 		font-size:28upx;
 		font-weight:500;
@@ -520,7 +506,7 @@
 		overflow: hidden;
 		margin-bottom: 25upx;
 	}
-	.index_hdzx_txt text.p{
+	.main .index_hdzx_txt text.p{
 		height:24upx;
 		font-size:22upx;
 		font-weight:500;
@@ -531,52 +517,52 @@
 		-webkit-line-clamp: 1;
 		overflow: hidden;
 	}
-	.index_hdzx_con .swiper-item{
+	.main .index_hdzx_con .swiper-item{
 		padding: 13upx;
 	}
-	.index_syzx{
+	.main .index_syzx{
 		margin-top: 70upx;
 	}
-	.index_syzx .index_hdzx_con{
+	.main .index_syzx .index_hdzx_con{
 		padding: 0;
 		padding-left: 26upx;
 	}
-	.index_syzx .index_hdzx_list{
+	.main .index_syzx .index_hdzx_list{
 		width: 342upx;
 		box-shadow:none;
 		border-radius:0;
 	}
-	.index_syzx .index_hdzx_list image{
+	.main .index_syzx .index_hdzx_list image{
 		width: 342upx;
 		height: 257upx;
 	}
-	.index_syzx .index_hdzx_txt text.h{
+	.main .index_syzx .index_hdzx_txt text.h{
 		text-align: center;
 		margin-bottom: 0;
 	}
-	.index_syzx .index_hdzx_con .swiper-item{
+	.main .index_syzx .index_hdzx_con .swiper-item{
 		padding: 0;
 	}
-	.index_syzx .index_hdzx_h{
+	.main .index_syzx .index_hdzx_h{
 		margin-bottom: 36upx;
 	}
-	.index_syzx .index_hdzx_txt{
+	.main .index_syzx .index_hdzx_txt{
 		padding: 28upx 0;
 	}
-	.index_syzx .index_hdzx_con .swiper{
+	.main .index_syzx .index_hdzx_con .swiper{
 		height: 352upx;
 	}
 	
-	.index_shop{
+	.main .index_shop{
 		padding: 0 26upx;
 		margin: 70upx 0;
 	}
 	
-	.index_shop_h{
+	.main .index_shop_h{
 		position: relative;
 		margin-bottom: 36upx;
 	}
-	.index_shop_h text.h{
+	.main .index_shop_h text.h{
 		display: block;
 		height:32upx;
 		font-size:32upx;
@@ -585,7 +571,7 @@
 		line-height:32upx;
 		margin-bottom: 18upx;
 	}
-	.index_shop_h text.p{
+	.main .index_shop_h text.p{
 		display: block;
 		height:24upx;
 		font-size:22upx;
@@ -594,27 +580,27 @@
 		line-height:24upx;
 	}
 	
-	.index_shop_con{
+	.main .index_shop_con{
 		width: 100%;
 	}
-	.index_shop_list{
+	.main .index_shop_list{
 		display: flex;
 	}
-	.index_shop_img{
+	.main .index_shop_img{
 		position: relative;
 	}
-	.index_shop_img image{
+	.main .index_shop_img image{
 		width: 223upx;
 		height: 160upx;
 	}
-	.index_shop_txt{
+	.main .index_shop_txt{
 		width: calc(100% - 254upx);
 		margin-left: 31upx;
 		padding-bottom: 27upx;
 		position: relative;
 		margin-bottom: 29upx;
 	}
-	.index_shop_txt_h{
+	.main .index_shop_txt_h{
 		height:28upx;
 		font-size:28upx;
 		font-weight:500;
@@ -625,7 +611,7 @@
 		-webkit-line-clamp: 1;
 		overflow: hidden;
 	}
-	.index_shop_txt_p{
+	.main .index_shop_txt_p{
 		width: 100%;
 		height:20upx;
 		font-size:20upx;
@@ -636,7 +622,7 @@
 		margin-top: 19upx;
 		margin-bottom: 22upx;
 	}
-	.index_shop_txt_p text{
+	.main .index_shop_txt_p text{
 		height:20upx;
 		font-size:20upx;
 		font-weight:500;
@@ -646,7 +632,7 @@
 		top: 0;
 		right: 0;
 	}
-	.index_shop_txt_span{
+	.main .index_shop_txt_span{
 		height:24upx;
 		font-size:24upx;
 		font-weight:500;
@@ -654,14 +640,14 @@
 		line-height:24upx;
 		margin-bottom: 22upx;
 	}
-	.index_shop_txt_font{
+	.main .index_shop_txt_font{
 		height:24upx;
 		font-size:24upx;
 		font-weight:500;
 		color:rgba(201,0,9,1);
 		line-height:24upx;
 	}
-	.index_shop_txt:before{
+	.main .index_shop_txt:before{
 		content: '';
 		width: calc(100% + 31upx);
 		height:1upx;

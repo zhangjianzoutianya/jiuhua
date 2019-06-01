@@ -1,0 +1,1 @@
+<view id="app" class="data-v-3a5943b6" bind:__l="__l"><view class="complete data-v-3a5943b6"><image src="../../../static/user/recharge/complete.png" mode class="data-v-3a5943b6"></image></view><view class="complete-text data-v-3a5943b6">200元充值成功</view><view data-event-opts="{{[['tap',[['goBack',['$event']]]]]}}" class="complete-btn data-v-3a5943b6" bindtap="__e">完 成</view></view>

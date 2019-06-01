@@ -17,64 +17,38 @@
 					 </view>
 				</view>
 				<view class="garbage_tab" @click="tabs(2)" :class="{'activ':index==2}">
-				  <text>更新</text>
+				  <text>最新</text>
 				  <view class="shom_top_left_img">
 				 	  <image class="acm_ty" src="../../../static/index/xia_snm.png" mode=""></image>
 					  <image class="abm_on" src="../../../static/index/xia_snm1.png" mode=""></image>
 				 </view>
 			    </view>
+				
 		    </view>
 		</view>
 		<view class="sec2">
 			<view class="sec-inner sec2-inner">
 				<view class="sec4-content">
-					<view class="sec4-content-list" @click="goMsg('articleInner')">
+					<view class="sec4-content-list" @click="goMsg(list.is_video==0?'articleInner':'videoInner',list.article_id)" v-for="(list,index) in contentList" :key="index">
 						<view class="img">
-							<image src="../../../static/index/sec2_but1.png" mode=""></image>
-						</view>
-						<view class="flex-right">
-							<view class="title">锻造生态环保为打好污染防治攻坚战保驾护航</view>
-							<!-- <view class="videoss">视频</view> -->
-							<view class="title2">
-								<view class="title2_1">热</view>
-								<text>服务到家</text>
-								<text>1088评论</text>
-								<text>1小时前</text>
-							</view>
-						</view>
-					</view>
-					<view class="sec4-content-list">
-						<view class="img">
-							<image src="../../../static/index/sec2_but2.png" mode=""></image>
-							<view class="sec4_play">
+							<image v-if="list.is_video==0" :src="list.thumb" mode=""></image>
+							<video v-else :src="list.thumb" controls></video>
+							<view class="sec4_play" v-if="list.is_video==1">
 								<image src="../../../static/index/sec2_plays.png" mode=""></image>
 							</view>
 						</view>
 						<view class="flex-right">
-							<view class="title">生态环境部召开部常务会议生态环境部召开部常务会议 <view class="videoss">视频</view></view>
-							
+							<view class="title">{{list.title}}</view>
+							<view v-if="list.is_video==1" class="videoss">视频</view>
 							<view class="title2">
-								<!-- <view class="title2_1">热</view> -->
+								<view class="title2_1" v-if="list.is_hot==1">热</view>
 								<text>服务到家</text>
-								<text>1088评论</text>
-								<text>1小时前</text>
+								<text>{{list.discuss_num}}评论</text>
+								<text>{{list.add_time}}</text>
 							</view>
 						</view>
 					</view>
-					<view class="sec4-content-list">
-						<view class="img">
-							<image src="../../../static/index/sec2_but2.png" mode=""></image>
-						</view>
-						<view class="flex-right">
-							<view class="title">生态环境部召开部常务会议</view>
-							<view class="title2">
-								<view class="title2_1">热</view>
-								<text>服务到家</text>
-								<text>1088评论</text>
-								<text>1小时前</text>
-							</view>
-						</view>
-					</view>
+					<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 				</view>
 			</view>
 		</view>
@@ -82,25 +56,102 @@
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
+	
 	export default {
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data() {
 			return {
 				index: 0,
+				page:1,
+				contentList:[],
+				allPages:'',
+				Hot:'',
+				New:'',
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
+		},
+		onReachBottom:function(){
+			let _this=this;
+			_this.events1();
+		},
+		mounted() {
+			let _this=this;
+			_this.events1();
 		},
 		methods: {
 			tabs(o){
-				this.index = o;
+				let _this=this;
+				_this.page==1;
+				_this.index = o;
+				if(_this.index==0){
+					_this.Hot = '';
+					_this.New = '';
+				}else if(_this.index==1){
+					_this.Hot = 1;
+					_this.New = '';
+				}else if(_this.index==2){
+					_this.Hot = '';
+					_this.New = 1;
+				}
+				_this.events1();
 			},
-			goMsg(url){
+			goMsg(url,id){
+				if(id!=''){
+					url = url+'?id='+id
+				}
 				uni.navigateTo({
 					url:url
+				})
+			},
+			// 列表
+			events1:function(){
+				let _this=this;
+				let data={
+					type:4,
+					page:_this.page,
+					Hot:_this.Hot,
+					New:_this.New,
+				};
+				if (_this.loadingType !== 0) {//loadingType!=0;直接返回
+					return false;
+				}
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.events1,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.articles == null ||res.data.result.articles==undefined ||res.data.result.articles=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						 _this.page++
+						 console.log(res)
+						_this.contentList = _this.contentList.concat(res.data.result.articles)
+						_this.allPages = res.data.result.pages;
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+						return;
+					}
+				}).catch(error =>{
+					
 				})
 			}
 		}
 	}
 </script>
-<style scoped>
+<style>
 	.garbage{
 		padding: 20upx 26upx;
 		border-top: 1upx solid #EEEEEE;
@@ -198,6 +249,7 @@
 		color:rgba(153,153,153,1);
 		margin-right: 15upx;
 		letter-spacing: 1upx;
+		flex-shrink: 0;
 
 	}
 	.sec4-content-list .title2 .title2_1{

@@ -101,7 +101,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.information {
 		width: 750upx;
 		height: 411upx;

@@ -4,19 +4,9 @@
 			<view class="page-section swiper">
 				<view class="page-section-spacing">
 					<swiper class="swiper" :indicator-dots="indicatorDots" :circular="circular" :autoplay="autoplay" :interval="interval" :duration="duration">
-						<swiper-item>
+						<swiper-item v-for="(item , index) in banner_list">
 							<view class="swiper-item">
-								<image width="100%" src="../../../static/index/sec2_banner.png" mode=""></image>
-							</view>
-						</swiper-item>
-						<swiper-item>
-							<view class="swiper-item">
-								<image width="100%" src="../../../static/index/sec2_banner.png" mode=""></image>
-							</view>
-						</swiper-item>
-						<swiper-item>
-							<view class="swiper-item">
-								<image width="100%" src="../../../static/index/sec2_banner.png" mode=""></image>
+								<image width="100%" :src="item.ad_code" mode=""></image>
 							</view>
 						</swiper-item>
 					</swiper>
@@ -62,30 +52,19 @@
 				</view>
 				
 				<view class="sec4-content">
-					<view class="sec4-content-list">
+					<view class="sec4-content-list" v-for="(list,index) in contentList" :key="index" @click="goMsg('articleInner',list.article_id)">
 						<view class="img">
-							<image src="../../../static/index/sec2_new.png" mode=""></image>
+							<image src="list.thumb" mode=""></image>
 						</view>
-						<view class="title">锻造生态环保为打好污染防治攻坚战保驾护航</view>
+						<view class="title">{{list.title}}</view>
 						<view class="title2">
-							<view class="title2_1">热</view>
+							<view class="title2_1" v-if="list.is_hot==1">热</view>
 							<text>服务到家</text>
-							<text>1088评论</text>
-							<text>1小时前</text>
+							<text>{{list.discuss_num}}评论</text>
+							<text>{{list.add_time}}</text>
 						</view>
 					</view>
-					<view class="sec4-content-list">
-						<view class="img">
-							<image src="../../../static/index/sec2_new1.png" mode=""></image>
-						</view>
-						<view class="title">生态环境部召开部常务会议</view>
-						<view class="title2">
-							<!-- <view class="title2_1">热</view> -->
-							<text>服务到家</text>
-							<text>1088评论</text>
-							<text>1小时前</text>
-						</view>
-					</view>
+					<uniLoadMore v-if="allPages!=1"  :loadingType="loadingType" :contentText="contentText" ></uniLoadMore>
 				</view>
 			</view>
 		</view>
@@ -93,28 +72,109 @@
 </template>
 
 <script>
+	import uniLoadMore from '../../../components/uni-load-more.vue';
 	export default{ 
+		 components: {//2注册组件
+			uniLoadMore
+		},
 		data(){
 			return{
 				indicatorDots: true,
 				autoplay: true,
 				interval: 4000,
 				duration: 800,
-				circular:true
+				circular:true,
+				banner_list:[],
+				page:1,
+				contentList:[],
+				allPages:'',
+				loadingText: '加载中...',
+				loadingType: 0,//定义加载方式 0---contentdown  1---contentrefresh 2---contentnomore
+				contentText: {
+					contentdown:'上拉显示更多',
+					contentrefresh: '正在加载...',
+					contentnomore: '没有更多数据了'
+				}
 			}
 		},
-		
+		onReachBottom:function(){
+			let _this=this;
+			_this.events1();
+		},
+		created(){
+			let _this=this;
+		},
+		mounted(){
+			let _this=this;
+			//baner
+			_this.getBanner();
+			_this.events1();
+		},
 		methods:{
-			goMsg(url){
+			goMsg(url,id){
+				if(id!=''){
+					url = url+'?id='+id
+				}
 				uni.navigateTo({
 					url:url
 				})
+			},
+			
+			//banner
+			getBanner:function(){
+				let _this=this;
+				let data={
+					id:6,
+				};
+				_this.$axios(_this.$baseUrl.banner,data).then(res =>{
+					if(res.data.status==1){
+						_this.banner_list=res.data.result.banner;
+					}
+				},(error) =>{
+					
+				})
+			},
+			// 列表
+			events1:function(){
+				let _this=this;
+				let data={
+					type:6,
+					page:_this.page,
+					Hot:_this.Hot,
+					New:_this.New,
+				};
+				if (_this.loadingType !== 0) {//loadingType!=0;直接返回
+					return false;
+				}
+				_this.loadingType = 1;
+				uni.showNavigationBarLoading()
+				_this.$axios(_this.$baseUrl.events1,data).then(res =>{
+					if(res.data.status==1){
+						if (res.data.result.articles == null ||res.data.result.articles==undefined ||res.data.result.articles=='' ) {//没有数据
+						    _this.loadingType = 2;
+						    uni.hideNavigationBarLoading();//关闭加载动画
+						    return;
+						}
+						 _this.page++
+						_this.contentList = _this.contentList.concat(res.data.result.articles)
+						_this.allPages = res.data.result.pages;
+						_this.loadingType = 0;//将loadingType归0重置
+						uni.hideNavigationBarLoading();//关闭加载动画
+					}else{
+						_this.loadingType = 2;
+						uni.hideNavigationBarLoading();//关闭加载动画
+						return;
+					}
+				}).catch(error =>{
+					
+				})
 			}
+			
 		}
 	}
 </script>
 
-<style scoped>
+<style>
 	.swiper {
 		width: 100%;
 		height: 328upx;

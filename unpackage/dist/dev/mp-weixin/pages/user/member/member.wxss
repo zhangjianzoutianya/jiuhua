@@ -1,15 +1,15 @@
 
-.information.data-v-4af07692 {
+.information {
 	width: 750rpx;
 	height: 411rpx;
 	overflow: hidden;
 	position: relative;
 }
-.information-bg.data-v-4af07692 {
+.information-bg {
 	width: 100%;
 	height: 100%;
 }
-.an-crown.data-v-4af07692 {
+.an-crown {
 	width: 206rpx;
 	height: 187rpx;
 	left: 272rpx;
@@ -17,7 +17,7 @@
 	position: absolute;
 	overflow: hidden;
 }
-.rule.data-v-4af07692 {
+.rule {
 	width: 110rpx;
 	height: 33rpx;
 	background: rgba(109, 129, 147, 1);
@@ -33,12 +33,12 @@
 	right: 25rpx;
 	z-index: 20;
 }
-.an-crown>image.data-v-4af07692 {
+.an-crown>image {
 	width: 100%;
 	height: 100%;
 	position: relative;
 }
-.an-crown-text.data-v-4af07692 {
+.an-crown-text {
 	width: 100%;
 	height: 30rpx;
 	font-size: 20rpx;
@@ -51,7 +51,7 @@
 	text-align: center;
 	line-height: 30rpx;
 }
-.member.data-v-4af07692 {
+.member {
 	position: absolute;
 	width: 700rpx;
 	height: 60rpx;
@@ -59,30 +59,30 @@
 	left: 25rpx;
 	overflow: hidden;
 }
-.member>view.data-v-4af07692 {
+.member>view {
 	float: left;
 }
-.member-img.data-v-4af07692 {
+.member-img {
 	width: 60rpx;
 	height: 60rpx;
 	overflow: hidden;
 }
-.member-img>image.data-v-4af07692 {
+.member-img>image {
 	width: 100%;
 	height: 100%;
 }
-.member-view.data-v-4af07692 {
+.member-view {
 	width: 144rpx;
 	height: 1rpx;
 	background-color: rgba(190, 190, 190, 1);
 	margin: 29rpx 4rpx;
 	overflow: hidden;
 }
-.member-view>view.data-v-4af07692 {
+.member-view>view {
 	height: 1rpx;
 	background-color: rgba(255, 216, 69, 1);
 }
-.member-text.data-v-4af07692 {
+.member-text {
 	position: absolute;
 	width: 700rpx;
 	height: 25rpx;
@@ -90,7 +90,7 @@
 	left: 25rpx;
 	overflow: hidden;
 }
-.member-text>view.data-v-4af07692 {
+.member-text>view {
 	width: 50%;
 	height: 25rpx;
 	font-size: 22rpx;
@@ -99,11 +99,11 @@
 	color: rgba(255, 232, 150, 1);
 	line-height: 25rpx;
 }
-.member-text>view.data-v-4af07692:nth-child(1) {
+.member-text>view:nth-child(1) {
 	float: right;
 	text-align: right;
 }
-.equity.data-v-4af07692 {
+.equity {
 	width: 100%;
 	height: 92rpx;
 	overflow: hidden;
@@ -114,7 +114,7 @@
 	color: rgba(232, 183, 65, 1);
 	line-height: 92rpx;
 }
-.classification.data-v-4af07692 {
+.classification {
 	margin-top: 17rpx;
 	width: 100%;
 	height: 177rpx;
@@ -124,7 +124,7 @@
 	display: -ms-flexbox;
 	display: flex;
 }
-.classification-view.data-v-4af07692 {
+.classification-view {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
@@ -132,17 +132,17 @@
 	width: 100%;
 	height: 100%;
 }
-.classification-img.data-v-4af07692 {
+.classification-img {
 	width: 100rpx;
 	height: 100rpx;
 	margin: 0 auto;
 	overflow: hidden;
 }
-.classification-img>image.data-v-4af07692 {
+.classification-img>image {
 	width: 100%;
 	height: 100%;
 }
-.classification-text.data-v-4af07692 {
+.classification-text {
 	width: 100%;
 	height: 77rpx;
 	line-height: 77rpx;

@@ -138,37 +138,6 @@
 				}
 
 			},
-			// ======================demo===============================================
-			// 
-			// 			getadd(flag, id) {
-			// 				uni.request({
-			// 					url: 'xxxx', //仅为示例，并非真实接口地址。
-			// 					data: {
-			// 						pid: id
-			// 					},
-			// 					success: function(res) {
-			// 						switch (flag) {
-			// 							case 1:
-			// 								_self.addressd1 = res.data;
-			// 								break;
-			// 							case 2:
-			// 								_self.addressd2 = res.data;
-			// 								_self.ctname = res.data[0].name;
-			// 								_self.ct = res.data[0].id;
-			// 								_self.getadd(3, _self.ct);
-			// 								break;
-			// 							case 3:
-			// 								_self.addressd3 = res.data;
-			// 								_self.csname = res.data[0].name;
-			// 								_self.cs = res.data[0].id;
-			// 								break;
-			// 							default:
-			// 								return;
-			// 						}
-			// 					}
-			// 				});
-
-			// ==============================================================================
 
 
 			// 模拟获取数据,真实场景可参考上面demo

@@ -2,53 +2,16 @@
   "pages": [
     "pages/index/index",
     "pages/business/index",
-    "pages/index/indexnav1/wisdomIndex",
-    "pages/index/indexnav1/supermarket/supermarket",
-    "pages/index/indexnav1/supermarket/details",
-    "pages/index/indexnav1/supermarket/map",
-    "pages/index/indexnav5/food",
-    "pages/index/indexnav5/supermarket/supermarket",
-    "pages/index/indexnav5/supermarket/details",
-    "pages/index/indexnav2/index",
-    "pages/index/indexnav2/regenerate",
-    "pages/index/indexnav2/articleInner",
-    "pages/index/indexnav2/videoInner",
-    "pages/index/indexnav2/complaint",
-    "pages/index/indexnav2/garbage_collection",
-    "pages/index/indexnav2/circulation_station",
-    "pages/index/indexnav2/station_inner",
-    "pages/index/indexnav3/live_box",
-    "pages/index/indexnav3/live_inner",
-    "pages/index/indexnav4/edge_hua",
-    "pages/index/indexnav4/shop_show",
-    "pages/index/indexnav4/shop_inner",
-    "pages/index/indexnav4/navigation",
-    "pages/index/indexnav6/index_neighborhood",
-    "pages/index/indexnav6/beauty_shop",
-    "pages/index/indexnav6/beautyshop_inner",
-    "pages/index/indexnav6/store_details",
-    "pages/index/indexnav6/community_business",
     "pages/user/index",
-    "pages/user/login/home_page",
-    "pages/user/login/member_login",
-    "pages/user/login/staff_login",
-    "pages/user/login/code_login",
-    "pages/user/login/merchant_register",
-    "pages/user/login/change_password",
     "pages/user/member/member",
     "pages/user/setUp/set_up",
     "pages/user/setUp/bind_cell_phone",
+    "pages/user/setUp/address",
+    "pages/user/setUp/address_inner",
+    "pages/user/setUp/address_add",
     "pages/user/information/information",
     "pages/user/information/nickname",
     "pages/user/member/rule",
-    "pages/user/integral/index",
-    "pages/user/integral/integral_rule",
-    "pages/user/integral/sign_in",
-    "pages/user/integral/integral_mall",
-    "pages/user/integral/exchange_records",
-    "pages/user/integral/integral_details",
-    "pages/user/integral/integral_handle",
-    "pages/user/integral/check_exchange_details",
     "pages/user/help/help",
     "pages/user/recharge/balance",
     "pages/user/recharge/recharge",
@@ -56,7 +19,91 @@
     "pages/user/recharge/recharge_record",
     "pages/user/recharge/coupon"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pages/user/integral",
+      "pages": [
+        "index",
+        "integral_rule",
+        "sign_in",
+        "integral_mall",
+        "exchange_records",
+        "integral_details",
+        "integral_handle",
+        "check_exchange_details"
+      ]
+    },
+    {
+      "root": "pages/user/login",
+      "pages": [
+        "home_page",
+        "member_login",
+        "staff_login",
+        "code_login",
+        "merchant_register",
+        "change_password"
+      ]
+    },
+    {
+      "root": "pages/index/indexnav1",
+      "pages": [
+        "wisdomIndex",
+        "supermarket/supermarket",
+        "supermarket/details",
+        "supermarket/map"
+      ]
+    },
+    {
+      "root": "pages/index/indexnav2",
+      "pages": [
+        "index",
+        "regenerate",
+        "articleInner",
+        "videoInner",
+        "complaint",
+        "garbage_collection",
+        "garbage_harmful",
+        "garbage_food",
+        "garbage_other",
+        "circulation_station",
+        "station_inner"
+      ]
+    },
+    {
+      "root": "pages/index/indexnav3",
+      "pages": [
+        "live_box",
+        "live_inner"
+      ]
+    },
+    {
+      "root": "pages/index/indexnav4",
+      "pages": [
+        "edge_hua",
+        "shop_show",
+        "shop_inner",
+        "navigation"
+      ]
+    },
+    {
+      "root": "pages/index/indexnav5",
+      "pages": [
+        "food",
+        "supermarket/supermarket",
+        "supermarket/details"
+      ]
+    },
+    {
+      "root": "pages/index/indexnav6",
+      "pages": [
+        "index_neighborhood",
+        "beauty_shop",
+        "beautyshop_inner",
+        "store_details",
+        "community_business"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "九华",
@@ -67,5 +114,6 @@
     "index": "/pages/index/main",
     "business": "/pages/business/index",
     "user": "/pages/user/index"
-  }
+  },
+  "sitemapLocation": "sitemap97.json"
 }

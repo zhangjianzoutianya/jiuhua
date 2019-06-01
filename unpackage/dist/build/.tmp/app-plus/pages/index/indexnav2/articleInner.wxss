@@ -1,0 +1,113 @@
+
+.sec-inner.data-v-0a961bee{
+	width: 699rpx;
+	margin: 0 auto;
+}
+.art-tit.data-v-0a961bee{
+	margin-top: 40rpx;
+	font-size:30rpx;
+	font-family:PingFang-SC-Bold;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	line-height:1;
+	letter-spacing: 1rpx;
+}
+.art-tit2.data-v-0a961bee{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 40rpx;
+}
+.art-tit2 text.data-v-0a961bee{
+	font-size:24rpx;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(153,153,153,1);
+	margin-right: 30rpx;
+}
+.art-content.data-v-0a961bee{
+	margin-top: 40rpx;
+}
+.art-content-inner1.data-v-0a961bee{
+	font-size:26rpx;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height:1.5;
+}
+.art-content-inner2.data-v-0a961bee{
+	margin-top: 40rpx;
+}
+.art-content-inner2 .art-content-inner2-img.data-v-0a961bee{
+	width: 699rpx;
+	height: 281rpx;
+}
+.art-content-inner3 .text.data-v-0a961bee{
+	font-size:26rpx;
+	font-family:PingFang-SC-Regular;
+	font-weight:400;
+	color:rgba(51,51,51,1);
+	line-height: 1.5;
+	text-indent: 2em;
+	margin-top: 40rpx;
+}
+.sec2.data-v-0a961bee{
+	margin-top: 40rpx;
+	padding: 40rpx 0;
+	border-top: 1px solid rgba(241,241,241,1);
+}
+.sec2-inner.data-v-0a961bee{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	/* padding-left: 79upx; */
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.ipt input.data-v-0a961bee{
+	width:530rpx;
+	height:49rpx;
+	background:rgba(240,240,240,1);
+	border-radius:10rpx;
+	outline: none;
+	border: none;
+	font-size: 24rpx;
+	padding-left: 20rpx;
+	letter-spacing: 2rpx;
+}
+.img1.data-v-0a961bee{
+	position: relative;
+}
+.img1 image.data-v-0a961bee{
+	width:31rpx;
+	height:29rpx;
+}
+.img2 image.data-v-0a961bee{
+	width:26rpx;
+	height:29rpx;
+}
+.img1-abs.data-v-0a961bee{
+	height: 18rpx;
+	position: absolute;
+	left: 50%;
+	top:0;
+	background:-o-linear-gradient(176deg,rgba(255,0,24,1),rgba(255,114,0,1));
+	background:linear-gradient(-86deg,rgba(255,0,24,1),rgba(255,114,0,1));
+	border-radius:6rpx;
+	font-size:18rpx;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(255,255,255,1);
+	line-height: 18rpx;
+	text-align: center;
+	padding: 0 5rpx;
+}
+

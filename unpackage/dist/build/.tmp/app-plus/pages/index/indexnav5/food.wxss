@@ -1,0 +1,217 @@
+
+.uni-padding-wrap.data-v-78450557 {
+	width: 100%;
+	height: 414rpx;
+}
+.uni-padding-wrap > image.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.swiper.data-v-78450557 {
+	width: 100%;
+	height: 410rpx;
+}
+.swiper-item.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.swiper-item>image.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.unmanned.data-v-78450557 {
+	width: 100%;
+	height: 180rpx;
+	overflow: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 46rpx;
+}
+.unmanned-view.data-v-78450557 {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	height: 100%;
+}
+.unmanned-img.data-v-78450557 {
+	width: 150rpx;
+	height: 150rpx;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.unmanned-img>image.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.unmanned-text.data-v-78450557 {
+	text-align: center;
+	font-size: 28rpx;
+	font-family: PingFang-SC-Regular;
+	font-weight: 400;
+	margin-top: -20rpx;
+	color: rgba(51, 51, 51, 1);
+}
+.sell-like-hot-cakes.data-v-78450557 {
+	width: 698rpx;
+	margin: 0 auto;
+	margin-top: 70rpx;
+}
+.sell-like-hot-cakes-text.data-v-78450557 {
+	font-size: 30rpx;
+	font-family: PingFang-SC-Medium;
+	font-weight: bold;
+	color: rgba(51, 51, 51, 1);
+	line-height: 33rpx;
+}
+.sell-like-hot-cakes-i.data-v-78450557 {
+	width: 55rpx;
+	height: 5rpx;
+	margin-top: 10rpx;
+	background: rgba(201, 201, 201, 1);
+}
+.area.data-v-78450557 {
+	margin-top: 32rpx;
+	width: 698rpx;
+}
+.area-view.data-v-78450557 {
+	width: 226rpx;
+	height: 292rpx;
+	border-radius: 14rpx;
+	float: left;
+	position: relative;
+}
+.area-view.data-v-78450557:nth-child(2) {
+	margin: 0 10rpx;
+}
+.area-view>image.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.mask.data-v-78450557 {
+	position: absolute;
+	bottom: 15rpx;
+	left: 0;
+	padding:0 19rpx;
+}
+.ranking.data-v-78450557 {
+	width: 99rpx;
+	height: 32rpx;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(232, 129, 54, 1)), to(rgba(232, 70, 53, 1)));
+	background: -o-linear-gradient(bottom, rgba(232, 129, 54, 1) 0%, rgba(232, 70, 53, 1) 100%);
+	background: linear-gradient(0deg, rgba(232, 129, 54, 1) 0%, rgba(232, 70, 53, 1) 100%);
+	opacity: 0.8;
+	border-radius: 32rpx 0 32rpx 0;
+	font-size: 26rpx;
+	color: rgba(255, 255, 255, 1);
+	line-height: 32rpx;
+	padding-left: 10rpx;
+}
+.area-text.data-v-78450557 {
+	height: 27rpx;
+	font-size: 26rpx;
+	color: rgba(255, 255, 255, 1);
+	line-height: 27rpx;
+	margin-top: 50rpx;
+}
+.area-name.data-v-78450557 {
+	height: 27rpx;
+	font-size: 24rpx;
+	color: rgba(255, 255, 255, 1);
+	line-height: 27rpx;
+	margin-top: 19rpx;
+}
+.check-in.data-v-78450557 {
+	margin-top: 356rpx;
+	width: 100%;
+	height: 210rpx;
+	overflow: hidden;
+}
+.check-in > image.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.nearby.data-v-78450557 {
+	width: 698rpx;
+	margin: 0 auto;
+	margin-top: 60rpx;
+}
+.merchant.data-v-78450557 {
+	width: 100%;
+	overflow: hidden;
+}
+.merchant-view.data-v-78450557 {
+	width: 100%;
+	height: 231rpx;
+	overflow: hidden;
+	border-bottom: 1rpx solid rgba(233,233,233,1);
+}
+.merchant-img.data-v-78450557 {
+	float: right;
+	margin-top: 72rpx;
+	width: 100rpx;
+}
+.merchant-img > image.data-v-78450557 {
+	width: 60rpx;
+	height: 60rpx;
+	margin-left: 20rpx;
+}
+.merchant-img > view.data-v-78450557 {
+	width:100rpx;
+	height:19rpx;
+	font-size:24rpx;
+	color:rgba(153,153,153,1);
+	text-align: center;
+	line-height:30rpx;
+}
+.merchant-image.data-v-78450557 {
+	width:158rpx;
+	height:158rpx;
+	border-radius:6rpx;
+	margin-top: 39rpx;
+	margin-right: 22rpx;
+	overflow: hidden;
+	float: left;
+}
+.merchant-image > image.data-v-78450557 {
+	width: 100%;
+	height: 100%;
+}
+.merchant-text1.data-v-78450557 {
+	margin-top: 50rpx;
+	height:29rpx;
+	font-size:30rpx;
+	font-family:PingFang-SC-Medium;
+	font-weight:bold;
+	color:rgba(51,51,51,1);
+	line-height:47rpx;
+}
+.merchant-text2.data-v-78450557 {
+	margin-top: 16rpx;
+	height:21rpx;
+	font-size:22rpx;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(153,153,153,1);
+}
+.merchant-text3.data-v-78450557 {
+	margin-top: 31rpx;
+	overflow: hidden;
+}
+.merchant-text3 > image.data-v-78450557 {
+	width: 23rpx;
+	height: 23rpx;
+	margin-right: 10rpx;
+	float: left;
+}
+.merchant-text3 > view.data-v-78450557 {
+	height:23rpx;
+	line-height: 23rpx;
+	font-size:23rpx;
+	font-family:PingFang-SC-Medium;
+	font-weight:500;
+	color:rgba(102,102,102,1);
+}
+

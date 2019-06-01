@@ -57,7 +57,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	#app {
 		overflow: hidden;
 	}

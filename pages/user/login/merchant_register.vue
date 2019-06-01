@@ -137,7 +137,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 
 	#app {
 		background: rgba(238, 238, 238, 1);
